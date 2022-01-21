@@ -1,4 +1,13 @@
-.container {
+$color-primary: blueviolet;
+
+.title {
+  font-size: 2.5rem;
+  color: #a8a8a8;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+/* .container {
   padding: 0 2rem;
 }
 
@@ -113,4 +122,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */
