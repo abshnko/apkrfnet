@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.scss";
 const TeamSection: NextComponentType = () => {
   return (
     <>
-      <div className="team h-screen ">
+      <div className="h-screen ">
         <div className={windStyles.wrapper}>
           <div className="title text-5xl pt-8 text-center ">Наша команда</div>
           <div className={styles.team}>
