@@ -13,7 +13,7 @@ const TeamSection: NextComponentType = () => {
             <div className={styles.member}>
               <Image
                 src="/images/starik.jpg"
-                alt="~фотка Старика~"
+                alt="фотка Старика"
                 width="220px"
                 height="290px"
               />
@@ -27,7 +27,7 @@ const TeamSection: NextComponentType = () => {
             <div className={styles.member}>
               <Image
                 src="/images/dad.jpg"
-                alt="~фотка ИВ~"
+                alt="фотка ИВ"
                 width="220px"
                 height="290px"
               />
