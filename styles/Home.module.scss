@@ -8,10 +8,11 @@ $color-primary: blueviolet;
   line-height: 2.5rem;
 }
 
+//classics
 .selected {
   display: grid;
   gap: 40px;
-  padding: 60px 50px;
+  padding: 30px 50px;
   margin: 0 50px;
   background-color: white;
   transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
@@ -22,16 +23,17 @@ $color-primary: blueviolet;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
 }
 
-//classics
 .all {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 30px;
   //   width: 90%;
   margin: 50px auto 0;
+  padding-bottom: 40px;
   @media (max-width: 600px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -57,7 +59,6 @@ $color-primary: blueviolet;
 
 .classics {
   background-color: rgb(243, 243, 243);
-
   padding-top: 50px;
 }
 
@@ -66,7 +67,7 @@ $color-primary: blueviolet;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: calc(100vw - 90vw);
   margin-top: 100px;
 
   .member {
