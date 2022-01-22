@@ -95,6 +95,14 @@ const Home: NextComponentType = () => {
                 </button>
               </div>
             </div>
+            {/* <div className="img text-center">
+              <Image
+                src="/images/pirosmani.jpg"
+                alt="pirosmani"
+                width="850px"
+                height="350px"
+              />
+            </div> */}
           </div>
         </div>
       </div>
