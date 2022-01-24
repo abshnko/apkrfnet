@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { CloseIcon, NavBarIcon } from "../utils/svgs";
+import { CloseIcon, NavBarIcon } from "../public/utils/svgs";
 
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
