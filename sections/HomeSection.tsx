@@ -1,6 +1,6 @@
 import type { NextComponentType } from "next";
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
@@ -10,9 +10,15 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import HelpCenterIcon from "@mui/icons-material/HelpCenter";
 import Alert from "../components/Alert";
 import { alerts } from "../data/alerts";
+import Navbar from "../components/Navbar";
 
 const Home: NextComponentType = () => {
   const [showAlertWriteToUs, setShowAlertWriteToUs] = useState(false);
+  useEffect(() => {
+    showAlertWriteToUs
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "visible");
+  }, [showAlertWriteToUs]);
   return (
     <>
       <Head>
@@ -23,26 +29,8 @@ const Home: NextComponentType = () => {
       <div className="my-container py-8">
         <div className={windStyles.wrapper}>
           <div className="header min-h-screen">
-            <div className="header-upper hidden md:block">
-              <ul className={windStyles.menu}>
-                <li className="hover:text-lime-600">
-                  <Link href="/meetings">заседания</Link>
-                </li>
-                <li className={windStyles.link}>
-                  <Link href="/">интересные материалы</Link>
-                </li>
-                <li className={windStyles.link}>
-                  <Link href="/">наша команда</Link>
-                </li>
-                <li className={windStyles.link}>
-                  <Link href="/">поделиться редкой книгой</Link>
-                </li>
-              </ul>
-              <div className="line pt-2">
-                <hr className="border-t-2 border-black" />
-              </div>
-            </div>
-            <div className="title mt-12">
+            <Navbar />
+            <div className="title mt-4 md:mt-12">
               <div className="title-main  text-4xl md:text-5xl text-center">
                 учебно-методическая группа
               </div>
@@ -98,6 +86,7 @@ const Home: NextComponentType = () => {
                 </button>
               </div>
             </div>
+
             {/* <div className="img text-center">
               <Image
                 src="/images/pirosmani.jpg"

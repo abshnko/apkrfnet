@@ -12,11 +12,11 @@ const Alert = ({
   return (
     <div className="flex modal justify-center items-center h-screen w-screen absolute top-0 left-0 bg-white z-20">
       <div
-        className="flex flex-col modal-content w-1/3 h-min p-8"
+        className="flex flex-col modal-content w-11/12 md:w-1/3 h-min p-8"
         style={style.modal}
       >
-        <div className="title text-4xl text-center">{title}</div>
-        <div className="text text-3xl p-8">{text}</div>
+        <div className="title text-2xl md:text-4xl text-center">{title}</div>
+        <div className="text text-xl md:text-3xl p-4 md:p-8">{text}</div>
         <button
           className="self-center text-2xl"
           style={style.button}

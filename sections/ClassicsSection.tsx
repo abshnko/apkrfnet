@@ -29,15 +29,15 @@ const ClassicsSection: NextComponentType = () => {
     [selectedClassic]
   );
 
-  const expand = useCallback(() => {
-    setShortBio(false);
-  }, [shortBio]);
+  //   const expand = useCallback(() => {
+  //     setShortBio(false);
+  //   }, [shortBio]);
 
   return (
     <>
       <div className={`${styles.classics} min-h-screen`}>
         <div className={windStyles.wrapper}>
-          <div className="title text-5xl  text-center mb-12">
+          <div className="title text-3xl md:text-5xl  text-center mb-12">
             Классики Уральской процессуальной школы
           </div>
           <div className="main">
