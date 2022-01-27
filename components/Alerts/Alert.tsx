@@ -19,7 +19,7 @@ const Alert = ({
       >
         <div className="title text-2xl md:text-4xl text-center">{title}</div>
         <div className="text text-xl md:text-3xl p-4 md:p-8">{text}</div>
-        <div className="check ">{extra}</div>
+        {extra && <div className="check ">{extra}</div>}
         {!extra && (
           <button
             className="self-center text-2xl"

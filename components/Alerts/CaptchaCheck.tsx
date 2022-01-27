@@ -17,7 +17,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
       return;
     }
     alert(
-      "Вы шпион, потому что не справились с заданием. Покиньте сайт сию сукунду!"
+      "Вы шпион, потому что не справились с заданием. Покиньте сайт сию секунду!"
     );
   };
   return (
@@ -26,7 +26,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
         <div className="question text-xl text-center pb-4">
           Найдите все фотографии, где изображен Университет на Комсомольской
         </div>
-        <div className="answer grid gap-4 grid-cols-4 w-full h-full">
+        <div className="answer grid gap-4 grid-cols-2 md:grid-cols-4 w-full h-full">
           <Button
             onClick={() => setIsActive1((state) => !state)}
             className={`${isActive1 && styles.active}`}
@@ -92,7 +92,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
               />
             )}
             <Image
-              src="/images/schools/hse.jfif"
+              src="/images/schools/hse.jpg"
               alt="classic img"
               layout="fill"
               objectFit="cover"
