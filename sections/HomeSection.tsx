@@ -8,17 +8,37 @@ import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import HelpCenterIcon from "@mui/icons-material/HelpCenter";
-import Alert from "../components/Alert";
+import Alert from "../components/Alerts/Alert";
 import { alerts } from "../data/alerts";
 import Navbar from "../components/Navbar";
+import CaptchaCheck from "../components/Alerts/CaptchaCheck";
 
 const Home: NextComponentType = () => {
   const [showAlertWriteToUs, setShowAlertWriteToUs] = useState(false);
+  const [showAlert5Min, setShowAlert5Min] = useState(false);
+  const [alertDisplayed, setAlertDisplayed] = useState(false);
+  const [passedSpyCheck, setPassedSpyCheck] = useState(false);
+
   useEffect(() => {
-    showAlertWriteToUs
+    alertDisplayed
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
-  }, [showAlertWriteToUs]);
+  }, [alertDisplayed]);
+
+  useEffect(() => {
+    showAlertWriteToUs || showAlert5Min
+      ? setAlertDisplayed(true)
+      : setAlertDisplayed(false);
+
+    !showAlert5Min && setPassedSpyCheck(true);
+  }, [showAlertWriteToUs, showAlert5Min]);
+
+  if (!passedSpyCheck) {
+    setTimeout(() => {
+      setShowAlert5Min(true);
+    }, 3000);
+  }
+
   return (
     <>
       <Head>
@@ -103,6 +123,14 @@ const Home: NextComponentType = () => {
           title={alerts[0].title}
           text={alerts[0].text}
           setState={setShowAlertWriteToUs}
+        />
+      )}
+      {showAlert5Min && (
+        <Alert
+          title={alerts[1].title}
+          text={alerts[1].text}
+          setState={setShowAlert5Min}
+          extra={<CaptchaCheck setState={setShowAlert5Min} />}
         />
       )}
     </>

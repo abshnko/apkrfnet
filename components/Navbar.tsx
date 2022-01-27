@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { CloseIcon, NavBarIcon } from "../public/utils/svgs";
+// import { CloseIcon, NavBarIcon } from "../public/utils/svgs";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -10,6 +12,7 @@ const Navbar = () => {
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
   }, [showMobileNav]);
+
   return (
     <>
       <button
@@ -17,7 +20,7 @@ const Navbar = () => {
         className="md:hidden cursor-pointer px-2"
         onClick={() => setShowMobileNav((e) => !e)}
       >
-        <NavBarIcon />
+        <MenuIcon />
       </button>
       <nav className="header-upper hidden md:block">
         <ul className={windStyles.menu}>
