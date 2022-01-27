@@ -28,16 +28,6 @@ $color-primary: blueviolet;
 }
 
 .all {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 30px;
-  //   width: 90%;
-  margin: 50px auto 0;
-  padding-bottom: 40px;
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .man {
     border: 1px solid white;
     border-radius: 2px;
@@ -48,32 +38,18 @@ $color-primary: blueviolet;
   .man:hover {
     border: 1px solid rgb(29, 128, 90);
     border-radius: 2px;
-  }
-
-  .active {
-    transform: scale(1.1);
-    border: 1px solid rgb(29, 128, 90);
-    border-radius: 2px;
+    color: red;
   }
 }
-
-.classics {
-  background-color: rgba(243, 243, 243, 0.685);
-  background-color: rgb(243, 243, 243);
-  padding-top: 50px;
+.activeClassic {
+  transform: scale(1.1);
+  border-radius: 2px;
+  color: rgb(126, 34, 206);
 }
 
 //team
 .team {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: calc(100vw - 90vw);
-  margin-top: 100px;
-
-  .member {
-    width: 300px;
-  }
 
   .name {
     font-size: 24px;

@@ -12,13 +12,19 @@ const Alert = ({
   extra?: ReactNode;
 }) => {
   return (
-    <div className="flex modal justify-center items-center h-screen w-screen top-0 left-0 bg-white z-20 fixed">
+    <div className="flex modal justify-center items-center h-screen w-screen top-0 left-0 bg-slate-200 z-20 fixed">
       <div
-        className="flex flex-col modal-content w-11/12 md:w-1/2  h-min p-8"
+        className={`flex flex-col bg-white  modal-content w-11/12 md:w-1/2  ${
+          extra ? "h-95vh" : "h-min"
+        } md:h-min md:p-8 p-4 overflow-auto ${!extra && "justify-center"}`}
         style={style.modal}
       >
-        <div className="title text-2xl md:text-4xl text-center">{title}</div>
-        <div className="text text-xl md:text-3xl p-4 md:p-8">{text}</div>
+        <div className="title text-2xl md:text-4xl text-purple-700">
+          {title}
+        </div>
+        <div className="text text-xl leading-tight md:text-3xl py-4 md:py-8">
+          {text}
+        </div>
         {extra && <div className="check ">{extra}</div>}
         {!extra && (
           <button

@@ -6,17 +6,23 @@ import styles from "../styles/Home.module.scss";
 const TeamSection: NextComponentType = () => {
   return (
     <>
-      <div className="min-h-screen py-8">
+      <div className="min-h-screen md:py-8 py-2">
         <div className={windStyles.wrapper}>
-          <div className="title text-5xl  text-center ">Наша команда</div>
-          <div className={styles.team}>
-            <div className={styles.member}>
-              <Image
-                src="/images/starik.jpg"
-                alt="фотка Старика"
-                width="220px"
-                height="290px"
-              />
+          <div className="title text-3xl md:text-5xl  text-center ">
+            Наша команда
+          </div>
+          <div
+            className={`${styles.team} mt-8 md:mt-28 grid grid-cols-1 grid-rows-1 md:grid-cols-4 gap-4`}
+          >
+            <div className="grid justify-items-center">
+              <div className="image">
+                <Image
+                  src="/images/starik.jpg"
+                  alt="фотка Старика"
+                  width="220px"
+                  height="290px"
+                />
+              </div>
               <div className={styles.name}>Антон Александрович С.</div>
               <div className={styles.position}>Штатный психолог</div>
               <div className={styles.description}>
@@ -25,13 +31,16 @@ const TeamSection: NextComponentType = () => {
                 раз.
               </div>
             </div>
-            <div className={styles.member}>
-              <Image
-                src="/images/dad.jpg"
-                alt="фотка ИВ"
-                width="220px"
-                height="290px"
-              />
+
+            <div className="grid justify-items-center">
+              <div className="image">
+                <Image
+                  src="/images/dad.jpg"
+                  alt="фотка ИВ"
+                  width="220px"
+                  height="290px"
+                />
+              </div>
               <div className={styles.name}>Дмитрий Борисович А.</div>
               <div className={styles.position}>Идейный вдохновитель</div>
               <div className={styles.description}>

@@ -23,7 +23,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
   return (
     <div className="tasks">
       <div className="task flex flex-col">
-        <div className="question text-xl text-center pb-4">
+        <div className="question text-xl pb-4">
           Найдите все фотографии, где изображен Университет на Комсомольской
         </div>
         <div className="answer grid gap-4 grid-cols-2 md:grid-cols-4 w-full h-full">
@@ -34,7 +34,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
             {isActive1 && (
               <CheckIcon
                 style={iconStyle}
-                className="absolute top-0 left-0 z-20 w-full h-full p-7"
+                className="absolute top-0 left-0 z-20 p-7"
               />
             )}
             <Image
@@ -52,7 +52,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
             {isActive2 && (
               <CheckIcon
                 style={iconStyle}
-                className="absolute top-0 left-0 z-20 w-full h-full p-7"
+                className="absolute top-0 left-0 z-20  p-7"
               />
             )}
             <Image
@@ -70,7 +70,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
             {isActive3 && (
               <CheckIcon
                 style={iconStyle}
-                className="absolute top-0 left-0 z-20 w-full h-full p-7"
+                className="absolute top-0 left-0 z-20  p-7"
               />
             )}
             <Image
@@ -88,7 +88,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
             {isActive4 && (
               <CheckIcon
                 style={iconStyle}
-                className="absolute top-0 left-0 z-20 w-full h-full p-7"
+                className="absolute top-0 left-0 z-20 p-7"
               />
             )}
             <Image
@@ -124,6 +124,8 @@ const Button = styled.button`
 
 const iconStyle: React.CSSProperties = {
   backgroundColor: "rgba(243, 243, 243, 0.385)",
+  width: "100%",
+  height: "100%",
 };
 
 export default CaptchaCheck;

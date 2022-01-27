@@ -2,7 +2,6 @@ import type { NextComponentType } from "next";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
@@ -16,6 +15,8 @@ import CaptchaCheck from "../components/Alerts/CaptchaCheck";
 const Home: NextComponentType = () => {
   const [showAlertWriteToUs, setShowAlertWriteToUs] = useState(false);
   const [showAlert5Min, setShowAlert5Min] = useState(false);
+  const [showAlertEN, setshowAlertEN] = useState(false);
+
   const [alertDisplayed, setAlertDisplayed] = useState(false);
   const [passedSpyCheck, setPassedSpyCheck] = useState(false);
 
@@ -26,17 +27,17 @@ const Home: NextComponentType = () => {
   }, [alertDisplayed]);
 
   useEffect(() => {
-    showAlertWriteToUs || showAlert5Min
+    showAlertWriteToUs || showAlert5Min || showAlertEN
       ? setAlertDisplayed(true)
       : setAlertDisplayed(false);
 
     !showAlert5Min && setPassedSpyCheck(true);
-  }, [showAlertWriteToUs, showAlert5Min]);
+  }, [showAlertWriteToUs, showAlert5Min, showAlertEN]);
 
   if (!passedSpyCheck) {
     setTimeout(() => {
       setShowAlert5Min(true);
-    }, 3000);
+    }, 300000);
   }
 
   return (
@@ -49,21 +50,21 @@ const Home: NextComponentType = () => {
       <div className="my-container py-8">
         <div className={windStyles.wrapper}>
           <div className="header min-h-screen">
-            <Navbar />
+            <Navbar setshowAlertEN={setshowAlertEN} />
             <div className="title mt-4 md:mt-12">
-              <div className="title-main  text-4xl md:text-5xl text-center">
+              <div className="title-main  text-4xl md:text-5xl md:text-center text-right">
                 учебно-методическая группа
               </div>
-              <div className="title-sub  text-2xl md:text-4xl pt-4 text-center">
+              <div className="title-sub  text-2xl md:text-4xl pt-4 md:text-center text-right">
                 по арбитражному процессу
               </div>
             </div>
-            <div className="main flex flex-col md:flex-row justify-between pt-36">
+            <div className="main flex flex-col md:flex-row justify-between md:pt-36 pt-16">
               <div className="events md:w-1/3">
                 <div className={`${styles.title} title`}>
                   предстоящие заседания
                 </div>
-                <div className="title-sub  text-xl mt-12">
+                <div className="title-sub  text-xl mt-4 mb-6 md:mb-0 md:mt-12">
                   на данный момент заседаний не планируется
                 </div>
               </div>
@@ -106,15 +107,6 @@ const Home: NextComponentType = () => {
                 </button>
               </div>
             </div>
-
-            {/* <div className="img text-center">
-              <Image
-                src="/images/pirosmani.jpg"
-                alt="pirosmani"
-                width="850px"
-                height="350px"
-              />
-            </div> */}
           </div>
         </div>
       </div>
@@ -131,6 +123,13 @@ const Home: NextComponentType = () => {
           text={alerts[1].text}
           setState={setShowAlert5Min}
           extra={<CaptchaCheck setState={setShowAlert5Min} />}
+        />
+      )}
+      {showAlertEN && (
+        <Alert
+          title={alerts[2].title}
+          text={alerts[2].text}
+          setState={setshowAlertEN}
         />
       )}
     </>

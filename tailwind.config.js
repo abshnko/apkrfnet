@@ -5,7 +5,14 @@ module.exports = {
     "./sections/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "light-purple": "rgba(191, 123, 230, 0.13)",
+      },
+      height: {
+        "95vh": "95vh",
+      },
+    },
   },
   plugins: [],
 };

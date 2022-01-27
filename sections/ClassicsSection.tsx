@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect, useRef } from "react";
 import type { NextComponentType } from "next";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
@@ -8,40 +8,25 @@ import Image from "next/image";
 const ClassicsSection: NextComponentType = () => {
   const [selectedClassic, setSelectedClassic] = useState(classics[0]);
   const [shortBio, setShortBio] = useState(true);
+  const selectedRef = useRef<null | HTMLDivElement>(null);
 
-  //   useEffect(() => {
-  //     setInterval(() => {
-  //       const newClassic = classics.filter((man) => {
-  //         if (selectedClassic.id === 5) {
-  //           return man.id === 0;
-  //         }
-  //         return man.id === selectedClassic.id + 1;
-  //       });
-  //       setSelectedClassic(newClassic[0]);
-  //     }, 3000);
-  //   }, []);
-
-  const chooseClassic = useCallback(
-    (id) => {
-      setSelectedClassic(classics.filter((man) => man.id === id)[0]);
-      setShortBio(true);
-    },
-    [selectedClassic]
-  );
-
-  //   const expand = useCallback(() => {
-  //     setShortBio(false);
-  //   }, [shortBio]);
+  const chooseClassic = useCallback((id) => {
+    setSelectedClassic(classics.filter((man) => man.id === id)[0]);
+    setShortBio(true);
+  }, []);
 
   return (
     <>
-      <div className={`${styles.classics} min-h-screen`}>
+      <div className={`min-h-screen md:pt-12 pt-5 bg-light-purple`}>
         <div className={windStyles.wrapper}>
-          <div className="title text-3xl md:text-5xl  text-center mb-12">
+          <div className="title text-2xl md:text-5xl  text-center md:mb-12 mb-5">
             Классики Уральской процессуальной школы
           </div>
           <div className="main">
-            <div className={styles.selected}>
+            <div
+              ref={selectedRef}
+              className="selected grid md:grid-cols-[1fr_2fr] grid-cols-[1fr] md:mx-12 mx-2 bg-white justify-center rounded-sm shadow-md py-0 md:py-8 md:px-12 px-8 grid-rows-[1fr_2fr] md:grid-rows-[1fr] gap-4"
+            >
               <div
                 className="image"
                 style={{ width: "100%", height: "100%", position: "relative" }}
@@ -54,18 +39,18 @@ const ClassicsSection: NextComponentType = () => {
                 />
               </div>
               <div className="text">
-                <div className="title text-3xl mb-4">
+                <div className="title md:text-3xl text-xl mb-4">
                   {selectedClassic.name}
                 </div>
                 <p>{selectedClassic.bio} </p>
-                <button className="text-sky-500 self-end  mt-4">
+                <button className="text-sky-500 self-end mt-4">
                   <Link href={`/classics/${selectedClassic.link}`}>
                     подробнее
                   </Link>
                 </button>
               </div>
             </div>
-            <div className={styles.all}>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-6 mx-auto md:mt-12 mt-6 pb-10">
               {classics.map((man) => {
                 const wholeName = man.name.split(" ");
                 return (
@@ -73,10 +58,15 @@ const ClassicsSection: NextComponentType = () => {
                     key={man.id}
                     className={`${
                       styles.man
-                    } font-bold hover:scale-110 transition-all ${
-                      selectedClassic.id === man.id && styles.active
+                    } font-bold hover:scale-110 hover:text-purple-700 transition-all ${
+                      selectedClassic.id === man.id && styles.activeClassic
                     }`}
-                    onClick={() => chooseClassic(man.id)}
+                    onClick={() => {
+                      chooseClassic(man.id);
+                      selectedRef?.current?.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
                   >
                     <div className="image ">
                       <Image
@@ -86,8 +76,10 @@ const ClassicsSection: NextComponentType = () => {
                         width="146px"
                       />
                     </div>
-                    <div className="last-name mt-2">{wholeName[0]}</div>
-                    <div className="name mb-2">{`${wholeName[1]} ${wholeName[2]}`}</div>
+                    <div className="last-name md:mt-2 leading-tight text-sm md:text-lg mt-0">
+                      {wholeName[0]}
+                    </div>
+                    <div className="name mb-2 text-sm leading-tight">{`${wholeName[1]} ${wholeName[2]}`}</div>
                   </button>
                 );
               })}

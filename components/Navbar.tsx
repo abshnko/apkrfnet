@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-// import { CloseIcon, NavBarIcon } from "../public/utils/svgs";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Alert from "./Alerts/Alert";
+import { alerts } from "../data/alerts";
 
-const Navbar = () => {
+const Navbar = ({ setshowAlertEN }: { setshowAlertEN: any }) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   useEffect(() => {
     showMobileNav
@@ -36,6 +37,11 @@ const Navbar = () => {
           <li className={windStyles.link}>
             <Link href="/">поделиться редкой книгой</Link>
           </li>
+          <li className={windStyles.link}>
+            <button className="font-bold" onClick={() => setshowAlertEN(true)}>
+              en
+            </button>
+          </li>
         </ul>
         <div className="line pt-2">
           <hr className="border-t-2 border-black" />
@@ -62,6 +68,17 @@ const Navbar = () => {
               </li>
               <li className="hover:text-lime-600 block  pb-3 font-light tracking-wide active:text-myRed">
                 <Link href="/">поделиться редкой книгой</Link>
+              </li>
+              <li className="hover:text-lime-600 block  pb-3 font-light tracking-wide active:text-myRed">
+                <button
+                  onClick={() => {
+                    setshowAlertEN(true);
+                    setShowMobileNav(false);
+                  }}
+                  className="font-light"
+                >
+                  en
+                </button>
               </li>
             </ul>
           </div>
