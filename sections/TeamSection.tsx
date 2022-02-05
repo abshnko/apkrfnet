@@ -1,51 +1,100 @@
 import React from "react";
 import type { NextComponentType } from "next";
 import Image from "next/image";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/Team.module.scss";
 
 const TeamSection: NextComponentType = () => {
   return (
     <>
-      <div className="min-h-screen md:py-8 py-2">
-        <div className={windStyles.wrapper}>
-          <div className="title text-3xl md:text-5xl  text-center ">
+      <div
+        className="min-h-screen md:py-8 py-2 relative"
+        style={{ backgroundColor: "#f9f9f9" }}
+      >
+        <div className={styles.redLine}>
+          <div className="title text-3xl md:text-3xl  text-left ml-6 text-white font-light">
             Наша команда
           </div>
-          <div
-            className={`${styles.team} mt-8 md:mt-28 grid grid-cols-1 grid-rows-1 md:grid-cols-4 gap-4`}
-          >
-            <div className="grid justify-items-center">
-              <div className="image">
+        </div>
+        <div className={windStyles.wrapper}>
+          <div className={styles.team}>
+            <div className={styles.teamMember}>
+              <div className={styles.image}>
                 <Image
                   src="/images/starik.jpg"
                   alt="фотка Старика"
-                  width="220px"
-                  height="290px"
+                  //   width="220px"
+                  //   height="290px"
+                  layout="fill"
+                  objectFit="cover"
                 />
               </div>
-              <div className={styles.name}>Антон Александрович С.</div>
-              <div className={styles.position}>Штатный психолог</div>
-              <div className={styles.description}>
-                Антон Александрович работает у нас уже 16 лет, профессиональный
-                психолог, он вытаскивал нашу команду из трудных времён не один
-                раз.
+              <div className={styles.text}>
+                <div className={styles.name}>Антон Александрович С.</div>
+                <div className={styles.position}>Штатный психолог</div>
+                <div className={styles.description}>
+                  Антон Александрович работает у нас уже 16 лет,
+                  профессиональный психолог, он вытаскивал нашу команду из
+                  трудных времён не один раз.
+                </div>
               </div>
             </div>
 
-            <div className="grid justify-items-center">
-              <div className="image">
+            <div className={styles.teamMember}>
+              <div className={styles.image}>
                 <Image
                   src="/images/dad.jpg"
                   alt="фотка ИВ"
-                  width="220px"
-                  height="290px"
+                  layout="fill"
+                  objectFit="cover"
                 />
               </div>
-              <div className={styles.name}>Дмитрий Борисович А.</div>
-              <div className={styles.position}>Идейный вдохновитель</div>
-              <div className={styles.description}>
-                Генерирует все более и более оторванные от реальности и
-                заставляющие беспокоиться идеи.
+              <div className={styles.text}>
+                <div className={styles.name}>Дмитрий Борисович А.</div>
+                <div className={styles.position}>Идейный вдохновитель</div>
+                <div className={styles.description}>
+                  Генерирует все более и более оторванные от реальности и
+                  заставляющие беспокоиться идеи.
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.teamMember}>
+              <div className={styles.image}>
+                <Image
+                  src="/images/dad.jpg"
+                  alt="фотка ИВ"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className={styles.text}>
+                <div className={styles.name}>Дмитрий Борисович А.</div>
+                <div className={styles.position}>Идейный вдохновитель</div>
+                <div className={styles.description}>
+                  Генерирует все более и более оторванные от реальности и
+                  заставляющие беспокоиться идеи.
+                </div>
+              </div>
+            </div>
+            <div className={styles.teamMember}>
+              <div className={styles.image}>
+                <Image
+                  src="/images/starik.jpg"
+                  alt="фотка Старика"
+                  //   width="220px"
+                  //   height="290px"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className={styles.text}>
+                <div className={styles.name}>Антон Александрович С.</div>
+                <div className={styles.position}>Служба безопасности</div>
+                <div className={styles.description}>
+                  Антон Александрович работает у нас уже 16 лет,
+                  профессиональный психолог, он вытаскивал нашу команду из
+                  трудных времён не один раз.
+                </div>
               </div>
             </div>
           </div>
@@ -58,5 +107,5 @@ const TeamSection: NextComponentType = () => {
 export default TeamSection;
 
 const windStyles = {
-  wrapper: "wrapper w-11/12 md:w-11/12 lg:w-4/5 m-auto xl:w-3/5",
+  wrapper: "wrapper w-11/12  m-auto",
 };

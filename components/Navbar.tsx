@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Alert from "./Alerts/Alert";
 import { alerts } from "../data/alerts";
+import styles from "../styles/Home.module.scss";
 
 const Navbar = ({ setshowAlertEN }: { setshowAlertEN: any }) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -23,30 +24,35 @@ const Navbar = ({ setshowAlertEN }: { setshowAlertEN: any }) => {
       >
         <MenuIcon />
       </button>
-      <nav className="header-upper hidden md:block">
-        <ul className={windStyles.menu}>
-          <li className="hover:text-lime-600">
-            <Link href="/meetings">заседания</Link>
-          </li>
-          <li className={windStyles.link}>
-            <Link href="/">интересные материалы</Link>
-          </li>
-          <li className={windStyles.link}>
-            <Link href="/">наша команда</Link>
-          </li>
-          <li className={windStyles.link}>
-            <Link href="/">поделиться редкой книгой</Link>
-          </li>
-          <li className={windStyles.link}>
-            <button className="font-bold" onClick={() => setshowAlertEN(true)}>
-              en
-            </button>
-          </li>
-        </ul>
-        <div className="line pt-2">
-          <hr className="border-t-2 border-black" />
-        </div>
-      </nav>
+      <div className={styles.navWrapper}>
+        <nav className="header-upper hidden md:block py-4">
+          <ul className={windStyles.menu}>
+            <li>
+              <Link href="/meetings">заседания</Link>
+            </li>
+            <li>
+              <Link href="/">интересные материалы</Link>
+            </li>
+            <li>
+              <Link href="#team">наша команда</Link>
+            </li>
+            <li>
+              <Link href="/meetings">процессуальная шляпа</Link>
+            </li>
+            <li>
+              <Link href="/">поделиться редкой книгой</Link>
+            </li>
+            <li>
+              <button
+                className="font-semibold"
+                onClick={() => setshowAlertEN(true)}
+              >
+                en
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
       {showMobileNav && (
         <>
           <div
@@ -57,19 +63,19 @@ const Navbar = ({ setshowAlertEN }: { setshowAlertEN: any }) => {
             } `}
           >
             <ul className="">
-              <li className="hover:text-lime-600 block  pb-3 font-light tracking-wide active:text-myRed">
+              <li className=" block  pb-3 font-light tracking-wide active:text-myRed">
                 <Link href="/meetings">заседания</Link>
               </li>
-              <li className="hover:text-lime-600 block  pb-3 font-light tracking-wide active:text-myRed">
+              <li className=" block  pb-3 font-light tracking-wide active:text-myRed">
                 <Link href="/">интересные материалы</Link>
               </li>
-              <li className="hover:text-lime-600 block  pb-3 font-light tracking-wide active:text-myRed">
+              <li className=" block  pb-3 font-light tracking-wide active:text-myRed">
                 <Link href="/">наша команда</Link>
               </li>
-              <li className="hover:text-lime-600 block  pb-3 font-light tracking-wide active:text-myRed">
+              <li className=" block  pb-3 font-light tracking-wide active:text-myRed">
                 <Link href="/">поделиться редкой книгой</Link>
               </li>
-              <li className="hover:text-lime-600 block  pb-3 font-light tracking-wide active:text-myRed">
+              <li className=" block  pb-3 font-light tracking-wide active:text-myRed">
                 <button
                   onClick={() => {
                     setshowAlertEN(true);
@@ -83,7 +89,7 @@ const Navbar = ({ setshowAlertEN }: { setshowAlertEN: any }) => {
             </ul>
           </div>
           <button
-            className="close fixed top-7 right-10"
+            className="close fixed top-7 right-10 "
             onClick={() => setShowMobileNav((e) => !e)}
           >
             <CloseIcon />
@@ -95,8 +101,8 @@ const Navbar = ({ setshowAlertEN }: { setshowAlertEN: any }) => {
 };
 
 const windStyles = {
-  menu: "menu flex justify-between font-bold",
-  link: "hover:text-lime-600",
+  menu: "menu flex justify-between font-semibold",
+  //   link: "hover:text-lime-600",
 };
 
 export default Navbar;

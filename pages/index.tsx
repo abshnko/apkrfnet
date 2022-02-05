@@ -1,11 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import HomeSection from "../sections/HomeSection";
 import TeamSection from "../sections/TeamSection";
 import ClassicsSection from "../sections/ClassicsSection";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
+  const [lastScrollLocation, setLastScrollLocation] = useState(0);
+
   return (
     <>
       {/* <Head>
@@ -16,7 +19,10 @@ const Home: NextPage = () => {
 
       <HomeSection />
       <ClassicsSection />
-      <TeamSection />
+      <div id="team">
+        <TeamSection />
+      </div>
+      <Footer />
     </>
   );
 };
