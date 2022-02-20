@@ -1,6 +1,6 @@
 import type { NextComponentType } from "next";
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
@@ -13,12 +13,11 @@ import Navbar from "../components/Navbar";
 import CaptchaCheck from "../components/Alerts/CaptchaCheck";
 import Image from "next/image";
 
-const Home: NextComponentType = () => {
+const Home = ({ myRef }: { myRef: any }) => {
   const [showAlertWriteToUs, setShowAlertWriteToUs] = useState(false);
   const [showAlert5Min, setShowAlert5Min] = useState(false);
   const [showAlertEN, setshowAlertEN] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-
   const [alertDisplayed, setAlertDisplayed] = useState(false);
   const [passedSpyCheck, setPassedSpyCheck] = useState(false);
 
@@ -52,12 +51,18 @@ const Home: NextComponentType = () => {
 
   return (
     <>
-      <div className={`${styles.all} all h-screen relative`}>
+      {/* <div
+        className={`${styles.all} all h-screen md:relative md:grid md:grid-rows-[min-content_auto] block static`}
+      >
         <Navbar setshowAlertEN={setshowAlertEN} />
-        <div className={`${styles.redLine}`}></div>
-        <div className={`${styles.myContainer} `}>
-          <div className={`${styles.blueSquare}`}>
-            <div className={styles.titleContainer}>
+        <div
+          className={`${styles.redLine} hidden md:block md:absolute w-full h-[110px] left-0] `}
+        ></div>
+        <div className={`${styles.myContainer} md:relative md:w-11/12 w-full`}>
+          <div className={`${styles.blueSquare}  md:absolute`}>
+            <div
+              className={`${styles.titleContainer} md:absolute static w-full h-2/4`}
+            >
               <div className={styles.title}>
                 учебно-методическая
                 <br /> группа
@@ -65,7 +70,7 @@ const Home: NextComponentType = () => {
               <div className={styles.subtitle}>по арбитражному процессу</div>
             </div>
           </div>
-          <div className={styles.blueRect}>
+          <div className={`${styles.blueRect} md:absolute static`}>
             <div className={styles.eventsContainer}>
               <div className={styles.eventsTitle}>предстоящие заседания</div>
               <div className={styles.eventsSubtitle}>
@@ -84,7 +89,7 @@ const Home: NextComponentType = () => {
               left: "15%",
               zIndex: "30",
             }}
-            // className="bg-slate-600"
+            className="hidden lg:block"
           >
             <Image
               src="/images/single_man.png"
@@ -94,9 +99,10 @@ const Home: NextComponentType = () => {
             ></Image>
           </div>
           <div
+            className="w-[500px] md:w-[700px] md:h-1/2 h-1/3"
             style={{
-              width: "700px",
-              height: "50%",
+              //   width: "700px",
+              //   height: "50%",
               position: "absolute",
               bottom: 0,
               right: "5%",
@@ -120,6 +126,82 @@ const Home: NextComponentType = () => {
               написать
             </button>
           </div>
+        </div>
+      </div> */}
+      <div
+        className={styles.allMobile}
+        // className={`${styles.all} all h-screen md:relative md:grid md:grid-rows-[min-content_auto] block static`}
+      >
+        <Navbar setshowAlertEN={setshowAlertEN} />
+        {/* <div
+          className={`${styles.redLine} hidden md:block md:absolute w-full h-[110px] left-0] `}
+        ></div> */}
+        <div className={styles.titleContainer}>
+          <div className={styles.title}>учебно-методическая группа</div>
+          <div className={styles.subtitle}>по арбитражному процессу</div>
+        </div>
+        <div className={styles.blueRect}>
+          <div className={styles.eventsContainer}>
+            <div className={styles.eventsTitle}>предстоящие заседания</div>
+            <div className={styles.eventsSubtitle}>
+              пока заседаний не планируется
+            </div>
+          </div>
+          <div
+            className="writetoUs"
+            style={{ textAlign: "right", marginTop: "10px" }}
+          >
+            <p className="" style={{ color: "white" }}>
+              появились вопросы?
+            </p>
+            <button
+              onClick={() => setShowAlertWriteToUs(true)}
+              className={styles.writeButton}
+              style={{ color: "white", marginTop: "10px", zIndex: "90" }}
+            >
+              написать
+            </button>
+          </div>
+        </div>
+        <div className={styles.redLineMobile}></div>
+
+        {/* IMAGE */}
+        <div
+          style={{
+            width: "290px",
+            height: "63%",
+            position: "absolute",
+            bottom: 0,
+            left: "15%",
+            zIndex: "30",
+          }}
+          className="hidden lg:block"
+        >
+          <Image
+            src="/images/single_man.png"
+            alt="man"
+            layout="fill"
+            objectFit="contain"
+          ></Image>
+        </div>
+        <div
+          //   className="w-[400px] md:w-[700px] md:h-1/2 h-1/3"
+          style={{
+            width: "370px",
+            height: "230px",
+            position: "absolute",
+            bottom: 0,
+            right: 0,
+            zIndex: "10",
+          }}
+          // className="bg-slate-600"
+        >
+          <Image
+            src="/images/group.png"
+            alt="man"
+            layout="fill"
+            objectFit="contain"
+          ></Image>
         </div>
       </div>
       {showAlertWriteToUs && (

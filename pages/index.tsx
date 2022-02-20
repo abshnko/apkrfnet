@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import HomeSection from "../sections/HomeSection";
 import TeamSection from "../sections/TeamSection";
 import ClassicsSection from "../sections/ClassicsSection";
@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   const [lastScrollLocation, setLastScrollLocation] = useState(0);
+  const ref = useRef(null);
 
   return (
     <>
@@ -34,9 +35,9 @@ const Home: NextPage = () => {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <HomeSection />
+      <HomeSection myRef={ref} />
       <ClassicsSection />
-      <div id="team">
+      <div ref={ref}>
         <TeamSection />
       </div>
       <Footer />

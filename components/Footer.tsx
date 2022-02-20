@@ -6,7 +6,7 @@ import CopyrightIcon from "@mui/icons-material/Copyright";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer}`}>
       <div className={styles.wrapper}>
         <div className="links">
           <div className={styles.link}>
@@ -33,16 +33,24 @@ const Footer = () => {
           <div className="">
             <CopyrightIcon /> 2022. Все права защищены
           </div>
+          <div className="text leading-4">
+            <div className="">заметили ошибку?</div>
+            <div className="mb-4">Выделите текст и нажмите ctrl+Enter</div>
+            <div className=" mb-3 leading-4">
+              <CheckCircleOutlineIcon /> сайт еще не внесен
+              <br /> в список иностранных агентов
+            </div>
+          </div>
         </div>
         <div className={styles.rights}>
-          <div className="text leading-4">
-            <div className="text-right">заметили ошибку?</div>
+          {/* <div className="text leading-4">
+            <div className="">заметили ошибку?</div>
             <div className="mb-4">Выделите текст и нажмите ctrl+Enter</div>
           </div>
-          <div className="text-right mb-3 leading-4">
+          <div className=" mb-3 leading-4">
             <CheckCircleOutlineIcon /> сайт еще не внесен
             <br /> в список иностранных агентов
-          </div>
+          </div> */}
           {/* <div className="">
             <CopyrightIcon /> 2022. Все права защищены
           </div> */}

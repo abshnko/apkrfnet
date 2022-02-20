@@ -19,12 +19,12 @@ const ClassicsSection: NextComponentType = () => {
     <>
       <div
         ref={selectedRef}
-        className={`${styles.classicsBG} min-h-screen md:pt-14 pt-5 relative`}
+        className={`${styles.classicsBG} min-h-screen overflow-hidden w-screen md:pt-14 pt-5 relative`}
       >
-        <div className={styles.blueLine}></div>
-        <div className={styles.classicsRedLine}></div>
+        {/* <div className={styles.blueLine}></div> */}
+        {/* <div className={styles.classicsRedLine}></div> */}
         <div className={styles.yellowTitleBox}>
-          <div className="title text-xl text-right mr-5">
+          <div className="title text-right mr-5">
             Классики Уральской <br /> процессуальной школы
           </div>
         </div>
@@ -34,12 +34,19 @@ const ClassicsSection: NextComponentType = () => {
               //   className="selected grid md:grid-cols-[1fr_2fr] grid-cols-[1fr] md:mx-12 mx-2 bg-white justify-center rounded-sm shadow-md py-0 md:py-8 md:px-12 px-8 grid-rows-[1fr_2fr] md:grid-rows-[1fr] gap-4"
               className={styles.selected}
             >
-              <div className="flex h-full items-center justify-center">
+              <div
+                style={{
+                  height: "150px",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "flex-end",
+                }}
+              >
                 <div
                   className="image"
                   style={{
-                    width: "100%",
-                    height: "70%",
+                    width: "40%",
+                    height: "100%",
                     position: "relative",
                     maxWidth: "200px",
                   }}
@@ -51,11 +58,17 @@ const ClassicsSection: NextComponentType = () => {
                     objectFit="contain"
                   />
                 </div>
-              </div>
-              <div className="text">
-                <div className="title md:text-3xl text-xl mb-4 mt-12">
+                <div
+                  style={{
+                    textAlign: "right",
+                    fontSize: "18px",
+                    marginRight: "20px",
+                  }}
+                >
                   {selectedClassic.name}
                 </div>
+              </div>
+              <div className="text">
                 <p>{selectedClassic.bio} </p>
                 <button className="text-sky-500 self-end mt-4">
                   <Link href={`/classics/${selectedClassic.link}`}>
@@ -64,9 +77,7 @@ const ClassicsSection: NextComponentType = () => {
                 </button>
               </div>
             </div>
-            <div
-              className={`grid grid-cols-2 gap-12 md:grid-cols-6 mx-auto md:mt-12 mt-6 pb-10 ${styles.allMen}`}
-            >
+            <div className={` ${styles.allMen}`}>
               {classics.map((man) => {
                 const wholeName = man.name.split(" ");
                 return (
@@ -84,20 +95,20 @@ const ClassicsSection: NextComponentType = () => {
                       });
                     }}
                   >
-                    <div className={styles.manImg}>
-                      <Image
-                        src={man.image}
-                        alt="classic img"
-                        // height="194px"
-                        // width="146px"
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </div>
-                    <div className="last-name md:mt-2 leading-tight text-sm md:text-lg mt-0">
-                      {wholeName[0]}
-                    </div>
-                    <div className=" name mb-2 text-sm leading-tight">{`${wholeName[1]} ${wholeName[2]}`}</div>
+                    <>
+                      <div className={styles.manImg}>
+                        <Image
+                          src={man.image}
+                          alt="classic img"
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </div>
+                      <div className={styles.manSurname}>{wholeName[0]}</div>
+                      <div
+                        className={styles.manName}
+                      >{`${wholeName[1]} ${wholeName[2]}`}</div>
+                    </>
                   </button>
                 );
               })}

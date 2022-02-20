@@ -7,7 +7,8 @@ const TeamSection: NextComponentType = () => {
   return (
     <>
       <div
-        className="min-h-screen md:py-8 py-2 relative"
+        //!fix later
+        className="min-h-screen hidden md:py-8 py-2 relative"
         style={{ backgroundColor: "#f9f9f9" }}
       >
         <div className={styles.redLine}>
