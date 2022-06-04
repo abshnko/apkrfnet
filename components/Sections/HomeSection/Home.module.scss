@@ -42,15 +42,44 @@
       }
     }
     .events_subtitle {
+      position: relative;
       font-size: 30px;
       line-height: 35px;
       margin-top: 50px;
       padding: 20px 50px;
       padding-bottom: 30px;
-      width: 300px;
+      width: 320px;
       color: white;
       background-color: $black_background;
       border-radius: 20px;
+      display: flex;
+      cursor: pointer;
+      transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
+      &:hover {
+        transform: scale(1.05);
+      }
+      .new_event {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 50px;
+        height: 50px;
+        background-color: $yellow;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-weight: 600;
+      }
+
+      .new_event_text {
+        width: 90%;
+      }
+      .new_event_icon {
+        filter: $filter_to_white;
+        display: flex;
+      }
     }
     .write_to_us_btn {
       font-size: 22px;

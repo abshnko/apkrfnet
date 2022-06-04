@@ -40,10 +40,13 @@
         position: relative;
         overflow: hidden;
         border-radius: 30px;
-        background-color: aliceblue;
         width: 372px;
         height: 495px;
         transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
     .right_side {

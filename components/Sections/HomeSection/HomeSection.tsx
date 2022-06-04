@@ -18,6 +18,7 @@ import Toast from "../../../utils/Alerts/Toast/Toast";
 import toastStyle from "../../../utils/Alerts/Toast/Toast.module.scss";
 import { showAlertWriteToUs } from "../../../utils/Alerts/alerts";
 import { IToast } from "../../../types";
+import { motion } from "framer-motion";
 
 const Home = ({ myRef }: { myRef: any }) => {
   const [showAlert5Min, setShowAlert5Min] = useState(false);
@@ -34,7 +35,7 @@ const Home = ({ myRef }: { myRef: any }) => {
 
   return (
     <>
-      <ToastContainer
+      {/* <ToastContainer
         autoClose={15000}
         closeButton={false}
         className={toastStyle.toast_container}
@@ -42,98 +43,98 @@ const Home = ({ myRef }: { myRef: any }) => {
         newestOnTop
         limit={2}
         hideProgressBar
-      />
+      /> */}
       <Navbar />
-      <div className={s.container}>
-        <div className={s.titleContainer}>
-          <div className={s.title}>Учебно-методическая группа</div>
-          <div className={s.subtitle}>по арбитражному процессу</div>
-        </div>
-        <div className={s.content}>
-          <div className={s.left_side}>
-            <div className={s.events_title}>
-              предстоящие <span>заседания</span> группы
-            </div>
-            <div className={s.events_subtitle}>
-              пока заседаний не планируется
-            </div>
-            <div className={s.write_to_us_btn}>
-              <p className="">появились вопросы?</p>
-              <button onClick={showAlertWriteToUs} className={s.write_button}>
-                <span>напишите нам</span>
-                <Image
-                  src="/images/right_arrow.svg"
-                  alt="right_arrow"
-                  width="30px"
-                  height="17px"
-                ></Image>
-              </button>
-            </div>
-          </div>
-          <div className={s.right_side}>
-            <div className={s.men_img_container}>
-              <div className={s.down_circle}>
-                <Image
-                  src="/images/down_circle.svg"
-                  alt="down_circle"
-                  width="800px"
-                  height="100px"
-                  layout="intrinsic"
-                  objectFit="contain"
-                />
-              </div>
-              <div className={s.back_circle}>
-                <Image
-                  src="/images/back_circle.svg"
-                  alt="down_circle"
-                  width="800px"
-                  height="500px"
-                  layout="intrinsic"
-                  objectFit="contain"
-                />
-              </div>
-              <div className={s.img}>
-                <Image
-                  src="/images/everyone_desktop.png"
-                  alt="man"
-                  width="800px"
-                  height="600px"
-                  layout="intrinsic"
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={{
-          display: "none",
+      <motion.div
+        initial={{
+          opacity: 0,
         }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.25,
+        }}
+        exit="out"
       >
-        <Image
-          src="/images/single_man.png"
-          alt="man"
-          layout="fill"
-          objectFit="contain"
-        ></Image>
-      </div>
+        <div className={s.container}>
+          <div className={s.titleContainer}>
+            <div className={s.title}>Учебно-методическая группа</div>
+            <div className={s.subtitle}>по арбитражному процессу</div>
+          </div>
+          <div className={s.content}>
+            <div className={s.left_side}>
+              <div className={s.events_title}>
+                предстоящие <span>заседания</span> группы
+              </div>
+              <Link href="/posts" passHref>
+                <div className={s.events_subtitle}>
+                  {/* пока заседаний не планируется */}
+                  <div className={s.new_event}>!</div>
+                  <div className={s.new_event_text}>
+                    объявлена дата нового заседания
+                  </div>
 
-      {showAlert5Min && (
-        <Alert
-          title={alerts[1].title}
-          text={alerts[1].text}
-          setState={setShowAlert5Min}
-          extra={<CaptchaCheck setState={setShowAlert5Min} />}
-        />
-      )}
-      {/* {showAlertEN && (
-        <Alert
-          title={alerts[2].title}
-          text={alerts[2].text}
-          setState={setshowAlertEN}
-        />
-      )} */}
+                  <div className={s.new_event_icon}>
+                    <Image
+                      src="/images/right_arrow.svg"
+                      alt="right_arrow"
+                      width="30px"
+                      height="17px"
+                    />
+                  </div>
+                </div>
+              </Link>
+              <div className={s.write_to_us_btn}>
+                <p className="">появились вопросы?</p>
+                <button onClick={showAlertWriteToUs} className={s.write_button}>
+                  <span>напишите нам</span>
+                  <Image
+                    src="/images/right_arrow.svg"
+                    alt="right_arrow"
+                    width="30px"
+                    height="17px"
+                  />
+                </button>
+              </div>
+            </div>
+            <div className={s.right_side}>
+              <div className={s.men_img_container}>
+                <div className={s.down_circle}>
+                  <Image
+                    src="/images/down_circle.svg"
+                    alt="down_circle"
+                    width="800px"
+                    height="100px"
+                    layout="intrinsic"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className={s.back_circle}>
+                  <Image
+                    src="/images/back_circle.svg"
+                    alt="down_circle"
+                    width="800px"
+                    height="500px"
+                    layout="intrinsic"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className={s.img}>
+                  <Image
+                    src="/images/everyone_desktop.png"
+                    alt="man"
+                    width="800px"
+                    height="600px"
+                    layout="intrinsic"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </>
   );
 };
