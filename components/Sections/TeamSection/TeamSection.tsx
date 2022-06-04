@@ -15,7 +15,7 @@ const TeamSection: NextComponentType = () => {
             <div className={s.teamMember}>
               <div className={s.image}>
                 <Image
-                  src="/images/starik.jpg"
+                  src="/images/starik.png"
                   alt="фотка Старика"
                   width="290px"
                   height="320px"
@@ -37,7 +37,7 @@ const TeamSection: NextComponentType = () => {
             <div className={s.teamMember}>
               <div className={s.image}>
                 <Image
-                  src="/images/dad.jpg"
+                  src="/images/dad.png"
                   alt="фотка ИВ"
                   width="290px"
                   height="340px"
@@ -57,7 +57,7 @@ const TeamSection: NextComponentType = () => {
             <div className={s.teamMember}>
               <div className={s.image}>
                 <Image
-                  src="/images/dad.jpg"
+                  src="/images/dad.png"
                   alt="фотка ИВ"
                   width="290px"
                   height="340px"
@@ -76,7 +76,7 @@ const TeamSection: NextComponentType = () => {
             <div className={s.teamMember}>
               <div className={s.image}>
                 <Image
-                  src="/images/starik.jpg"
+                  src="/images/starik.png"
                   alt="фотка Старика"
                   width="290px"
                   height="320px"
