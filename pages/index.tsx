@@ -43,8 +43,8 @@ const Home: NextPage = () => {
         <div ref={ref}>
           <TeamSection />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

@@ -7,7 +7,7 @@ import s from "./Navbar.module.scss";
 import { scroll } from "../../utils/funcs";
 import { ToastContainer, toast } from "react-toastify";
 import Toast from "../../utils/Alerts/Toast/Toast";
-import toastStyle from "../../Alerts/Toast/Toast.module.scss";
+import toastStyle from "../../utils/Alerts/Toast/Toast.module.scss";
 import { IToast } from "../../types";
 import { showAlertEN } from "../../utils/Alerts/alerts";
 
@@ -22,6 +22,15 @@ const Navbar = () => {
 
   return (
     <>
+      <ToastContainer
+        autoClose={15000}
+        closeButton={false}
+        className={toastStyle.toast_container}
+        toastClassName={toastStyle.toast_wrapper}
+        newestOnTop
+        limit={2}
+        hideProgressBar
+      />
       <button
         type="button"
         onClick={() => setShowMobileNav((e) => !e)}
@@ -36,7 +45,7 @@ const Navbar = () => {
           </div>
           <ul className={s.links}>
             <li>
-              <Link href="/meetings">заседания</Link>
+              <Link href="/posts">Объявления</Link>
             </li>
             <li>
               <Link href="/">интересные материалы</Link>
