@@ -1,0 +1,50 @@
+@import "/styles/variables.scss";
+
+.container {
+  min-height: calc(100vh - 60px);
+
+  .title {
+    font-size: 34px;
+    font-weight: 600;
+    .accent {
+      @include accentedButton;
+      font-size: 34px;
+    }
+  }
+}
+//team
+.team {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  .teamMember {
+    width: 290px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 600px;
+    background-color: $black_background;
+
+    .image {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .text {
+      padding: 10px 20px;
+      color: white;
+      height: 100%;
+      .name {
+        font-size: 28px;
+      }
+      .position {
+        margin-top: 5px;
+        font-size: 18px;
+        opacity: 70%;
+      }
+      .description {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+}

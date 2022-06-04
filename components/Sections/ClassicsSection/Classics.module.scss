@@ -1,0 +1,134 @@
+@import "/styles/variables.scss";
+
+.container {
+  min-height: 100vh;
+
+  .title {
+    margin-top: 1rem;
+    font-size: 34px;
+    font-weight: 600;
+    span {
+      @include accentedButton;
+      font-size: 34px;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 7rem;
+    height: 600px;
+
+    .left_side {
+      width: 40%;
+      display: flex;
+      justify-content: space-evenly;
+      .left_chevron {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        width: 50px;
+        height: 30px;
+        margin-left: 2rem;
+      }
+
+      .left_chevron,
+      .right_chevron {
+        cursor: pointer;
+      }
+      .main_img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        background-color: aliceblue;
+        width: 372px;
+        height: 495px;
+        transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      }
+    }
+    .right_side {
+      width: 35%;
+      color: white;
+      min-width: 600px;
+      .card {
+        background-color: $black_background;
+        padding: 30px 50px;
+        border-radius: 20px;
+        height: 550px;
+
+        .name {
+          font-size: 36px;
+        }
+        .bio {
+          margin-top: 2rem;
+          font-size: 24px;
+        }
+        .more_info {
+          @include accentedButton;
+          display: inline-block;
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+}
+
+.selected {
+  display: grid;
+  gap: 10px;
+  padding: 10px 15px;
+  //   margin: 0 50px;
+  //   background-color: white;
+  //   transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
+  //   grid-template-columns:min 2fr;
+  //   justify-content: center;
+  //   border-radius: 2px;
+  //   box-shadow: 0px 25px 12px rgba(0, 0, 0, 0.25);
+  //   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  margin: 0 8px;
+}
+.allMen {
+  //   background-color: transparent;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  .man {
+    border-radius: 2px;
+    padding: 10px;
+    // width: 80px;
+    // height: 150px;
+    // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    .manImg {
+      border: 5px solid $dark-blue;
+      width: 80px;
+      height: 100px;
+      position: relative;
+      margin-bottom: 5px;
+      // max-width: 200px;
+    }
+    .manSurname {
+      font-size: 15px;
+      line-height: 15px;
+    }
+    .manName {
+      font-size: 13px;
+    }
+  }
+  .man:hover {
+    // border: 1px solid rgb(29, 128, 90);
+    border-radius: 2px;
+    .manImg {
+      border: 7px solid $orange;
+    }
+  }
+}
+.activeClassic {
+  transform: scale(1.1);
+  border-radius: 2px;
+  .manImg {
+    border: 7px solid $orange;
+  }
+}

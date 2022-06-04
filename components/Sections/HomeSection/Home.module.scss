@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap");
+@import "/styles/variables.scss";
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 7rem;
+  min-height: calc(100vh - 60px);
+  .titleContainer {
+    padding: 25px 50px 10px 30px;
+    text-align: center;
+    margin-bottom: 3rem;
+    .title {
+      font-size: 50px;
+      font-weight: 600;
+      margin: 0 auto;
+      line-height: 3rem;
+    }
+    .subtitle {
+      font-size: 36px;
+      color: #212121;
+      margin: 15px 0 15px auto;
+    }
+  }
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  .left_side {
+    width: 50%;
+    margin-top: 4rem;
+
+    .events_title {
+      font-size: 36px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      span {
+        background-color: $yellow;
+        padding: 2px 10px;
+        border-radius: 20px;
+        padding-bottom: 10px;
+      }
+    }
+    .events_subtitle {
+      font-size: 30px;
+      line-height: 35px;
+      margin-top: 50px;
+      padding: 20px 50px;
+      padding-bottom: 30px;
+      width: 300px;
+      color: white;
+      background-color: $black_background;
+      border-radius: 20px;
+    }
+    .write_to_us_btn {
+      font-size: 22px;
+      margin-top: 4rem;
+      position: relative;
+      p {
+        margin-left: 5px;
+      }
+      .write_button {
+        padding: 4px 20px;
+        background-color: $yellow;
+        font-size: 28px;
+        font-weight: 600;
+        border-radius: 20px;
+        padding-bottom: 10px;
+        margin-top: 1rem;
+
+        span {
+          margin-right: 12px;
+        }
+
+        transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .right_side {
+    width: 50%;
+    .men_img_container {
+      position: relative;
+      width: 800px;
+      height: 600px;
+
+      .img {
+        z-index: 5;
+      }
+
+      .down_circle {
+        position: absolute;
+        top: 27.5rem;
+        left: 0;
+        z-index: 1;
+      }
+      .back_circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

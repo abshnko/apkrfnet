@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from "react";
 import Image from "next/image";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import styles from "../../styles/Alert.module.scss";
+import s from "./Alert.module.scss";
 import CheckIcon from "@mui/icons-material/Check";
 
 const CaptchaCheck = ({ setState }: { setState: any }) => {
@@ -24,24 +24,19 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
   };
   return (
     <div className="tasks">
-      <div className="task flex flex-col">
+      <div className="task">
         {!madeMistake && (
           <>
-            <div className="question text-xl pb-4">
+            <div className="question">
               Найдите все фотографии, где изображено здание университета на
               Комсомольской
             </div>
-            <div className="mb-6 answer grid gap-4 grid-cols-2 md:grid-cols-4 w-full h-full">
+            <div>
               <Button
                 onClick={() => setIsActive1((state) => !state)}
-                className={`${isActive1 && styles.active}`}
+                className={`${isActive1 && s.active}`}
               >
-                {isActive1 && (
-                  <CheckIcon
-                    style={iconStyle}
-                    className="absolute top-0 left-0 z-20 p-7"
-                  />
-                )}
+                {isActive1 && <CheckIcon />}
                 <Image
                   src="/images/schools/mgu.jpg"
                   alt="classic img"
@@ -51,14 +46,9 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
               </Button>
               <Button
                 onClick={() => setIsActive2((state) => !state)}
-                className={`${isActive2 && styles.active}`}
+                className={`${isActive2 && s.active}`}
               >
-                {isActive2 && (
-                  <CheckIcon
-                    style={iconStyle}
-                    className="absolute top-0 left-0 z-20  p-7"
-                  />
-                )}
+                {isActive2 && <CheckIcon />}
                 <Image
                   src="/images/schools/sgu.jpg"
                   alt="classic img"
@@ -68,14 +58,9 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
               </Button>
               <Button
                 onClick={() => setIsActive3((state) => !state)}
-                className={`${isActive3 && styles.active}`}
+                className={`${isActive3 && s.active}`}
               >
-                {isActive3 && (
-                  <CheckIcon
-                    style={iconStyle}
-                    className="absolute top-0 left-0 z-20  p-7"
-                  />
-                )}
+                {isActive3 && <CheckIcon />}
                 <Image
                   src="/images/schools/random.jpg"
                   alt="classic img"
@@ -85,14 +70,9 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
               </Button>
               <Button
                 onClick={() => setIsActive4((state) => !state)}
-                className={`${isActive4 && styles.active}`}
+                className={`${isActive4 && s.active}`}
               >
-                {isActive4 && (
-                  <CheckIcon
-                    style={iconStyle}
-                    className="absolute top-0 left-0 z-20 p-7"
-                  />
-                )}
+                {isActive4 && <CheckIcon />}
                 <Image
                   src="/images/schools/hse.jpg"
                   alt="classic img"
@@ -104,7 +84,7 @@ const CaptchaCheck = ({ setState }: { setState: any }) => {
             <button
               onClick={checkAnswer}
               //   className="text-xl py-2 rounded bg-lime-300 px-4 w-min self-center mt-4"
-              className={styles.button}
+              className={s.button}
             >
               Готово
             </button>
@@ -147,11 +127,5 @@ const Button = styled.button`
     border: 8px solid #f8bf2d;
   }
 `;
-
-const iconStyle: React.CSSProperties = {
-  backgroundColor: "rgba(243, 243, 243, 0.385)",
-  width: "100%",
-  height: "100%",
-};
 
 export default CaptchaCheck;

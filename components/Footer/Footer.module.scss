@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap");
+@import "/styles/variables.scss";
+.container {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 8rem;
+
+  .infos {
+    opacity: 90%;
+    .agent {
+      font-size: 24px;
+      display: flex;
+      margin-bottom: 20px;
+      //   align-items: center;
+      .icon {
+        opacity: 80%;
+
+        font-size: 29px;
+        margin-right: 10px;
+        background-color: $yellow;
+        border-radius: 50%;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .accent {
+      }
+    }
+    .copyright {
+      font-size: 24px;
+      display: flex;
+
+      .icon {
+        opacity: 80%;
+        font-size: 29px;
+        margin-right: 10px;
+        background-color: $yellow;
+        border-radius: 50%;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

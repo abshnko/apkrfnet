@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap"); */
 
 html,
@@ -9,6 +5,14 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Exo 2", sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Exo 2", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -22,6 +26,36 @@ button {
   cursor: pointer;
 }
 
-* {
-  box-sizing: border-box;
+li {
+  list-style: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  padding: 0 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #dadada;
+}
+
+::selection {
+  background: rgba(255, 221, 45, 0.32);
+}
+
+::-moz-selection {
+  background: rgba(255, 221, 45, 0.32);
 }

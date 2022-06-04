@@ -1,0 +1,29 @@
+@import "/styles/variables.scss";
+
+.container {
+  padding: 20px 30px;
+  .text {
+    // color: white;
+    color: black;
+    font-size: 26px;
+  }
+  .button {
+    font-size: 22px;
+    background-color: $yellow;
+    padding: 3px 20px;
+    border-radius: 20px;
+    padding-bottom: 5px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+}
+
+//toast custom styling
+.toast_container {
+  top: 5rem;
+  min-width: 550px;
+}
+.toast_wrapper {
+  border-radius: 20px;
+  //   background-color: $black_background;
+}
