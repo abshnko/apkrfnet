@@ -6,14 +6,42 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Post_1 from "../../components/Posts/Post_1/Post_1";
+import Post_2 from "../../components/Posts/Post_2/Post_2";
 
 const Posts: NextPage = () => {
-  const [postId, setPostId] = useState(0);
+  const [postId, setPostId] = useState(8);
   const [post, setPost] = useState(posts.find((post) => post.id === postId));
 
   useEffect(() => {
     setPost(posts.find((post) => post.id === postId));
   }, [postId]);
+
+  const renderSwitch = (id: number) => {
+    switch (id) {
+      case 0:
+        return <Post_1 />;
+      case 1:
+        return <Post_2 />;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      default:
+        return null;
+    }
+  };
 
   return (
     <>
@@ -34,20 +62,23 @@ const Posts: NextPage = () => {
           <div className={s.left_side}>
             <div className={s.posts_title}>Объявления</div>
             <div className={s.all_posts}>
-              {posts.map((post) => {
-                return (
-                  <div
-                    className={`${s.post} ${
-                      post.id === postId ? s.active_post : ""
-                    }`}
-                    key={post.id}
-                    onClick={() => setPostId(post.id)}
-                  >
-                    <div className={s.title}>{post.title}</div>
-                    <div className={s.date}>{post.date}</div>
-                  </div>
-                );
-              })}
+              {posts
+                .slice(0)
+                .reverse()
+                .map((post) => {
+                  return (
+                    <div
+                      key={post.id}
+                      className={`${s.post} ${
+                        post.id === postId ? s.active_post : ""
+                      }`}
+                      onClick={() => setPostId(post.id)}
+                    >
+                      <div className={s.title}>{post.title}</div>
+                      <div className={s.date}>{post.date}</div>
+                    </div>
+                  );
+                })}
             </div>
 
             <div className={s.arrow}>
@@ -64,7 +95,7 @@ const Posts: NextPage = () => {
             <div className={s.post_date_container}>
               <div className={s.post_date}>{post!.date}</div>
             </div>
-            <div className={s.post_content}>{post!.text}</div>
+            <div className={s.post_content}>{renderSwitch(post!.id)}</div>
           </div>
         </div>
         <Footer />

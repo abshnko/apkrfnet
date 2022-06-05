@@ -20,14 +20,20 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-top: 2rem;
+  line-height: 26px;
+}
 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-
-li {
-  list-style: none;
+ul,
+ol {
+  list-style-position: inside;
+  margin-top: 1rem;
+  line-height: 26px;
 }
 
 /* width */

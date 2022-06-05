@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .position {
+    width: 40%;
+  }
+}
