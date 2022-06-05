@@ -1,0 +1,41 @@
+@import "/styles/variables.scss";
+
+.container {
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  ol {
+    list-style-position: inside;
+  }
+
+  .bill_images {
+    display: flex;
+    justify-content: space-between;
+
+    .relative_img {
+      position: relative;
+
+      .img {
+        border-radius: 30px;
+        overflow: hidden;
+      }
+
+      .arrow {
+        position: absolute;
+        top: -60px;
+        left: 30px;
+        transform: rotate(20deg);
+      }
+    }
+    .img {
+      border-radius: 30px;
+      overflow: hidden;
+    }
+  }
+}
+.img {
+  border-radius: 20px;
+  overflow: hidden;
+}

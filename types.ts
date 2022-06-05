@@ -13,3 +13,7 @@ export interface ISignature {
   signature: string;
   name: string;
 }
+
+export interface IRedactedText {
+  theme?: string;
+}

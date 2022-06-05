@@ -7,16 +7,34 @@ import Footer from "../../components/Footer/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Post_1 from "../../components/Posts/Post_1/Post_1";
-import Post_2 from "../../components/Posts/Post_2/Post_2";
+import Post_1 from "../../components/Posts/Post_1";
+import Post_2 from "../../components/Posts/Post_2";
+import Post_3 from "../../components/Posts/Post_3";
+import Post_4 from "../../components/Posts/Post_4";
 
 const Posts: NextPage = () => {
   const [postId, setPostId] = useState(8);
   const [post, setPost] = useState(posts.find((post) => post.id === postId));
+  const [postContentElement, setSostContentElement] = useState<any>(null);
+  const [_document, setDocument] = useState<any>(null);
 
   useEffect(() => {
     setPost(posts.find((post) => post.id === postId));
+    if (postContentElement) {
+      postContentElement!.scrollTop = 0;
+      postContentElement!.scrollLeft = 0;
+    }
   }, [postId]);
+
+  useEffect(() => {
+    setDocument(document);
+  }, []);
+
+  useEffect(() => {
+    if (_document) {
+      setSostContentElement(_document.getElementById("postContent"));
+    }
+  }, [_document]);
 
   const renderSwitch = (id: number) => {
     switch (id) {
@@ -24,10 +42,10 @@ const Posts: NextPage = () => {
         return <Post_1 />;
       case 1:
         return <Post_2 />;
-      case 0:
-        return null;
-      case 0:
-        return null;
+      case 2:
+        return <Post_3 />;
+      case 3:
+        return <Post_4 />;
       case 0:
         return null;
       case 0:
@@ -90,12 +108,26 @@ const Posts: NextPage = () => {
               />
             </div>
           </div>
-          <div className={s.right_side}>
-            <div className={s.post_title}>{post!.title}</div>
-            <div className={s.post_date_container}>
-              <div className={s.post_date}>{post!.date}</div>
-            </div>
-            <div className={s.post_content}>{renderSwitch(post!.id)}</div>
+
+          <div className={s.right_side} id="postContent">
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
+              key={post!.title}
+            >
+              <div className={s.post_title}>{post!.title}</div>
+              <div className={s.post_date_container}>
+                <div className={s.post_date}>{post!.date}</div>
+              </div>
+              <div className={s.post_content}>{renderSwitch(post!.id)}</div>
+            </motion.div>
           </div>
         </div>
         <Footer />

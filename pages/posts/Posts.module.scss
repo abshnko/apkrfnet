@@ -10,11 +10,11 @@
   justify-content: space-between;
 
   .left_side {
-    width: 34%;
+    width: 28%;
     color: white;
     padding: 20px 40px;
     border-radius: 20px;
-    height: 750px;
+    height: 80vh;
     background-color: $black_background;
 
     padding-bottom: 2rem;
@@ -72,8 +72,10 @@
     }
   }
   .right_side {
-    width: 63%;
+    width: 68%;
+    overflow-y: auto;
 
+    height: 80vh;
     .post_title {
       @include accentedButton;
       font-size: 28px;
@@ -81,13 +83,9 @@
 
     .post_date_container {
       margin-top: 1rem;
-      //   @include accentedButton;
       font-size: 18px;
       display: block;
       width: min-content;
-      //   background-color: $black_background;
-      //   color: white;
-      //   border-radius: 15px;
       padding-left: 10px;
 
       .post_date {
@@ -95,8 +93,8 @@
       }
     }
     .post_content {
-      height: 640px;
-      overflow-y: auto;
+      height: 70vh;
+      //   overflow-y: auto;
       padding: 0 2rem 5rem 0;
       font-size: 20px;
       margin-top: 1rem;

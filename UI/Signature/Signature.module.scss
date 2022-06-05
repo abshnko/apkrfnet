@@ -1,8 +1,9 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 40% auto auto;
+  align-items: center;
   margin-top: 4rem;
   justify-content: space-between;
-  align-items: flex-end;
 
   .position {
     width: 40%;

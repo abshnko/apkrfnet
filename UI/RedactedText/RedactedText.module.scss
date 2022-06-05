@@ -2,6 +2,14 @@
 
 .redacted {
   background-color: $black_background;
-  padding: 2px 40px;
+  padding: 0 40px;
+  margin: 5px 3px 0 5px;
   margin-left: 5px;
+  display: inline-block;
+  width: 90px;
+  margin-top: 5px;
+}
+
+.white {
+  background-color: white;
 }
