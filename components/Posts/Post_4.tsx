@@ -137,7 +137,7 @@ const Post_4 = () => {
             <Image
               src="/images/Post_4/bill1.png"
               alt="bill1"
-              width="280px"
+              width="300px"
               height={300}
             />
           </div>
@@ -155,7 +155,7 @@ const Post_4 = () => {
           <Image
             src="/images/Post_4/bill2.png"
             alt="bill1"
-            width="340px"
+            width="380px"
             height={300}
           />
         </div>
@@ -163,7 +163,7 @@ const Post_4 = () => {
           <Image
             src="/images/Post_4/bill3.png"
             alt="bill1"
-            width="280px"
+            width="300px"
             height={300}
           />
         </div>

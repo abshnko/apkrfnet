@@ -12,7 +12,7 @@ const TeamSection: NextComponentType = () => {
         </div>
         <div className={s.wrapper}>
           <div className={s.team}>
-            <div className={s.teamMember}>
+            {/* <div className={s.teamMember}>
               <div className={s.image}>
                 <Image
                   src="/images/starik.png"
@@ -32,14 +32,14 @@ const TeamSection: NextComponentType = () => {
                   трудных времён не один раз.
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className={s.teamMember}>
               <div className={s.image}>
                 <Image
                   src="/images/dad.png"
                   alt="фотка ИВ"
-                  width="290px"
+                  width="250px"
                   height="340px"
                   objectFit="cover"
                 />
@@ -54,12 +54,12 @@ const TeamSection: NextComponentType = () => {
               </div>
             </div>
 
-            <div className={s.teamMember}>
+            {/* <div className={s.teamMember}>
               <div className={s.image}>
                 <Image
                   src="/images/dad.png"
                   alt="фотка ИВ"
-                  width="290px"
+                  width="250px"
                   height="340px"
                   objectFit="cover"
                 />
@@ -72,8 +72,8 @@ const TeamSection: NextComponentType = () => {
                   заставляющие беспокоиться идеи.
                 </div>
               </div>
-            </div>
-            <div className={s.teamMember}>
+            </div> */}
+            {/* <div className={s.teamMember}>
               <div className={s.image}>
                 <Image
                   src="/images/starik.png"
@@ -92,7 +92,7 @@ const TeamSection: NextComponentType = () => {
                   трудных времён не один раз.
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

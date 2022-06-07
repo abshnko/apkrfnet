@@ -18,11 +18,10 @@
   justify-content: space-between;
   margin-top: 3rem;
   .teamMember {
-    width: 290px;
+    width: 250px;
     border-radius: 20px;
     overflow: hidden;
     height: 600px;
-    background-color: $black_background;
 
     .image {
       width: 100%;
@@ -31,6 +30,8 @@
     }
     .text {
       padding: 10px 20px;
+      background-color: $black_background;
+      margin-top: -5px;
       color: white;
       height: 100%;
       .name {

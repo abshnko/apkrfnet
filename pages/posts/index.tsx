@@ -11,6 +11,9 @@ import Post_1 from "../../components/Posts/Post_1";
 import Post_2 from "../../components/Posts/Post_2";
 import Post_3 from "../../components/Posts/Post_3";
 import Post_4 from "../../components/Posts/Post_4";
+import Post_5 from "../../components/Posts/Post_5";
+import Post_6 from "../../components/Posts/Post_6";
+import Post_7 from "../../components/Posts/Post_7";
 
 const Posts: NextPage = () => {
   const [postId, setPostId] = useState(8);
@@ -46,12 +49,12 @@ const Posts: NextPage = () => {
         return <Post_3 />;
       case 3:
         return <Post_4 />;
-      case 0:
-        return null;
-      case 0:
-        return null;
-      case 0:
-        return null;
+      case 4:
+        return <Post_5 />;
+      case 5:
+        return <Post_6 />;
+      case 6:
+        return <Post_7 />;
       case 0:
         return null;
       case 0:

@@ -19,32 +19,46 @@ import toastStyle from "../../../utils/Alerts/Toast/Toast.module.scss";
 import { showAlertWriteToUs } from "../../../utils/Alerts/alerts";
 import { IToast } from "../../../types";
 import { motion } from "framer-motion";
+import useLocalStorage from "use-local-storage";
+import SpyCheckModal from "../../SpyCheckModal/SpyCheckModal";
+// import { clearTimeout } from "timers";
 
 const Home = ({ myRef }: { myRef: any }) => {
   const [showAlert5Min, setShowAlert5Min] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [alertDisplayed, setAlertDisplayed] = useState(false);
-  const [passedSpyCheck, setPassedSpyCheck] = useState(false);
+  const [showSpyCheck, setShowSpyCheck] = useState(false);
+  const [passedSpyCheck, setPassedSpyCheck] = useLocalStorage(
+    "passedSpyCheck",
+    false
+  );
+  const [didntPass, setDidntPass] = useLocalStorage("didn't Pass", false);
 
-  //!needed
-  //   if (!passedSpyCheck) {
-  //     setTimeout(() => {
-  //       setShowAlert5Min(true);
-  //     }, 300000);
-  //   }
+  useEffect(() => {
+    if (didntPass) {
+      const time = setTimeout(() => {
+        setShowSpyCheck(true);
+      }, 1000);
+      return () => clearTimeout(time);
+    }
+    if (!passedSpyCheck) {
+      const time = setTimeout(() => {
+        setShowSpyCheck(true);
+      }, 300000);
+      return () => clearTimeout(time);
+    }
+  }, []);
 
   return (
     <>
-      {/* <ToastContainer
-        autoClose={15000}
-        closeButton={false}
-        className={toastStyle.toast_container}
-        toastClassName={toastStyle.toast_wrapper}
-        newestOnTop
-        limit={2}
-        hideProgressBar
-      /> */}
       <Navbar />
+      {showSpyCheck && (
+        <SpyCheckModal
+          setShowSpyCheck={setShowSpyCheck}
+          setPassedSpyCheck={setPassedSpyCheck}
+          setDidntPass={setDidntPass}
+        />
+      )}
+
       <motion.div
         initial={{
           opacity: 0,
@@ -106,7 +120,6 @@ const Home = ({ myRef }: { myRef: any }) => {
                     alt="down_circle"
                     width="800px"
                     height="100px"
-                    layout="intrinsic"
                     objectFit="contain"
                   />
                 </div>
@@ -116,7 +129,6 @@ const Home = ({ myRef }: { myRef: any }) => {
                     alt="down_circle"
                     width="800px"
                     height="500px"
-                    layout="intrinsic"
                     objectFit="contain"
                   />
                 </div>
@@ -126,7 +138,6 @@ const Home = ({ myRef }: { myRef: any }) => {
                     alt="man"
                     width="800px"
                     height="600px"
-                    layout="intrinsic"
                     objectFit="contain"
                   />
                 </div>
