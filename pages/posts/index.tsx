@@ -6,7 +6,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Post_1 from "../../components/Posts/Post_1";
 import Post_2 from "../../components/Posts/Post_2";
 import Post_3 from "../../components/Posts/Post_3";
@@ -14,6 +13,7 @@ import Post_4 from "../../components/Posts/Post_4";
 import Post_5 from "../../components/Posts/Post_5";
 import Post_6 from "../../components/Posts/Post_6";
 import Post_7 from "../../components/Posts/Post_7";
+import Post_8 from "../../components/Posts/Post_8";
 
 const Posts: NextPage = () => {
   const [postId, setPostId] = useState(8);
@@ -55,6 +55,18 @@ const Posts: NextPage = () => {
         return <Post_6 />;
       case 6:
         return <Post_7 />;
+      case 7:
+        return <Post_8 />;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      case 0:
+        return null;
+      case 0:
+        return null;
       case 0:
         return null;
       case 0:

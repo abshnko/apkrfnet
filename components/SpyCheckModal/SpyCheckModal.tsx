@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
 import s from "./SpyCheckModal.module.scss";
 import { spyQuestions } from "../../data/spyQuestions";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import AccentedBlock from "../../UI/AccentedParagraph/AccentedParagraph";
 import Footnote from "../../UI/Footnote/Footnote";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-const SpyCheckModal = ({
-  setShowSpyCheck,
-  setPassedSpyCheck,
-  setDidntPass,
-}: any) => {
+const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
   const [id, setId] = useState(randomIntFromInterval(0, 4));
   const [question, setQuestion] = useState(
     spyQuestions.find((q) => q.id === id)
@@ -25,11 +19,10 @@ const SpyCheckModal = ({
   const onSubmit = () => {
     if (chosenAnswer === question?.rightAnswer) {
       setPassed(true);
-      setPassedSpyCheck(true);
       setDidntPass(false);
       const time = setTimeout(() => {
         setShowSpyCheck(false);
-      }, 1500);
+      }, 2000);
       return () => clearTimeout(time);
     } else {
       setFailed(true);

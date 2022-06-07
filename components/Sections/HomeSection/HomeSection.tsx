@@ -1,27 +1,13 @@
-import type { NextComponentType } from "next";
-import Head from "next/head";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import s from "./Home.module.scss";
-import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import ArchiveIcon from "@mui/icons-material/Archive";
-import HelpCenterIcon from "@mui/icons-material/HelpCenter";
-import Alert from "../../Alerts/Alert";
-import { alerts } from "../../../data/alerts";
 import Navbar from "../../Navbar/Navbar";
-import CaptchaCheck from "../../Alerts/CaptchaCheck";
 import Image from "next/image";
-import Toast from "../../../utils/Alerts/Toast/Toast";
-import toastStyle from "../../../utils/Alerts/Toast/Toast.module.scss";
 import { showAlertWriteToUs } from "../../../utils/Alerts/alerts";
-import { IToast } from "../../../types";
 import { motion } from "framer-motion";
 import useLocalStorage from "use-local-storage";
 import SpyCheckModal from "../../SpyCheckModal/SpyCheckModal";
-// import { clearTimeout } from "timers";
 
 const Home = ({ myRef }: { myRef: any }) => {
   const [showAlert5Min, setShowAlert5Min] = useState(false);
@@ -48,13 +34,22 @@ const Home = ({ myRef }: { myRef: any }) => {
     }
   }, []);
 
+  useEffect(() => {
+    //каждые 5 мин новый вопрос после успешного ответа
+    if (!showSpyCheck) {
+      const time = setTimeout(() => {
+        setShowSpyCheck(true);
+      }, 300000);
+      return () => clearTimeout(time);
+    }
+  }, [showSpyCheck]);
+
   return (
     <>
       <Navbar />
       {showSpyCheck && (
         <SpyCheckModal
           setShowSpyCheck={setShowSpyCheck}
-          setPassedSpyCheck={setPassedSpyCheck}
           setDidntPass={setDidntPass}
         />
       )}
