@@ -20,6 +20,7 @@ a {
   text-decoration: none;
 }
 
+li,
 p {
   margin-top: 2rem;
   line-height: 26px;

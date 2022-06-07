@@ -17,3 +17,10 @@ export interface ISignature {
 export interface IRedactedText {
   theme?: string;
 }
+
+export interface IHomeSection {
+  myRef: any;
+  showSpyCheck: boolean;
+  setShowSpyCheck: any;
+  setDidntPass: any;
+}

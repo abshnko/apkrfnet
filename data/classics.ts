@@ -5,7 +5,7 @@ export const classics = [
     dateOfBirth: "",
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupiditate provident esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem, animi possimus fugit corporis voluptatem molestias.
      `,
-    image: "/images/osipov.png",
+    image: "/images/classics/osipov.png",
     link: "osipov",
     fullBio: "",
     title: "",
@@ -16,7 +16,7 @@ export const classics = [
     dateOfBirth: "",
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupiditate provident esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem, animi possimus fugit corporis voluptatem molestias.
     `,
-    image: "/images/man_1.png",
+    image: "/images/classics/man_1.png",
     link: "osipov",
     fullBio: "",
     title: "",
@@ -27,7 +27,7 @@ export const classics = [
     dateOfBirth: "",
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupiditate provident esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem, animi possimus fugit corporis voluptatem molestias.
     `,
-    image: "/images/man_2.png",
+    image: "/images/classics/man_2.png",
     link: "osipov",
     fullBio: "",
     title: "",
@@ -38,7 +38,7 @@ export const classics = [
     dateOfBirth: "",
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupiditate provident esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem, animi possimus fugit corporis voluptatem molestias.
     `,
-    image: "/images/man_3.png",
+    image: "/images/classics/man_3.png",
     link: "osipov",
     fullBio: "",
     title: "",
@@ -49,7 +49,7 @@ export const classics = [
     dateOfBirth: "",
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupiditate provident esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem, animi possimus fugit corporis voluptatem molestias.
   `,
-    image: "/images/man_4.png",
+    image: "/images/classics/man_4.png",
     link: "osipov",
     fullBio: "",
     title: "",
@@ -60,7 +60,7 @@ export const classics = [
     dateOfBirth: "",
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupiditate provident esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem, animi possimus fugit corporis voluptatem molestias.
    `,
-    image: "/images/man_5.png",
+    image: "/images/classics/man_5.png",
     link: "osipov",
     fullBio: "",
     title: "",

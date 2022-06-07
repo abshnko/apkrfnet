@@ -7,48 +7,20 @@ import Image from "next/image";
 import { showAlertWriteToUs } from "../../../utils/Alerts/alerts";
 import { motion } from "framer-motion";
 import useLocalStorage from "use-local-storage";
-import SpyCheckModal from "../../SpyCheckModal/SpyCheckModal";
+import SpyCheckModal_Portal from "../../SpyCheckModal/SpyCheckModal_Portal";
+import { IHomeSection } from "../../../types";
 
-const Home = ({ myRef }: { myRef: any }) => {
-  const [showAlert5Min, setShowAlert5Min] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [showSpyCheck, setShowSpyCheck] = useState(false);
-  const [passedSpyCheck, setPassedSpyCheck] = useLocalStorage(
-    "passedSpyCheck",
-    false
-  );
-  const [didntPass, setDidntPass] = useLocalStorage("didn't Pass", false);
-
-  useEffect(() => {
-    if (didntPass) {
-      const time = setTimeout(() => {
-        setShowSpyCheck(true);
-      }, 1000);
-      return () => clearTimeout(time);
-    }
-    if (!passedSpyCheck) {
-      const time = setTimeout(() => {
-        setShowSpyCheck(true);
-      }, 300000);
-      return () => clearTimeout(time);
-    }
-  }, []);
-
-  useEffect(() => {
-    //каждые 5 мин новый вопрос после успешного ответа
-    if (!showSpyCheck) {
-      const time = setTimeout(() => {
-        setShowSpyCheck(true);
-      }, 300000);
-      return () => clearTimeout(time);
-    }
-  }, [showSpyCheck]);
-
+const HomeSection = ({
+  myRef,
+  showSpyCheck,
+  setShowSpyCheck,
+  setDidntPass,
+}: IHomeSection) => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {showSpyCheck && (
-        <SpyCheckModal
+        <SpyCheckModal_Portal
           setShowSpyCheck={setShowSpyCheck}
           setDidntPass={setDidntPass}
         />
@@ -145,4 +117,4 @@ const Home = ({ myRef }: { myRef: any }) => {
   );
 };
 
-export default Home;
+export default HomeSection;

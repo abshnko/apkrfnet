@@ -14,11 +14,12 @@ import Post_5 from "../../components/Posts/Post_5";
 import Post_6 from "../../components/Posts/Post_6";
 import Post_7 from "../../components/Posts/Post_7";
 import Post_8 from "../../components/Posts/Post_8";
+import MainLayout from "../../components/MainLayout";
 
 const Posts: NextPage = () => {
   const [postId, setPostId] = useState(8);
   const [post, setPost] = useState(posts.find((post) => post.id === postId));
-  const [postContentElement, setSostContentElement] = useState<any>(null);
+  const [postContentElement, setPostContentElement] = useState<any>(null);
   const [_document, setDocument] = useState<any>(null);
 
   useEffect(() => {
@@ -35,7 +36,7 @@ const Posts: NextPage = () => {
 
   useEffect(() => {
     if (_document) {
-      setSostContentElement(_document.getElementById("postContent"));
+      setPostContentElement(_document.getElementById("postContent"));
     }
   }, [_document]);
 
@@ -78,75 +79,75 @@ const Posts: NextPage = () => {
 
   return (
     <>
-      <Navbar />
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.25,
-        }}
-        exit="out"
-      >
-        <div className={s.container}>
-          <div className={s.left_side}>
-            <div className={s.posts_title}>Объявления</div>
-            <div className={s.all_posts}>
-              {posts
-                .slice(0)
-                .reverse()
-                .map((post) => {
-                  return (
-                    <div
-                      key={post.id}
-                      className={`${s.post} ${
-                        post.id === postId ? s.active_post : ""
-                      }`}
-                      onClick={() => setPostId(post.id)}
-                    >
-                      <div className={s.title}>{post.title}</div>
-                      <div className={s.date}>{post.date}</div>
-                    </div>
-                  );
-                })}
-            </div>
-
-            <div className={s.arrow}>
-              <Image
-                src="/images/right_chevron.svg"
-                alt="right_chevron"
-                width={40}
-                height={40}
-              />
-            </div>
-          </div>
-
-          <div className={s.right_side} id="postContent">
-            <motion.div
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              transition={{
-                duration: 0.25,
-              }}
-              key={post!.title}
-            >
-              <div className={s.post_title}>{post!.title}</div>
-              <div className={s.post_date_container}>
-                <div className={s.post_date}>{post!.date}</div>
+      <MainLayout title="Объявления | АПКРФ НЕТ">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.25,
+          }}
+          exit="out"
+        >
+          <div className={s.container}>
+            <div className={s.left_side}>
+              <div className={s.posts_title}>Объявления</div>
+              <div className={s.all_posts}>
+                {posts
+                  .slice(0)
+                  .reverse()
+                  .map((post) => {
+                    return (
+                      <div
+                        key={post.id}
+                        className={`${s.post} ${
+                          post.id === postId ? s.active_post : ""
+                        }`}
+                        onClick={() => setPostId(post.id)}
+                      >
+                        <div className={s.title}>{post.title}</div>
+                        <div className={s.date}>{post.date}</div>
+                      </div>
+                    );
+                  })}
               </div>
-              <div className={s.post_content}>{renderSwitch(post!.id)}</div>
-            </motion.div>
+
+              <div className={s.arrow}>
+                <Image
+                  src="/images/right_chevron.svg"
+                  alt="right_chevron"
+                  width={40}
+                  height={40}
+                />
+              </div>
+            </div>
+
+            <div className={s.right_side} id="postContent">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+                key={post!.title}
+              >
+                <div className={s.post_title}>{post!.title}</div>
+                <div className={s.post_date_container}>
+                  <div className={s.post_date}>{post!.date}</div>
+                </div>
+                <div className={s.post_content}>{renderSwitch(post!.id)}</div>
+              </motion.div>
+            </div>
           </div>
-        </div>
-        <Footer />
-      </motion.div>
+        </motion.div>
+      </MainLayout>
     </>
   );
 };
