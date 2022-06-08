@@ -11,24 +11,30 @@ import img from "../../../public/images/man_1.png";
 const ClassicsSection: NextComponentType = () => {
   const [selectedClassic, setSelectedClassic] = useState(classics[0]);
   const selectedRef = useRef<null | HTMLDivElement>(null);
-  const [classicId, setClassicId] = useState(0);
+  const [classicId, setClassicId] = useState("0");
 
   useEffect(() => {
     setSelectedClassic(classics.find((classic) => classic.id === classicId)!);
   }, [classicId]);
 
   const incrementId = () => {
-    if (classicId === 5) {
-      setClassicId(0);
+    if (classicId === "5") {
+      setClassicId("0");
     } else {
-      setClassicId((id) => id + 1);
+      setClassicId((id) => {
+        const newId = parseInt(id) + 1;
+        return newId.toString();
+      });
     }
   };
   const decrementId = () => {
-    if (classicId === 0) {
-      setClassicId(5);
+    if (classicId === "0") {
+      setClassicId("5");
     } else {
-      setClassicId((id) => id - 1);
+      setClassicId((id) => {
+        const newId = parseInt(id) - 1;
+        return newId.toString();
+      });
     }
   };
 
@@ -96,14 +102,18 @@ const ClassicsSection: NextComponentType = () => {
                   key={selectedClassic.name}
                 >
                   <div className={s.name}>
-                    <Link href={`/classics/${selectedClassic.link}`}>
+                    <Link href={`/classics/${selectedClassic.id}`}>
                       {selectedClassic.name}
                     </Link>
                   </div>
                   {/* </AnimatePresence> */}
-                  <p className={s.bio}>{selectedClassic.shortBio} </p>
+                  <p className={s.bio}>
+                    {selectedClassic.shortBio.split("\\n").map((p, i) => {
+                      return <p key={i}>{p}</p>;
+                    })}
+                  </p>
                   <div className={s.more_info}>
-                    <Link href={`/classics/${selectedClassic.link}`}>
+                    <Link href={`/classics/${selectedClassic.id}`}>
                       Подробнее
                     </Link>
                   </div>

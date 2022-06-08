@@ -24,3 +24,14 @@ export interface IHomeSection {
   setShowSpyCheck: any;
   setDidntPass: any;
 }
+
+export interface IClassic {
+  id: string;
+  name: string;
+  dateOfBirth: string;
+  shortBio: string;
+  image: string;
+  link: string;
+  fullBio: string;
+  title: string;
+}
