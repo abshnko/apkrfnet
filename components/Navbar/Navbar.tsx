@@ -54,7 +54,7 @@ const Navbar = () => {
               <button>наша команда</button>
             </li>
             <li>
-              <Link href="/meetings">процессуальная шляпа</Link>
+              <Link href="/gallery">галерея участников</Link>
             </li>
             <li>
               <Link href="/">поделиться редкой книгой</Link>
