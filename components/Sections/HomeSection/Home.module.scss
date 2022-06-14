@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap");
-@import "/styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap');
+@import '/styles/variables.scss';
 
 .container {
   width: 80%;
@@ -120,15 +120,100 @@
       }
 
       .down_circle {
-        position: absolute;
-        top: 27.5rem;
-        left: 0;
-        z-index: 1;
+        position: relative;
+        z-index: -1;
+        width: 800px;
+        height: 100px;
+        margin-top: -5rem;
       }
       .back_circle {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
+        z-index: -1;
+        width: 800px;
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin-top: 3rem;
+    width: 90%;
+    .titleContainer {
+      padding: 0;
+      //   text-align: left;
+      .title {
+        font-size: 32px;
+      }
+      .subtitle {
+        font-size: 24px;
+      }
+    }
+    .content {
+      width: 100%;
+      display: block;
+      .left_side {
+        width: 100%;
+        margin: 6rem 0 0;
+
+        .events_title {
+          font-size: 24px;
+          display: none;
+        }
+        .events_subtitle {
+          margin: 2rem 0 0;
+          font-size: 26px;
+          padding: 20px 30px 25px;
+          width: 100%;
+          .new_event {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .write_to_us_btn {
+          margin-top: 2rem;
+          font-size: 20px;
+          width: 100%;
+          p {
+            // text-align: center;
+          }
+          .write_button {
+            font-size: 24px;
+            width: 100%;
+          }
+        }
+      }
+      .right_side {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        // width: 100%;
+        .men_img_container {
+          position: relative;
+          width: 350px;
+          height: 230px;
+
+          .img {
+            z-index: 5;
+          }
+
+          .down_circle {
+            position: relative;
+            z-index: -1;
+            width: 350px;
+            height: 100px;
+            margin-top: -5rem;
+          }
+          .back_circle {
+            position: relative;
+            z-index: -1;
+            width: 350px;
+            height: 230px;
+          }
+        }
       }
     }
   }

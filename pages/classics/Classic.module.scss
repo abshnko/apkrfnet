@@ -8,10 +8,11 @@
   height: min-content;
   align-items: flex-start;
   .left_side {
-    width: 70%;
+    width: 65%;
 
     .title {
       font-size: 38px;
+      font-weight: 600;
     }
 
     .date {
@@ -19,11 +20,12 @@
     }
     .text {
       font-size: 22px;
-      margin-top: 4rem;
+      //   margin-top: 4rem;
       //   margin-left: 0.5rem;
       border-radius: 20px;
-      border: 3px solid black;
-      padding: 0 2rem 2rem;
+      //   border: 3px solid black;
+      padding: 2rem 0;
+      text-align: justify;
     }
   }
   .main_img {

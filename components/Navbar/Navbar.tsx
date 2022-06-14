@@ -1,24 +1,44 @@
-import React from "react";
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import s from "./Navbar.module.scss";
-import { scroll } from "../../utils/funcs";
-import { ToastContainer, toast } from "react-toastify";
-import Toast from "../../utils/Alerts/Toast/Toast";
-import toastStyle from "../../utils/Alerts/Toast/Toast.module.scss";
-import { IToast } from "../../types";
-import { showAlertEN } from "../../utils/Alerts/alerts";
+import React from 'react';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import s from './Navbar.module.scss';
+import { ToastContainer, toast } from 'react-toastify';
+import toastStyle from '../../utils/Alerts/Toast/Toast.module.scss';
+import { showAlertEN } from '../../utils/Alerts/alerts';
+import { useGlobalContext } from '../../context/state';
 
-const Navbar = () => {
+const Navbar = ({ myRef }: any) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const router = useRouter();
+  const { scrollToTeam, setScrollToTeam } = useGlobalContext();
+  const handleClick = (e: any) => {
+    if (myRef !== undefined) {
+      myRef.current?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      e.preventDefault();
+      setScrollToTeam(true);
+      router.push('/');
+    }
+  };
 
   useEffect(() => {
     showMobileNav
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "visible");
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'visible');
   }, [showMobileNav]);
+
+  useEffect(() => {
+    if (scrollToTeam) {
+      const time = setTimeout(() => {
+        myRef.current?.scrollIntoView({ behavior: 'smooth' });
+        setScrollToTeam(false);
+      }, 100);
+      return () => clearTimeout(time);
+    }
+  }, []);
 
   return (
     <>
@@ -36,7 +56,7 @@ const Navbar = () => {
         onClick={() => setShowMobileNav((e) => !e)}
         className={s.menu_icon}
       >
-        <MenuIcon style={{ width: "40px", height: "40px", color: "#4A4A4A" }} />
+        <MenuIcon style={{ width: '40px', height: '40px', color: '#4A4A4A' }} />
       </button>
       <div className={s.navbar_fixed}>
         <nav className={s.navbar}>
@@ -48,16 +68,10 @@ const Navbar = () => {
               <Link href="/posts">Объявления</Link>
             </li>
             <li>
-              <Link href="/">интересные материалы</Link>
-            </li>
-            <li>
-              <button>наша команда</button>
+              <button onClick={handleClick}>наша команда</button>
             </li>
             <li>
               <Link href="/gallery">галерея участников</Link>
-            </li>
-            <li>
-              <Link href="/">поделиться редкой книгой</Link>
             </li>
             <li>
               <button onClick={showAlertEN}>en</button>
@@ -73,13 +87,7 @@ const Navbar = () => {
                 <Link href="/meetings">заседания</Link>
               </li>
               <li>
-                <Link href="/">интересные материалы</Link>
-              </li>
-              <li>
                 <Link href="/">наша команда</Link>
-              </li>
-              <li>
-                <Link href="/">поделиться редкой книгой</Link>
               </li>
               <li>
                 <button
@@ -95,7 +103,7 @@ const Navbar = () => {
             </ul>
             <button onClick={() => setShowMobileNav((e) => !e)}>
               <CloseIcon
-                style={{ width: "40px", height: "40px", color: "#cbabab" }}
+                style={{ width: '40px', height: '40px', color: '#cbabab' }}
               />
             </button>
           </div>

@@ -1,3 +1,10 @@
+import { Dispatch, SetStateAction } from 'react';
+
+export type GlobalContent = {
+  scrollToTeam: boolean;
+  setScrollToTeam: Dispatch<SetStateAction<boolean>>;
+};
+
 export interface IToast {
   closeToast: any;
   toastProps: any;
@@ -19,7 +26,6 @@ export interface IRedactedText {
 }
 
 export interface IHomeSection {
-  myRef: any;
   showSpyCheck: boolean;
   setShowSpyCheck: any;
   setDidntPass: any;

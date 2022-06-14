@@ -1,7 +1,7 @@
-import React from "react";
-import type { NextComponentType } from "next";
-import Image from "next/image";
-import s from "./Team.module.scss";
+import React from 'react';
+import type { NextComponentType } from 'next';
+import Image from 'next/image';
+import s from './Team.module.scss';
 
 const TeamSection: NextComponentType = () => {
   return (
@@ -14,13 +14,14 @@ const TeamSection: NextComponentType = () => {
           <div className={s.team}>
             <div className={s.teamMember}>
               <div className={s.image}>
-                <Image
-                  src="/images/team/dad.png"
-                  alt="фотка ИВ"
-                  width="250px"
-                  height="340px"
-                  objectFit="cover"
-                />
+                <div className={s.image_dad}>
+                  <Image
+                    src="/images/team/dad.png"
+                    alt="фотка ИВ"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
               </div>
               <div className={s.text}>
                 <div className={s.name}>Дмитрий Борисович А.</div>
@@ -33,13 +34,14 @@ const TeamSection: NextComponentType = () => {
             </div>
             <div className={s.teamMember}>
               <div className={s.image}>
-                <Image
-                  src="/images/team/starik.png"
-                  alt="фотка ИВ"
-                  width="280px"
-                  height="340px"
-                  objectFit="cover"
-                />
+                <div className={s.image_starik}>
+                  <Image
+                    src="/images/team/starik.png"
+                    alt="фотка ИВ"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
               </div>
               <div className={s.text}>
                 <div className={s.name}>Антон Александрович С.</div>

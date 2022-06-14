@@ -1,12 +1,12 @@
-import React from "react";
-import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer/Footer";
-import Head from "next/head";
+import React from 'react';
+import Navbar from './Navbar/Navbar';
+import Footer from './Footer/Footer';
+import Head from 'next/head';
 
 interface IMainLayout {
   title: string;
 }
-const MainLayout = ({ children, title }: any) => {
+const MainLayout = ({ children, title, myRef }: any) => {
   return (
     <>
       <Head>
@@ -32,7 +32,7 @@ const MainLayout = ({ children, title }: any) => {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Navbar />
+      <Navbar myRef={myRef} />
       <main>{children}</main>
       <Footer />
     </>

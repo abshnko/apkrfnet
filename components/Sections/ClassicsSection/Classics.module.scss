@@ -1,4 +1,4 @@
-@import "/styles/variables.scss";
+@import '/styles/variables.scss';
 
 .container {
   min-height: 100vh;
@@ -24,14 +24,19 @@
       width: 40%;
       display: flex;
       justify-content: space-evenly;
-      .left_chevron {
-        -webkit-transform: rotateY(180deg);
-        transform: rotateY(180deg);
+      .arrow {
+        position: relative;
         width: 50px;
         height: 30px;
-        margin-left: 2rem;
+        align-self: center;
+        .left_chevron {
+          -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+          //   width: 50px;
+          //   height: 30px;
+          margin-left: 2rem;
+        }
       }
-
       .left_chevron,
       .right_chevron {
         cursor: pointer;
@@ -66,73 +71,79 @@
           margin-top: 2rem;
           font-size: 24px;
           line-height: 30px;
+          p {
+            text-align: left !important;
+          }
         }
         .more_info {
           @include accentedButton;
           display: inline-block;
           margin-top: 3rem;
+          cursor: pointer;
+          .button {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            span {
+              align-self: baseline;
+            }
+            img {
+              zoom: 0.8;
+            }
+          }
         }
       }
     }
   }
 }
 
-.selected {
-  display: grid;
-  gap: 10px;
-  padding: 10px 15px;
-  //   margin: 0 50px;
-  //   background-color: white;
-  //   transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
-  //   grid-template-columns:min 2fr;
-  //   justify-content: center;
-  //   border-radius: 2px;
-  //   box-shadow: 0px 25px 12px rgba(0, 0, 0, 0.25);
-  //   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  margin: 0 8px;
-}
-.allMen {
-  //   background-color: transparent;
-  z-index: 30;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  .man {
-    border-radius: 2px;
-    padding: 10px;
-    // width: 80px;
-    // height: 150px;
-    // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    .manImg {
-      border: 5px solid $dark-blue;
-      width: 80px;
-      height: 100px;
-      position: relative;
-      margin-bottom: 5px;
-      // max-width: 200px;
+@media screen and (max-width: 500px) {
+  .container {
+    min-height: max-content;
+    margin-top: 5rem;
+    .title {
+      font-size: 30px;
+      height: fit-content;
+      span {
+        font-size: 30px;
+      }
     }
-    .manSurname {
-      font-size: 15px;
-      line-height: 15px;
+    .content {
+      flex-direction: column;
+      margin-top: 1rem;
+      height: max-content;
+
+      .left_side {
+        width: 100%;
+
+        .main_img {
+          width: 142px;
+          height: 190px;
+          border-radius: 20px;
+        }
+      }
+      .right_side {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 1rem;
+        .card {
+          padding: 20px 30px 30px;
+          height: min-content;
+          .name {
+            font-size: 30px;
+          }
+          .bio {
+            font-size: 18px;
+            margin-top: 1rem;
+            p {
+              margin-top: 1rem;
+            }
+          }
+          .more_info {
+            margin-top: 1rem;
+          }
+        }
+      }
     }
-    .manName {
-      font-size: 13px;
-    }
-  }
-  .man:hover {
-    // border: 1px solid rgb(29, 128, 90);
-    border-radius: 2px;
-    .manImg {
-      border: 7px solid $orange;
-    }
-  }
-}
-.activeClassic {
-  transform: scale(1.1);
-  border-radius: 2px;
-  .manImg {
-    border: 7px solid $orange;
   }
 }

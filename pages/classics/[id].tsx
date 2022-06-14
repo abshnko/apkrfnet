@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import AccentedText from "../../UI/AccentedText/AccentedText";
 import { IClassic } from "../../types";
+import AccentedBlock from "../../UI/AccentedParagraph/AccentedParagraph";
 
 const Classic = () => {
   const router = useRouter();
@@ -21,6 +22,12 @@ const Classic = () => {
 
   useEffect(() => {
     if (classic !== undefined) {
+      classic?.fullBio.split("\\n").map((p) => {
+        if (p.includes("\\a")) {
+          console.log(p.split("\\a"));
+        }
+        return <li key={classic.id}>{p}</li>;
+      });
       setLoading(false);
     }
     console.log(classic);
@@ -40,7 +47,19 @@ const Classic = () => {
                 </div>
                 {/* <div className={s.date}>{classic?.dateOfBirth}</div> */}
                 <div className={s.text}>
-                  {classic?.fullBio.split("\\n").map((p) => {
+                  {classic?.fullBio.split("\n").map((p) => {
+                    if (p.includes("\r")) {
+                      return (
+                        <AccentedBlock>
+                          <p>{p.split("\r")}</p>
+                        </AccentedBlock>
+                      );
+                      //   p.split("\\a").map((a) => {
+                      //     return (
+                      //       <AccentedBlock key={classic.id}>{a}</AccentedBlock>
+                      //     );
+                      //   });
+                    }
                     return <p key={classic.id}>{p}</p>;
                   })}
                 </div>

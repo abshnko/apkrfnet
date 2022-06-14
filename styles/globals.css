@@ -4,12 +4,14 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   box-sizing: border-box;
+  /* scroll-behavior: smooth; */
+  scroll-padding-top: 100px;
 }
 
 * {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -24,6 +26,9 @@ li,
 p {
   margin-top: 2rem;
   line-height: 26px;
+}
+p {
+  text-align: justify;
 }
 button {
   background-color: transparent;

@@ -1,24 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import "react-toastify/dist/ReactToastify.css";
-import s from "./Home.module.scss";
-import Navbar from "../../Navbar/Navbar";
-import Image from "next/image";
-import { showAlertWriteToUs } from "../../../utils/Alerts/alerts";
-import { motion } from "framer-motion";
-import useLocalStorage from "use-local-storage";
-import SpyCheckModal_Portal from "../../SpyCheckModal/SpyCheckModal_Portal";
-import { IHomeSection } from "../../../types";
+import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
+import 'react-toastify/dist/ReactToastify.css';
+import s from './Home.module.scss';
+import Navbar from '../../Navbar/Navbar';
+import Image from 'next/image';
+import { showAlertWriteToUs } from '../../../utils/Alerts/alerts';
+import { motion } from 'framer-motion';
+import useLocalStorage from 'use-local-storage';
+import SpyCheckModal_Portal from '../../SpyCheckModal/SpyCheckModal_Portal';
+import { IHomeSection } from '../../../types';
 
 const HomeSection = ({
-  myRef,
   showSpyCheck,
   setShowSpyCheck,
   setDidntPass,
 }: IHomeSection) => {
+  //   const width =
+  //     window.innerWidth ||
+  //     document.documentElement.clientWidth ||
+  //     document.body.clientWidth;
   return (
     <>
-      {/* <Navbar /> */}
       {showSpyCheck && (
         <SpyCheckModal_Portal
           setShowSpyCheck={setShowSpyCheck}
@@ -81,30 +83,33 @@ const HomeSection = ({
             </div>
             <div className={s.right_side}>
               <div className={s.men_img_container}>
-                <div className={s.down_circle}>
-                  <Image
-                    src="/images/down_circle.svg"
-                    alt="down_circle"
-                    width="800px"
-                    height="100px"
-                    objectFit="contain"
-                  />
-                </div>
                 <div className={s.back_circle}>
                   <Image
                     src="/images/back_circle.svg"
-                    alt="down_circle"
-                    width="800px"
-                    height="500px"
+                    alt="back_circle"
+                    // width="800px"
+                    // height="500px"
                     objectFit="contain"
+                    layout="fill"
                   />
                 </div>
                 <div className={s.img}>
                   <Image
                     src="/images/everyone_desktop.png"
                     alt="man"
-                    width="800px"
-                    height="600px"
+                    // width="800px"
+                    layout="fill"
+                    // height="600px"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className={s.down_circle}>
+                  <Image
+                    src="/images/down_circle.svg"
+                    alt="down_circle"
+                    // width="800px"
+                    // height="100px"
+                    layout="fill"
                     objectFit="contain"
                   />
                 </div>

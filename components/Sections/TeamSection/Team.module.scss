@@ -1,4 +1,4 @@
-@import "/styles/variables.scss";
+@import '/styles/variables.scss';
 
 .container {
   min-height: calc(100vh - 60px);
@@ -12,7 +12,6 @@
     }
   }
 }
-//team
 .team {
   display: flex;
   justify-content: flex-start;
@@ -28,8 +27,17 @@
     }
     .image {
       width: 100%;
-      position: relative;
       overflow: hidden;
+      .image_dad {
+        width: 250px;
+        height: 340px;
+        position: relative;
+      }
+      .image_starik {
+        width: 280px;
+        height: 340px;
+        position: relative;
+      }
     }
     .text {
       padding: 10px 20px;
@@ -48,6 +56,45 @@
       .description {
         margin-top: 10px;
         font-size: 18px;
+      }
+    }
+  }
+}
+
+// !сделать разные размеры фоток и высоту тим мембера для разных телефонов
+@media screen and (max-width: 500px) {
+  .container {
+    margin-top: 3rem;
+
+    .team {
+      gap: 10px;
+      justify-content: space-between;
+      .teamMember {
+        width: 50%;
+        height: 600px;
+
+        .image {
+          width: 100%;
+          height: 45%;
+          .image_dad {
+            width: 100%;
+            height: 100%;
+            position: relative;
+          }
+          .image_starik {
+            width: 100%;
+            height: 100%;
+            position: relative;
+          }
+        }
+        .text {
+          .name {
+            font-size: 22px;
+          }
+          .position {
+            font-size: 16px;
+          }
+        }
       }
     }
   }

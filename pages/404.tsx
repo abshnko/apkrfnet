@@ -1,11 +1,11 @@
-import React from "react";
-import MainContainer from "../components/MainContainer";
-import MainLayout from "../components/MainLayout";
-import error from "../public/images/error404.svg";
-import s from "../styles/404.module.scss";
-import Link from "next/link";
-import Image from "next/image";
-import arrow from "../public/images/right_arrow.svg";
+import React from 'react';
+import MainContainer from '../components/MainContainer';
+import MainLayout from '../components/MainLayout';
+import error from '../public/images/error404.svg';
+import s from '../styles/404.module.scss';
+import Link from 'next/link';
+import Image from 'next/image';
+import arrow from '../public/images/right_arrow.svg';
 
 const Page404 = () => {
   return (
@@ -14,9 +14,9 @@ const Page404 = () => {
         <div className={s.container}>
           <div className={s.left_side}>
             <div className={s.title}>Такой страницы нет. Вы заблудились. </div>
-            <Link href="/">
+            <Link href="/" passHref>
               <div className={s.button}>
-                <span>на главную</span>{" "}
+                <span>на главную</span>{' '}
                 <Image src={arrow} alt="arrow" width={28} height={28} />
               </div>
             </Link>
