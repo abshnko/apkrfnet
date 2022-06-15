@@ -1,4 +1,5 @@
 import Post_1 from '../components/Posts/Post_1';
+import Post_10 from '../components/Posts/Post_10';
 import Post_2 from '../components/Posts/Post_2';
 import Post_3 from '../components/Posts/Post_3';
 import Post_4 from '../components/Posts/Post_4';
@@ -6,6 +7,7 @@ import Post_5 from '../components/Posts/Post_5';
 import Post_6 from '../components/Posts/Post_6';
 import Post_7 from '../components/Posts/Post_7';
 import Post_8 from '../components/Posts/Post_8';
+import Post_9 from '../components/Posts/Post_9';
 
 export const scroll = (ref: any) => {
   if (ref && ref.current) {
@@ -61,9 +63,9 @@ export const renderSwitch = (id: string) => {
     case '7':
       return <Post_8 />;
     case '8':
-      return null;
+      return <Post_9 />;
     case '9':
-      return null;
+      return <Post_10 />;
     case '10':
       return null;
     case '11':

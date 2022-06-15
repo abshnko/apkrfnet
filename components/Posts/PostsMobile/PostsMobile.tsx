@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Post_1 from '../Post_1';
 import s from './PostsMobile.module.scss';
 import { posts } from '../../../data/posts';
-import { decrementId, incrementId } from '../../../utils/funcs';
 import { renderSwitch } from '../../../utils/funcs';
 import NewBadge from '../../../UI/Mobile/NewBadge/NewBadge';
 
@@ -65,18 +63,6 @@ const PostsMobile = ({ postId, post, setPostId }: any) => {
         </div>
       )}
       <div className={s.text}>{renderSwitch(post!.id)}</div>
-      {/* <div className={s.up_button_container}>
-        <div className={s.up_button}>
-          <Image
-            onClick={() => {}}
-            src="/images/right_arrow.svg"
-            alt="down_chevron"
-            layout="fixed"
-            width={40}
-            height={40}
-          />
-        </div>
-      </div> */}
     </div>
   );
 };
