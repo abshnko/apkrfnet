@@ -2,13 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
 import s from './Navbar.module.scss';
 import { ToastContainer, toast } from 'react-toastify';
 import toastStyle from '../../utils/Alerts/Toast/Toast.module.scss';
 import { showAlertEN } from '../../utils/Alerts/alerts';
+import menu_img from '../../public/images/menu.svg';
 import { useGlobalContext } from '../../context/state';
+import Image from 'next/image';
+import NavbarMobile from './NavbarMobile/NavbarMobile';
 
 const Navbar = ({ myRef }: any) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -51,18 +52,19 @@ const Navbar = ({ myRef }: any) => {
         limit={2}
         hideProgressBar
       />
-      <button
-        type="button"
-        onClick={() => setShowMobileNav((e) => !e)}
-        className={s.menu_icon}
-      >
-        <MenuIcon style={{ width: '40px', height: '40px', color: '#4A4A4A' }} />
-      </button>
+
       <div className={s.navbar_fixed}>
         <nav className={s.navbar}>
           <div className={s.logo}>
             <Link href="/">Апкрф.нет</Link>
           </div>
+          <button
+            type="button"
+            onClick={() => setShowMobileNav((e) => !e)}
+            className={s.menu_icon}
+          >
+            <Image src={'/images/menu.svg'} alt="menu" layout="fill" />
+          </button>
           <ul className={s.links}>
             <li>
               <Link href="/posts">Объявления</Link>
@@ -80,34 +82,11 @@ const Navbar = ({ myRef }: any) => {
         </nav>
       </div>
       {showMobileNav && (
-        <>
-          <div>
-            <ul className="">
-              <li>
-                <Link href="/meetings">заседания</Link>
-              </li>
-              <li>
-                <Link href="/">наша команда</Link>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    showAlertEN();
-                    setShowMobileNav(false);
-                  }}
-                  className="font-light"
-                >
-                  en
-                </button>
-              </li>
-            </ul>
-            <button onClick={() => setShowMobileNav((e) => !e)}>
-              <CloseIcon
-                style={{ width: '40px', height: '40px', color: '#cbabab' }}
-              />
-            </button>
-          </div>
-        </>
+        <NavbarMobile
+          setShowMobileNav={setShowMobileNav}
+          showAlertEN={showAlertEN}
+          handleClick={handleClick}
+        />
       )}
     </>
   );

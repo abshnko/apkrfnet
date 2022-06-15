@@ -67,6 +67,7 @@ const ClassicsSection: NextComponentType = () => {
                 transition={{
                   duration: 0.55,
                 }}
+                exit={{ opacity: 0, x: [0, -100] }}
                 key={selectedClassic.image}
               >
                 <div className={s.main_img}>

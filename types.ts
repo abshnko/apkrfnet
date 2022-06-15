@@ -5,6 +5,12 @@ export type GlobalContent = {
   setScrollToTeam: Dispatch<SetStateAction<boolean>>;
 };
 
+export type INavbarMobile = {
+  showAlertEN: () => void;
+  setShowMobileNav: Dispatch<SetStateAction<boolean>>;
+  handleClick: (e: any) => void;
+};
+
 export interface IToast {
   closeToast: any;
   toastProps: any;

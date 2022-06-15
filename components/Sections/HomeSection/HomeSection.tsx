@@ -72,12 +72,13 @@ const HomeSection = ({
                 <p className="">появились вопросы?</p>
                 <button onClick={showAlertWriteToUs} className={s.write_button}>
                   <span>напишите нам</span>
-                  <Image
-                    src="/images/right_arrow.svg"
-                    alt="right_arrow"
-                    width="30px"
-                    height="17px"
-                  />
+                  <div className={s.write_image}>
+                    <Image
+                      src="/images/right_arrow.svg"
+                      alt="right_arrow"
+                      layout="fill"
+                    />
+                  </div>
                 </button>
               </div>
             </div>

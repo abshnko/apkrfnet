@@ -105,6 +105,12 @@
         &:hover {
           transform: scale(1.1);
         }
+
+        .write_image {
+          position: relative;
+          width: 30px;
+          height: 17px;
+        }
       }
     }
   }
@@ -138,7 +144,7 @@
 
 @media screen and (max-width: 500px) {
   .container {
-    margin-top: 3rem;
+    margin-top: 5rem;
     width: 90%;
     .titleContainer {
       padding: 0;
@@ -163,24 +169,42 @@
         }
         .events_subtitle {
           margin: 2rem 0 0;
-          font-size: 26px;
+          font-size: 24px;
           padding: 20px 30px 25px;
           width: 100%;
           .new_event {
             width: 40px;
             height: 40px;
           }
+
+          &:hover {
+            transform: none;
+          }
         }
         .write_to_us_btn {
           margin-top: 2rem;
-          font-size: 20px;
+          font-size: 18px;
           width: 100%;
           p {
             // text-align: center;
           }
           .write_button {
-            font-size: 24px;
+            font-size: 20px;
             width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+
+            &:hover {
+              transform: none;
+            }
+            .write_image {
+              position: relative;
+              width: 20px;
+              height: 13px;
+              margin-top: 5px;
+            }
           }
         }
       }

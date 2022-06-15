@@ -16,34 +16,34 @@ const Home: NextPage = () => {
     false
   );
   const [didntPass, setDidntPass] = useLocalStorage("didn't Pass", false);
-  useEffect(() => {
-    if (didntPass) {
-      const time = setTimeout(() => {
-        setShowSpyCheck(true);
-      }, 1000);
-      return () => clearTimeout(time);
-    }
-    if (!passedSpyCheck) {
-      const time = setTimeout(() => {
-        setShowSpyCheck(true);
-      }, 300000);
-      return () => clearTimeout(time);
-    }
-  }, []);
+  //   useEffect(() => {
+  //     if (didntPass) {
+  //       const time = setTimeout(() => {
+  //         setShowSpyCheck(true);
+  //       }, 1000);
+  //       return () => clearTimeout(time);
+  //     }
+  //     if (!passedSpyCheck) {
+  //       const time = setTimeout(() => {
+  //         setShowSpyCheck(true);
+  //       }, 300000);
+  //       return () => clearTimeout(time);
+  //     }
+  //   }, []);
 
-  useEffect(() => {
-    fixBackground(showSpyCheck);
-    if (!showSpyCheck) {
-      const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      const time = setTimeout(() => {
-        setShowSpyCheck(true);
-      }, 300000);
-      return () => clearTimeout(time);
-    }
-  }, [showSpyCheck]);
+  //   useEffect(() => {
+  //     fixBackground(showSpyCheck);
+  //     if (!showSpyCheck) {
+  //       const scrollY = document.body.style.top;
+  //       document.body.style.position = '';
+  //       document.body.style.top = '';
+  //       window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  //       const time = setTimeout(() => {
+  //         setShowSpyCheck(true);
+  //       }, 300000);
+  //       return () => clearTimeout(time);
+  //     }
+  //   }, [showSpyCheck]);
 
   return (
     <>
