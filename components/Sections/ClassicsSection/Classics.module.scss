@@ -99,7 +99,8 @@
 
 @media screen and (max-width: 500px) {
   .container {
-    margin-top: 0;
+    min-height: min-content;
+    margin-top: 4rem;
     .title {
       font-size: 26px;
       height: fit-content;

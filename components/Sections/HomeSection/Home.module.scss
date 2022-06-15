@@ -149,7 +149,7 @@
   .container {
     margin-top: 5rem;
     width: 90%;
-    min-height: 100vh;
+    min-height: min-content;
     .titleContainer {
       padding: 0;
       //   text-align: left;
