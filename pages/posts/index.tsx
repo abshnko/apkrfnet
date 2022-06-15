@@ -11,7 +11,7 @@ import { renderSwitch } from '../../utils/funcs';
 import PostsMobile from '../../components/Posts/PostsMobile/PostsMobile';
 
 const Posts: NextPage = () => {
-  const [postId, setPostId] = useState('11');
+  const [postId, setPostId] = useState('10');
   const [post, setPost] = useState(posts.find((post) => post.id === postId));
   const [postContentElement, setPostContentElement] = useState<any>(null);
   const [_document, setDocument] = useState<any>(null);

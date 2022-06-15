@@ -1,16 +1,16 @@
-import React from "react";
-import AccentedBlock from "../../UI/AccentedParagraph/AccentedParagraph";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import Footnote from "../../UI/Footnote/Footnote";
-import RedactedText from "../../UI/RedactedText/RedactedText";
-import Signature from "../../UI/Signature/Signature";
-import Image from "next/image";
-import s from "./Post.module.scss";
+import React from 'react';
+import AccentedBlock from '../../UI/AccentedParagraph/AccentedParagraph';
+import AccentedText from '../../UI/AccentedText/AccentedText';
+import Footnote from '../../UI/Footnote/Footnote';
+import RedactedText from '../../UI/RedactedText/RedactedText';
+import Signature from '../../UI/Signature/Signature';
+import Image from 'next/image';
+import s from './Post.module.scss';
 
 const Post_4 = () => {
   return (
     <div className={s.container}>
-      <h2 style={{ marginBottom: "2rem", display: "inline-block" }}>
+      <h2 style={{ marginBottom: '2rem', display: 'inline-block' }}>
         Уважаемые молодые, моложавые и находящиеся в самом соку преподаватели
         <sup>1</sup>, аспиранты и соискатели, а также совсем недавно
         защитившиеся кандидаты (помню, помню о вас, не переживайте)!
@@ -70,23 +70,23 @@ const Post_4 = () => {
         Все эти докучливые воздыхатели явная помеха в написании диссертации.
         Предлагаю для начала поговорить с его женой (если есть) или родителями
         (если захотят). Ну, а если не отвяжется &ndash; конечно, поставим вопрос
-        на <span style={{ textDecoration: "line-through" }}>партсобрании</span>{" "}
-        заседании учебно-методической группы. Разъясним, так сказать,{" "}
-        <span style={{ textDecoration: "line-through" }}>политику Партии</span>{" "}
-        приоритеты. В конце концов,{" "}
-        <span style={{ textDecoration: "line-through" }}>
+        на <span style={{ textDecoration: 'line-through' }}>партсобрании</span>{' '}
+        заседании учебно-методической группы. Разъясним, так сказать,{' '}
+        <span style={{ textDecoration: 'line-through' }}>политику Партии</span>{' '}
+        приоритеты. В конце концов,{' '}
+        <span style={{ textDecoration: 'line-through' }}>
           заставим положить на стол партбилет
-        </span>{" "}
+        </span>{' '}
         срок избрания на должность никто не отменял. Кандидат в мастера спорта
-        по боксу &hellip;, конечно, с удовольствием Вам поможет:{" "}
-        <span style={{ textDecoration: "line-through" }}>
+        по боксу &hellip;, конечно, с удовольствием Вам поможет:{' '}
+        <span style={{ textDecoration: 'line-through' }}>
           пара хуков слева прилетят - мама не горюй!
-        </span>{" "}
+        </span>{' '}
         он вне всяких сомнений обладает даром убеждения. Но это высшая мера
-        наказания &ndash; к ней приговариваем только единогласным решением{" "}
-        <span style={{ textDecoration: "line-through" }}>всей ячейки</span> всех
-        членов учебно-методической группы (кандидаты в члены{" "}
-        <span style={{ textDecoration: "line-through" }}>Политбюро</span> в
+        наказания &ndash; к ней приговариваем только единогласным решением{' '}
+        <span style={{ textDecoration: 'line-through' }}>всей ячейки</span> всех
+        членов учебно-методической группы (кандидаты в члены{' '}
+        <span style={{ textDecoration: 'line-through' }}>Политбюро</span> в
         голосовании не участвуют)&raquo;.
       </p>
       <p>
@@ -123,10 +123,10 @@ const Post_4 = () => {
         &quot;Kill Bill&quot;, задумалась: а кто такие Билл и &quot;толстая
         практикантка&quot; Моника?&raquo;
       </p>
-      <p style={{ display: "inline-block", marginBottom: "2rem" }}>
+      <p style={{ display: 'inline-block', marginBottom: '2rem' }}>
         Ответ аспирантке Д.: &laquo;Есть подозрение, что речь идет об одном
-        довольно известном саксофонисте и его{" "}
-        <span style={{ textDecoration: "line-through" }}>аспирантке</span>{" "}
+        довольно известном саксофонисте и его{' '}
+        <span style={{ textDecoration: 'line-through' }}>аспирантке</span>{' '}
         практикантке, изображенных на этих фото (усатый мужик на заднем плане
         слева на первой фотографии попал в кадр по случайности; это просто
         какой-то левый усатый мужик)&raquo;.
@@ -175,14 +175,14 @@ const Post_4 = () => {
         посоветуете?&raquo;
       </p>
       <p>
-        Ответ аспирантке Е.: &laquo;Вопрос не по адресу.{" "}
-        <span style={{ textDecoration: "line-through" }}>В бан на полгода</span>
+        Ответ аспирантке Е.: &laquo;Вопрос не по адресу.{' '}
+        <span style={{ textDecoration: 'line-through' }}>В бан на полгода</span>
         . Думайте о первой главе &ndash; тогда мысли о коже рук улетучатся сами
         собой&raquo;.
       </p>
       <p>
         Вопрос аспирантки Ж.: &laquo;Мне очень понравился приглашенный на
-        последнее заседание учебно-методической группы к.ю.н. <RedactedText />{" "}
+        последнее заседание учебно-методической группы к.ю.н. <RedactedText />{' '}
         из МГУ. Можно ли &hellip;? Или хотя бы &hellip;? В крайнем случае
         &hellip;?&raquo;
       </p>
@@ -209,10 +209,10 @@ const Post_4 = () => {
       <p>
         Ответ соискателю Ж.: &laquo;Если стихи хорошие, то да, можете (в
         пределах трех минут где-нибудь между четвертой и пятой кружками пива).
-        Но предварительно их нужно показать главному кафедральному авторитету по{" "}
-        <span style={{ textDecoration: "line-through" }}>
+        Но предварительно их нужно показать главному кафедральному авторитету по{' '}
+        <span style={{ textDecoration: 'line-through' }}>
           уточненным рейтинг-планам
-        </span>{" "}
+        </span>{' '}
         стихотворным формам &ndash; ... А эпиграммы на преподавателей кафедры
         необходимо также просмотреть мне лично &ndash; все-таки Вы не Валентин
         Гафт, вдруг там с рифмой проблема? Обидятся.
@@ -231,7 +231,7 @@ const Post_4 = () => {
         Ответ совсем юному преподавателю З.: &laquo;Написано неразборчиво
         &ndash; ответить ничего не могу. А вообще-то такие каракули вполне могут
         разобрать лишь опытные кафедральные каракулеведы, к коим я отношу
-        <RedactedText />, <RedactedText />, <RedactedText /> и <RedactedText />{" "}
+        <RedactedText />, <RedactedText />, <RedactedText /> и <RedactedText />{' '}
         (никого не&nbsp; забыл?). Увижу в этом году &ndash; обязательно передам
         Ваше письмо&raquo;.
       </p>
@@ -288,10 +288,10 @@ const Post_4 = () => {
       </p>
       <p>
         Ответ аспирантке М.: &laquo;Можно, конечно. Обязательно приходите. Но не
-        с другом. Наиболее подходящий вариант &ndash; подруга-филолог{" "}
-        <span style={{ textDecoration: "line-through" }}>формата 90-60-90</span>
-        . Предварительно для оформления спецпропуска пришлите ее фото{" "}
-        <span style={{ textDecoration: "line-through" }}>
+        с другом. Наиболее подходящий вариант &ndash; подруга-филолог{' '}
+        <span style={{ textDecoration: 'line-through' }}>формата 90-60-90</span>
+        . Предварительно для оформления спецпропуска пришлите ее фото{' '}
+        <span style={{ textDecoration: 'line-through' }}>
           (только не надо всяких постановочных съемок &ndash; мне надо увидеть
           ее без макияжа)
         </span>
@@ -330,10 +330,10 @@ const Post_4 = () => {
         то, конечно же, специально для Вашей искрометной персоны будет
         организована неофициальная часть. Правда, есть смутное подозрение, что
         на нее останемся только мы с Вами. Пардон, <RedactedText />
-        <sup>3</sup>, конечно же, тоже не откажется{" "}
-        <span style={{ textDecoration: "line-through" }}>
+        <sup>3</sup>, конечно же, тоже не откажется{' '}
+        <span style={{ textDecoration: 'line-through' }}>
           самовыразиться с Вами в хип-хопе
-        </span>{" "}
+        </span>{' '}
         закружить Вас в вальсе&raquo;.
       </p>
       <p>
@@ -353,12 +353,12 @@ const Post_4 = () => {
       <p>
         Вопрос преподавателя со стажем Р.: &laquo;На первом свидании с одной
         нашей аспиранткой робко попытался ее поцеловать. Она довольно неожиданно
-        ответила весьма энергичным французским поцелуем (это когда{" "}
+        ответила весьма энергичным французским поцелуем (это когда{' '}
         <RedactedText />
         ). Кое-как сумел ее остановить, ведь использование французского поцелуя
-        значительно повышает вероятность передачи{" "}
+        значительно повышает вероятность передачи{' '}
         <a
-          style={{ fontStyle: "italic", fontWeight: "600" }}
+          style={{ fontStyle: 'italic', fontWeight: '600' }}
           href="http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%84%D0%B5%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D0%BE%D0%BD%D0%BE%D0%BD%D1%83%D0%BA%D0%BB%D0%B5%D0%BE%D0%B7"
         >
           мононуклеоз
@@ -372,9 +372,9 @@ const Post_4 = () => {
         человек! Как Вы себе представляете &ndash; я для целей
         процессуально-правовой дискуссии собираю девушек в возрасте 22-25 лет и
         тут ни с того ни с сего начинаю вдруг им втолковывать о вредных
-        последствиях{" "}
+        последствиях{' '}
         <a
-          style={{ fontStyle: "italic", fontWeight: "600" }}
+          style={{ fontStyle: 'italic', fontWeight: '600' }}
           href="http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%84%D0%B5%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D0%BE%D0%BD%D0%BE%D0%BD%D1%83%D0%BA%D0%BB%D0%B5%D0%BE%D0%B7"
         >
           мононуклеоз
@@ -423,7 +423,7 @@ const Post_4 = () => {
       <p>
         Вопрос заведующего кафедрой <RedactedText />: &laquo;Дмитрий Борисович,
         шестой раз перенес Вам сроки сдачи первой главы. Как на этот раз с
-        Вашими творческими планами? Можно ли рассчитывать, что к{" "}
+        Вашими творческими планами? Можно ли рассчитывать, что к{' '}
         <RedactedText /> мы сможем-таки ее увидеть?&raquo;
       </p>
       <p>
@@ -451,7 +451,7 @@ const Post_4 = () => {
       </p>
       <AccentedBlock>
         <p>
-          На очередное заседание, которое состоится{" "}
+          На очередное заседание, которое состоится{' '}
           <strong>16 марта 2013 г. в 18-00</strong>, на обсуждение выносятся
           следующие темы:
         </p>
@@ -466,15 +466,15 @@ const Post_4 = () => {
         </ol>
       </AccentedBlock>
       <p>
-        Место, где будет проводиться наше мероприятие, как всегда определится{" "}
-        <span style={{ textDecoration: "line-through" }}>лаборантом</span> мною
-        исходя из{" "}
-        <span style={{ textDecoration: "line-through" }}>
+        Место, где будет проводиться наше мероприятие, как всегда определится{' '}
+        <span style={{ textDecoration: 'line-through' }}>лаборантом</span> мною
+        исходя из{' '}
+        <span style={{ textDecoration: 'line-through' }}>
           наличия в карте бара нефильтрованных сортов пива
-        </span>{" "}
+        </span>{' '}
         общего количества изъявивших желание провести весенний вечер в душном и
-        прокуренном помещении. В связи с чем прошу в срок{" "}
-        <strong>до 6 марта 2013 г.</strong> (включительно){" "}
+        прокуренном помещении. В связи с чем прошу в срок{' '}
+        <strong>до 6 марта 2013 г.</strong> (включительно){' '}
         <strong>
           подтвердить свое участие в работе группы посредством
           устного/письменного сообщения лаборанту &hellip;
@@ -489,14 +489,7 @@ const Post_4 = () => {
       </p>
       <Signature>
         <p>Руководитель учебно-методической группы по арбитражному процессу</p>
-        <div className={s.img}>
-          <Image
-            src="/images/Post_4/dad.png"
-            alt="bill1"
-            width={210}
-            height={150}
-          />
-        </div>
+
         <p>Д. Б. Абушенко</p>
       </Signature>
     </div>

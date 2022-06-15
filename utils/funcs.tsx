@@ -1,5 +1,7 @@
 import Post_1 from '../components/Posts/Post_1';
 import Post_10 from '../components/Posts/Post_10';
+import Post_11 from '../components/Posts/Post_11';
+import Post_12 from '../components/Posts/Post_12';
 import Post_2 from '../components/Posts/Post_2';
 import Post_3 from '../components/Posts/Post_3';
 import Post_4 from '../components/Posts/Post_4';
@@ -44,6 +46,7 @@ export const decrementId = (id: string, setId: any, n: string) => {
   }
 };
 
+// !post 12 table not adaptive
 export const renderSwitch = (id: string) => {
   switch (id) {
     case '0':
@@ -67,9 +70,9 @@ export const renderSwitch = (id: string) => {
     case '9':
       return <Post_10 />;
     case '10':
-      return null;
+      return <Post_11 />;
     case '11':
-      return null;
+      return <Post_12 />;
     case '12':
       return null;
     case '13':
