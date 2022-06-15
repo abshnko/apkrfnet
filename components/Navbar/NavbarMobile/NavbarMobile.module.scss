@@ -35,8 +35,10 @@
       flex-direction: column;
       list-style: none;
       font-size: 22px;
+      text-transform: uppercase;
       button {
-        font-size: 22px;
+        font-size: inherit;
+        text-transform: inherit;
       }
 
       .link {

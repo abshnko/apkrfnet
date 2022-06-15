@@ -4,9 +4,8 @@ import Link from 'next/link';
 import s from './Classics.module.scss';
 import { classics } from '../../../data/classics';
 import Image from 'next/image';
-import right_chevron from '../../../public/images/right_chevron.svg';
 import { motion, AnimatePresence } from 'framer-motion';
-import img from '../../../public/images/man_1.png';
+import { decrementId, incrementId } from '../../../utils/funcs';
 
 const ClassicsSection: NextComponentType = () => {
   const [selectedClassic, setSelectedClassic] = useState(classics[0]);
@@ -16,27 +15,6 @@ const ClassicsSection: NextComponentType = () => {
   useEffect(() => {
     setSelectedClassic(classics.find((classic) => classic.id === classicId)!);
   }, [classicId]);
-
-  const incrementId = () => {
-    if (classicId === '5') {
-      setClassicId('0');
-    } else {
-      setClassicId((id) => {
-        const newId = parseInt(id) + 1;
-        return newId.toString();
-      });
-    }
-  };
-  const decrementId = () => {
-    if (classicId === '0') {
-      setClassicId('5');
-    } else {
-      setClassicId((id) => {
-        const newId = parseInt(id) - 1;
-        return newId.toString();
-      });
-    }
-  };
 
   return (
     <>
@@ -50,7 +28,7 @@ const ClassicsSection: NextComponentType = () => {
             <div className={s.left_side}>
               <div className={s.arrow}>
                 <Image
-                  onClick={decrementId}
+                  onClick={() => decrementId(classicId, setClassicId, '5')}
                   className={s.left_chevron}
                   src="/images/right_chevron.svg"
                   alt="left_chevron"
@@ -81,7 +59,7 @@ const ClassicsSection: NextComponentType = () => {
               </motion.div>
               <div className={s.arrow}>
                 <Image
-                  onClick={incrementId}
+                  onClick={() => incrementId(classicId, setClassicId, '5')}
                   className={s.right_chevron}
                   src="/images/right_chevron.svg"
                   alt="right_chevron"

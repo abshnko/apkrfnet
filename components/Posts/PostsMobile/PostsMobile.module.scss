@@ -1,0 +1,143 @@
+@import '/styles/variables.scss';
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  min-height: calc(100vh - 60px);
+
+  .title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .dropdown {
+    position: relative;
+    background-color: $black_background;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 13px;
+    color: white;
+
+    .dropdown_title_container {
+      display: flex;
+      justify-content: left;
+      margin-right: 10px;
+
+      .badge {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+      }
+    }
+    .dropdown_arrow_container {
+      width: min-content;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      .dropdown_arrow {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        transform: rotate(90deg);
+        filter: invert(100%) sepia(3%) saturate(1691%) hue-rotate(179deg)
+          brightness(118%) contrast(100%);
+        transition: all 0.6s;
+      }
+      .active {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  .text {
+    margin-top: 1rem;
+  }
+
+  .up_button_container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    .up_button {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  //dropdown
+  .dropdown_body {
+    position: absolute;
+    background-color: $black_background;
+    border-radius: 20px;
+    margin-top: 0.5rem;
+    padding: 20px 30px;
+    color: white;
+    width: inherit;
+    height: 400px;
+    margin-bottom: 2rem;
+
+    .dropdown_container {
+      height: 350px;
+      overflow-y: scroll;
+
+      .post {
+        margin-top: 20px;
+        border-bottom: 1px solid grey;
+        padding-bottom: 5px;
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .title {
+          font-size: 18px;
+          text-align: left;
+          opacity: 60%;
+        }
+
+        .date_container {
+          display: flex;
+          justify-content: left;
+          .date {
+            margin-top: 5px;
+            color: grey;
+            font-size: 14px;
+          }
+          .badge {
+            background-color: $yellow;
+            border-radius: 10px;
+            color: black;
+            opacity: 100%;
+            padding: 0 10px;
+            font-size: 12px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            height: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+      .active_post {
+        .title {
+          opacity: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .container {
+    display: none;
+  }
+}

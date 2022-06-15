@@ -1,4 +1,4 @@
-@import "/styles/variables.scss";
+@import '/styles/variables.scss';
 
 .container {
   min-height: min-content;
@@ -99,5 +99,11 @@
       font-size: 20px;
       margin-top: 1rem;
     }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    display: none;
   }
 }
