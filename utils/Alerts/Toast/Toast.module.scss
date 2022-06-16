@@ -1,4 +1,4 @@
-@import "/styles/variables.scss";
+@import '/styles/variables.scss';
 
 .container {
   padding: 20px 30px;
@@ -20,10 +20,32 @@
 
 //toast custom styling
 .toast_container {
-  top: 5rem;
+  top: 5rem !important;
   min-width: 550px;
 }
 .toast_wrapper {
-  border-radius: 20px;
-  //   background-color: $black_background;
+  border-radius: 20px !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 10px;
+    .text {
+      font-size: 18px;
+    }
+    .button {
+      font-size: 16px;
+    }
+  }
+
+  //toast custom styling
+  .toast_container {
+    top: 4rem !important;
+    min-width: 250px;
+  }
+  .toast_wrapper {
+    border-radius: 20px !important;
+    width: 90% !important;
+    margin: 1rem auto 0 !important;
+  }
 }

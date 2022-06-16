@@ -44,12 +44,12 @@ const Navbar = ({ myRef }: any) => {
   return (
     <>
       <ToastContainer
-        autoClose={15000}
+        autoClose={6000}
         closeButton={false}
         className={toastStyle.toast_container}
         toastClassName={toastStyle.toast_wrapper}
         newestOnTop
-        limit={2}
+        limit={6}
         hideProgressBar
       />
 
