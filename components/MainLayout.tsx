@@ -6,7 +6,7 @@ import Head from 'next/head';
 interface IMainLayout {
   title: string;
 }
-const MainLayout = ({ children, title, myRef }: any) => {
+const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
   return (
     <>
       <Head>
@@ -32,7 +32,7 @@ const MainLayout = ({ children, title, myRef }: any) => {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Navbar myRef={myRef} />
+      <Navbar myRefTeam={myRefTeam} refClassics={refClassics} />
       <main>{children}</main>
       <Footer />
     </>

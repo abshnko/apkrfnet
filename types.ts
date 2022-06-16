@@ -3,6 +3,8 @@ import { Dispatch, SetStateAction } from 'react';
 export type GlobalContent = {
   scrollToTeam: boolean;
   setScrollToTeam: Dispatch<SetStateAction<boolean>>;
+  scrollToClassics: boolean;
+  setScrollToClassics: Dispatch<SetStateAction<boolean>>;
 };
 
 export type INavbarMobile = {

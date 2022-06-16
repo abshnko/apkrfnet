@@ -4,13 +4,23 @@ import { GlobalContent } from '../types';
 const GlobalContext = createContext<GlobalContent>({
   scrollToTeam: false,
   setScrollToTeam: () => {},
+  scrollToClassics: false,
+  setScrollToClassics: () => {},
 });
 
 export const Provider = ({ children }: any) => {
   const [scrollToTeam, setScrollToTeam] = useState(false);
+  const [scrollToClassics, setScrollToClassics] = useState(false);
 
   return (
-    <GlobalContext.Provider value={{ scrollToTeam, setScrollToTeam }}>
+    <GlobalContext.Provider
+      value={{
+        scrollToTeam,
+        setScrollToTeam,
+        scrollToClassics,
+        setScrollToClassics,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );

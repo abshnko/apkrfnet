@@ -9,7 +9,8 @@ import MainLayout from '../components/MainLayout';
 import { fixBackground } from '../utils/funcs';
 
 const Home: NextPage = () => {
-  const ref = useRef<null | HTMLDivElement>(null);
+  const refTeam = useRef<null | HTMLDivElement>(null);
+  const refClassics = useRef<null | HTMLDivElement>(null);
   const [showSpyCheck, setShowSpyCheck] = useState(false);
   const [passedSpyCheck, setPassedSpyCheck] = useLocalStorage(
     'passedSpyCheck',
@@ -47,15 +48,21 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <MainLayout title={'Главная | АПКРФ НЕТ'} myRef={ref}>
+      <MainLayout
+        title={'Главная | АПКРФ НЕТ'}
+        myRefTeam={refTeam}
+        refClassics={refClassics}
+      >
         <HomeSection
           setDidntPass={setDidntPass}
           setShowSpyCheck={setShowSpyCheck}
           showSpyCheck={showSpyCheck}
         />
         <div className={s.container}>
-          <ClassicsSection />
-          <div ref={ref}>
+          <div ref={refClassics}>
+            <ClassicsSection />
+          </div>
+          <div ref={refTeam}>
             <TeamSection />
           </div>
         </div>

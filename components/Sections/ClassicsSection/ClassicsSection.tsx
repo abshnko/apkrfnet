@@ -6,11 +6,12 @@ import { classics } from '../../../data/classics';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { decrementId, incrementId } from '../../../utils/funcs';
+import useLocalStorage from 'use-local-storage';
 
 const ClassicsSection: NextComponentType = () => {
   const [selectedClassic, setSelectedClassic] = useState(classics[0]);
   const selectedRef = useRef<null | HTMLDivElement>(null);
-  const [classicId, setClassicId] = useState('0');
+  const [classicId, setClassicId] = useLocalStorage('classicId', '0');
 
   useEffect(() => {
     setSelectedClassic(classics.find((classic) => classic.id === classicId)!);

@@ -10,14 +10,20 @@ import menu_img from '../../public/images/menu.svg';
 import { useGlobalContext } from '../../context/state';
 import Image from 'next/image';
 import NavbarMobile from './NavbarMobile/NavbarMobile';
+import { removeScrollUnderModal, scrollToRef } from '../../utils/funcs';
 
-const Navbar = ({ myRef }: any) => {
+const Navbar = ({ myRefTeam, refClassics }: any) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const router = useRouter();
-  const { scrollToTeam, setScrollToTeam } = useGlobalContext();
+  const {
+    scrollToTeam,
+    setScrollToTeam,
+    scrollToClassics,
+    setScrollToClassics,
+  } = useGlobalContext();
   const handleClick = (e: any) => {
-    if (myRef !== undefined) {
-      myRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (myRefTeam !== undefined) {
+      myRefTeam.current?.scrollIntoView({ behavior: 'smooth' });
     } else {
       e.preventDefault();
       setScrollToTeam(true);
@@ -26,19 +32,12 @@ const Navbar = ({ myRef }: any) => {
   };
 
   useEffect(() => {
-    showMobileNav
-      ? (document.body.style.overflow = 'hidden')
-      : (document.body.style.overflow = 'visible');
+    removeScrollUnderModal(showMobileNav);
   }, [showMobileNav]);
 
   useEffect(() => {
-    if (scrollToTeam) {
-      const time = setTimeout(() => {
-        myRef.current?.scrollIntoView({ behavior: 'smooth' });
-        setScrollToTeam(false);
-      }, 100);
-      return () => clearTimeout(time);
-    }
+    scrollToRef(myRefTeam, scrollToTeam, setScrollToTeam);
+    scrollToRef(refClassics, scrollToClassics, setScrollToClassics);
   }, []);
 
   return (

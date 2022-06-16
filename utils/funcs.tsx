@@ -52,6 +52,22 @@ export const decrementId = (id: string, setId: any, n: string) => {
   }
 };
 
+export const scrollToRef = (ref: any, isScroll: boolean, setIsScroll: any) => {
+  if (isScroll) {
+    const time = setTimeout(() => {
+      ref.current?.scrollIntoView({ behavior: 'smooth' });
+      setIsScroll(false);
+    }, 100);
+    return () => clearTimeout(time);
+  }
+};
+
+export const removeScrollUnderModal = (show: boolean) => {
+  show
+    ? (document.body.style.overflow = 'hidden')
+    : (document.body.style.overflow = 'visible');
+};
+
 // !post 12 table not adaptive
 export const renderSwitch = (id: string) => {
   switch (id) {
