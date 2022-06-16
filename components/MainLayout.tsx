@@ -3,9 +3,6 @@ import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
 import Head from 'next/head';
 
-interface IMainLayout {
-  title: string;
-}
 const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
   return (
     <>
