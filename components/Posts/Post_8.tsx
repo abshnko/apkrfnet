@@ -1,11 +1,11 @@
-import React from "react";
-import AccentedBlock from "../../UI/AccentedParagraph/AccentedParagraph";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import Footnote from "../../UI/Footnote/Footnote";
-import RedactedText from "../../UI/RedactedText/RedactedText";
-import Signature from "../../UI/Signature/Signature";
-import Image from "next/image";
-import s from "./Post.module.scss";
+import React from 'react';
+import AccentedBlock from '../../UI/AccentedParagraph/AccentedParagraph';
+import AccentedText from '../../UI/AccentedText/AccentedText';
+import Footnote from '../../UI/Footnote/Footnote';
+import RedactedText from '../../UI/RedactedText/RedactedText';
+import Signature from '../../UI/Signature/Signature';
+import Image from 'next/image';
+import s from './Post.module.scss';
 
 const Post_8 = () => {
   return (
@@ -65,17 +65,15 @@ const Post_8 = () => {
         образовательными технологиями некоторое сакральное знание можно передать
         вам дистанционно (привет Мудлу
         <sup>1</sup>
-        !).<span style={{ textDecoration: "line-through" }}></span>
+        !).<span style={{ textDecoration: 'line-through' }}></span>
       </p>
       <Footnote>
-        <p>
-          <sup>1</sup>
-          <span>
-            {" "}
-            Это не ругательство; если кто не знает &ndash; звоните доц.{" "}
-            <RedactedText />
-          </span>
-        </p>
+        <sup>1</sup>
+        <span>
+          {' '}
+          Это не ругательство; если кто не знает &ndash; звоните доц.{' '}
+          <RedactedText />
+        </span>
       </Footnote>
 
       <p>
@@ -85,22 +83,20 @@ const Post_8 = () => {
         <sup>2</sup>
       </p>
       <Footnote>
-        <p>
-          <sup>2</sup>
-          <span>
-            {" "}
-            Нижеприводимые рекомендации разработаны мною в тесном сотрудничестве
-            с некоторыми практикующими лекторами, которые любезно согласились
-            проиллюстрировать отдельные примеры фотографиями из своих домашних
-            архивов.
-          </span>
-        </p>
+        <sup>2</sup>
+        <span>
+          {' '}
+          Нижеприводимые рекомендации разработаны мною в тесном сотрудничестве с
+          некоторыми практикующими лекторами, которые любезно согласились
+          проиллюстрировать отдельные примеры фотографиями из своих домашних
+          архивов.
+        </span>
       </Footnote>
       <ol>
         <li>
           <strong> </strong>
           <strong>
-            Ваш внешний вид интересует студентов первые полторы минуты.{" "}
+            Ваш внешний вид интересует студентов первые полторы минуты.{' '}
           </strong>
         </li>
       </ol>
@@ -261,7 +257,7 @@ const Post_8 = () => {
       <ol start={7}>
         <li>
           <strong>
-            Неработающий микрофон не повод для истерики и отмены лекции.{" "}
+            Неработающий микрофон не повод для истерики и отмены лекции.{' '}
           </strong>
           Равным образом как и микрофон, издающий высокий свист при попытке
           произнести какую-либо фразу.
@@ -372,10 +368,8 @@ const Post_8 = () => {
         &laquo;прецедент&raquo; избавился только благодаря электрошоку).
       </p>
       <Footnote>
-        <p>
-          <sup>3</sup>
-          <span> Вместо &laquo;велосипед&raquo;.</span>
-        </p>
+        <sup>3</sup>
+        <span> Вместо &laquo;велосипед&raquo;.</span>
       </Footnote>
       <p>
         А как часто мы слышим неправильное употребление окончаний и
@@ -450,7 +444,7 @@ const Post_8 = () => {
           <strong> </strong>
           <strong>
             Не паникуйте, если вдруг объявится какой-то продвинутый студент,
-            который прямо во время лекции задаст Вам вопрос.{" "}
+            который прямо во время лекции задаст Вам вопрос.{' '}
           </strong>
         </li>
       </ol>
@@ -792,7 +786,7 @@ const Post_8 = () => {
         &laquo;Подведомственность дел арбитражным судам&raquo; и др.).
       </p>
       <p>
-        Итак, очередное заседание состоится{" "}
+        Итак, очередное заседание состоится{' '}
         <strong>10 октября 2014 г. в 18-00.</strong>
       </p>
       <AccentedBlock>
@@ -804,7 +798,7 @@ const Post_8 = () => {
         </p>
       </AccentedBlock>
       <p>
-        Прошу в срок <strong>до 30 сентября 2014 г.</strong> (включительно){" "}
+        Прошу в срок <strong>до 30 сентября 2014 г.</strong> (включительно){' '}
         <strong>
           подтвердить свое участие в работе группы посредством сообщения
           лаборанту &hellip;

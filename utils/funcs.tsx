@@ -2,6 +2,12 @@ import Post_1 from '../components/Posts/Post_1';
 import Post_10 from '../components/Posts/Post_10';
 import Post_11 from '../components/Posts/Post_11';
 import Post_12 from '../components/Posts/Post_12';
+import Post_13 from '../components/Posts/Post_13';
+import Post_14 from '../components/Posts/Post_14';
+import Post_15 from '../components/Posts/Post_15';
+import Post_16 from '../components/Posts/Post_16';
+import Post_17 from '../components/Posts/Post_17';
+import Post_18 from '../components/Posts/Post_18';
 import Post_2 from '../components/Posts/Post_2';
 import Post_3 from '../components/Posts/Post_3';
 import Post_4 from '../components/Posts/Post_4';
@@ -74,10 +80,18 @@ export const renderSwitch = (id: string) => {
     case '11':
       return <Post_12 />;
     case '12':
-      return null;
+      return <Post_13 />;
     case '13':
-      return null;
+      return <Post_14 />;
     case '14':
+      return <Post_15 />;
+    case '15':
+      return <Post_16 />;
+    case '16':
+      return <Post_17 />;
+    case '17':
+      return <Post_18 />;
+    case '18':
       return null;
     default:
       return null;

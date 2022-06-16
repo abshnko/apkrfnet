@@ -9,9 +9,10 @@ import { motion } from 'framer-motion';
 import MainLayout from '../../components/MainLayout';
 import { renderSwitch } from '../../utils/funcs';
 import PostsMobile from '../../components/Posts/PostsMobile/PostsMobile';
+import NewBadge from '../../UI/NewBadge/NewBadge';
 
 const Posts: NextPage = () => {
-  const [postId, setPostId] = useState('10');
+  const [postId, setPostId] = useState('17');
   const [post, setPost] = useState(posts.find((post) => post.id === postId));
   const [postContentElement, setPostContentElement] = useState<any>(null);
   const [_document, setDocument] = useState<any>(null);
@@ -67,6 +68,11 @@ const Posts: NextPage = () => {
                       >
                         <div className={s.title}>{post.title}</div>
                         <div className={s.date}>{post.date}</div>
+                        {'isNew' in post && (
+                          <div className={s.badge}>
+                            <NewBadge />
+                          </div>
+                        )}
                       </div>
                     );
                   })}

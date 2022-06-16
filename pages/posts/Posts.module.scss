@@ -40,23 +40,33 @@
         // margin-bottom: 2.5rem;
         padding-bottom: 1rem;
         padding-top: 2.5rem;
-        opacity: 60%;
-
+        position: relative;
         cursor: pointer;
+
         .title {
           font-size: 24px;
+          opacity: 60%;
         }
 
         .date {
           margin-top: 0.5rem;
+          opacity: 60%;
         }
         &:first-child {
           padding-top: 0;
         }
+
+        .badge {
+          position: absolute;
+          bottom: 40px;
+          right: 0;
+        }
       }
 
       .active_post {
-        opacity: 100%;
+        .title {
+          opacity: 100%;
+        }
         font-weight: 600;
       }
     }

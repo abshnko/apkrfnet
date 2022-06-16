@@ -6,10 +6,17 @@
   color: black;
   opacity: 100%;
   padding: 0 10px;
-  font-size: 12px;
+  font-size: 18px;
   margin-left: 10px;
   display: flex;
   align-items: center;
-  height: 20px;
+  height: 30px;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 500px) {
+  .badge {
+    font-size: 12px;
+    height: 20px;
+  }
 }
