@@ -1,10 +1,10 @@
-import React from "react";
-import s from "./Post.module.scss";
-import RedactedText from "../../UI/RedactedText/RedactedText";
-import Signature from "../../UI/Signature/Signature";
-import AccentedBlock from "../../UI/AccentedParagraph/AccentedParagraph";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import Footnote from "../../UI/Footnote/Footnote";
+import React from 'react';
+import s from './Post.module.scss';
+import RedactedText from '../UI/RedactedText/RedactedText';
+import Signature from '../UI/Signature/Signature';
+import AccentedBlock from '../UI/AccentedParagraph/AccentedParagraph';
+import AccentedText from '../UI/AccentedText/AccentedText';
+import Footnote from '../UI/Footnote/Footnote';
 
 const Post_1 = () => {
   return (
@@ -29,7 +29,7 @@ const Post_1 = () => {
       </p>
       <p>
         Учитывая вышеизложенное, руководствуясь действующим положением о работе
-        учебно-методической группы, прошу в срок до 25 марта 2011 г.{" "}
+        учебно-методической группы, прошу в срок до 25 марта 2011 г.{' '}
         <b>подтвердить свое участие в работе группы. </b>
       </p>
       <p>
@@ -224,7 +224,7 @@ const Post_1 = () => {
         <li>
           караоке-клубы (запрет распространяется только лишь на членов кафедры,
           не имеющих высшего музыкального образования, а равно на имеющих такое
-          образование хоровиков, лишенных слуха и/или чувства меры);{" "}
+          образование хоровиков, лишенных слуха и/или чувства меры);{' '}
         </li>
         <li>
           квартиры других членов кафедры противоположного пола (за исключением

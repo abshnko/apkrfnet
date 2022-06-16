@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import s from "./SpyCheckModal.module.scss";
-import { spyQuestions } from "../../data/spyQuestions";
-import Footnote from "../../UI/Footnote/Footnote";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from 'react';
+import s from './SpyCheckModal.module.scss';
+import { spyQuestions } from '../../data/spyQuestions';
+import Footnote from '../UI/Footnote/Footnote';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
   const [id, setId] = useState(randomIntFromInterval(0, 4));
@@ -65,11 +65,11 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
 
                 <div
                   className={`${s.answers} ${
-                    !("visualQuestion" in question!) && s.answers_text
+                    !('visualQuestion' in question!) && s.answers_text
                   }`}
                 >
                   {question?.answers.map((a) => {
-                    return "visualQuestion" in question ? (
+                    return 'visualQuestion' in question ? (
                       <div
                         className={`${s.img_wrapper} ${
                           chosenAnswer === a.id && !passed && s.active

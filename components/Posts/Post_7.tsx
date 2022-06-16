@@ -1,11 +1,11 @@
-import React from "react";
-import AccentedBlock from "../../UI/AccentedParagraph/AccentedParagraph";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import Footnote from "../../UI/Footnote/Footnote";
-import RedactedText from "../../UI/RedactedText/RedactedText";
-import Signature from "../../UI/Signature/Signature";
-import Image from "next/image";
-import s from "./Post.module.scss";
+import React from 'react';
+import AccentedBlock from '../UI/AccentedParagraph/AccentedParagraph';
+import AccentedText from '../UI/AccentedText/AccentedText';
+import Footnote from '../UI/Footnote/Footnote';
+import RedactedText from '../UI/RedactedText/RedactedText';
+import Signature from '../UI/Signature/Signature';
+import Image from 'next/image';
+import s from './Post.module.scss';
 
 const Post_7 = () => {
   return (
@@ -143,7 +143,7 @@ const Post_7 = () => {
         аспирантов? Чем они лучше нас, обычных преподавателей? Вот что у меня
         &ndash; при помощи некоторых остепененных коллег
         <sup>1</sup>
-        &ndash; в итоге получилось (назовем это{" "}
+        &ndash; в итоге получилось (назовем это{' '}
         <strong>
           <em>&laquo;Моральный кодекс аспиранта&raquo;</em>
         </strong>
@@ -450,7 +450,7 @@ const Post_7 = () => {
       </ol>
       <p>&nbsp;</p>
       <p>
-        На очередное заседание, которое состоится{" "}
+        На очередное заседание, которое состоится{' '}
         <strong>30 мая 2014 г. (пятница) в 18-00</strong>, на обсуждение
         выносятся следующие темы.
       </p>
@@ -477,7 +477,7 @@ const Post_7 = () => {
         <p>
           Место, где будет проводиться наше мероприятие, будет определено
           традиционно путем подбрасывания рублевой монеты. В связи с чем прошу в
-          срок <strong>до 16 мая 2014 г.</strong> (включительно){" "}
+          срок <strong>до 16 мая 2014 г.</strong> (включительно){' '}
           <strong>
             подтвердить свое участие в работе группы посредством сообщения
             лаборанту &hellip;
@@ -498,7 +498,7 @@ const Post_7 = () => {
       </p>
       <p>
         Во-вторых, это крупный специалист по иностранной валюте и иностранным
-        инвестициям, доцент кафедры предпринимательского права УрГЮА{" "}
+        инвестициям, доцент кафедры предпринимательского права УрГЮА{' '}
         <RedactedText />
       </p>
       <p>

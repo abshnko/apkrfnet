@@ -1,7 +1,7 @@
-import React from "react";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import RedactedText from "../../UI/RedactedText/RedactedText";
-import Signature from "../../UI/Signature/Signature";
+import React from 'react';
+import AccentedText from '../UI/AccentedText/AccentedText';
+import RedactedText from '../UI/RedactedText/RedactedText';
+import Signature from '../UI/Signature/Signature';
 
 const Post_2 = () => {
   return (
@@ -50,9 +50,9 @@ const Post_2 = () => {
         <strong> до 01 декабря 2011 г. </strong>
         (включительно)
         <strong>
-          {" "}
+          {' '}
           подтвердить свое участие в работе группы посредством
-          устного/письменного сообщения лаборанту.{" "}
+          устного/письменного сообщения лаборанту.{' '}
         </strong>
         Конкретное место проведения мероприятия будет уточнено дополнительно
         исходя из общего количества акцептовавших эту публичную оферту (надеюсь,
@@ -74,10 +74,10 @@ const Post_2 = () => {
       </p>
       <p>
         <AccentedText>P.S.S.</AccentedText> Лица, не дочитавшие до конца это
-        объявление, должны{" "}
+        объявление, должны{' '}
         <strong>
           представить письменное объяснение <RedactedText />
-        </strong>{" "}
+        </strong>{' '}
         (а <RedactedText /> &ndash; письменное объяснение самому себе по поводу
         своей неявки на прошлое заседание с приложением оправдательных
         документов).

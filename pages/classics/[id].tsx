@@ -6,9 +6,9 @@ import s from './Classic.module.scss';
 import { classics } from '../../data/classics';
 import Link from 'next/link';
 import Image from 'next/image';
-import AccentedText from '../../UI/AccentedText/AccentedText';
+import AccentedText from '../../components/UI/AccentedText/AccentedText';
 import { IClassic } from '../../types';
-import AccentedBlock from '../../UI/AccentedParagraph/AccentedParagraph';
+import AccentedBlock from '../../components/UI/AccentedParagraph/AccentedParagraph';
 import { useGlobalContext } from '../../context/state';
 
 const Classic = () => {
@@ -79,7 +79,7 @@ const Classic = () => {
                     src={classic!.image}
                     alt="classic img"
                     layout="fill"
-                    objectFit="contain"
+                    objectFit="cover"
                   />
                 </div>
               </div>

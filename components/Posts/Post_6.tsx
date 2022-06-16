@@ -1,11 +1,11 @@
-import React from "react";
-import AccentedBlock from "../../UI/AccentedParagraph/AccentedParagraph";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import Footnote from "../../UI/Footnote/Footnote";
-import RedactedText from "../../UI/RedactedText/RedactedText";
-import Signature from "../../UI/Signature/Signature";
-import Image from "next/image";
-import s from "./Post.module.scss";
+import React from 'react';
+import AccentedBlock from '../UI/AccentedParagraph/AccentedParagraph';
+import AccentedText from '../UI/AccentedText/AccentedText';
+import Footnote from '../UI/Footnote/Footnote';
+import RedactedText from '../UI/RedactedText/RedactedText';
+import Signature from '../UI/Signature/Signature';
+import Image from 'next/image';
+import s from './Post.module.scss';
 
 const Post_6 = () => {
   return (
@@ -228,7 +228,7 @@ const Post_6 = () => {
       </p>
       <AccentedBlock>
         <p>
-          На очередное заседание, которое состоится{" "}
+          На очередное заседание, которое состоится{' '}
           <strong>9 ноября 2013 г. в 18-00</strong>, на обсуждение выносятся
           следующие темы:
         </p>
@@ -243,8 +243,8 @@ const Post_6 = () => {
       <p>
         Место, где будет проводиться наше мероприятие, будет определено
         исключительно исходя из пропорционального соотношения любителей пива и
-        вина. В связи с чем прошу в срок <strong>до 31 октября 2013 г.</strong>{" "}
-        (включительно){" "}
+        вина. В связи с чем прошу в срок <strong>до 31 октября 2013 г.</strong>{' '}
+        (включительно){' '}
         <strong>
           подтвердить свое участие в работе группы посредством
           устного/письменного/телеграфного сообщения лаборанту &hellip;

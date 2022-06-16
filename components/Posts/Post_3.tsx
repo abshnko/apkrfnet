@@ -1,9 +1,9 @@
-import React from "react";
-import AccentedBlock from "../../UI/AccentedParagraph/AccentedParagraph";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import RedactedText from "../../UI/RedactedText/RedactedText";
-import Signature from "../../UI/Signature/Signature";
-import s from "./Post.module.scss";
+import React from 'react';
+import AccentedBlock from '../UI/AccentedParagraph/AccentedParagraph';
+import AccentedText from '../UI/AccentedText/AccentedText';
+import RedactedText from '../UI/RedactedText/RedactedText';
+import Signature from '../UI/Signature/Signature';
+import s from './Post.module.scss';
 
 const Post_3 = () => {
   return (
@@ -21,7 +21,7 @@ const Post_3 = () => {
         <p>
           Для тех, кто все же решил осилить хотя бы третий абзац, сообщаю:
           учебно-методическая группа по арбитражному процессу не упразднена и не
-          присоединена к группе по гражданскому процессу (привет{" "}
+          присоединена к группе по гражданскому процессу (привет{' '}
           <RedactedText theme="white" /> !).
         </p>
       </AccentedBlock>
@@ -53,7 +53,7 @@ const Post_3 = () => {
         (Московский государственный университет имени М.В. Ломоносова).
       </p>
       <p>
-        На первое в этом учебном году заседание, которое состоится{" "}
+        На первое в этом учебном году заседание, которое состоится{' '}
         <strong>5 октября 2012 г. в 18-00</strong>, на обсуждение выносятся
         следующие темы:
       </p>
@@ -95,8 +95,8 @@ const Post_3 = () => {
         лица по поддельному паспорту и доверенности.
       </p>
       <p>Перед Дубовязом встал вопрос, как защитить свои нарушенные права.</p>
-      <p style={{ marginBottom: "3rem", display: "inline-block" }}>
-        <i style={{ fontWeight: "600" }}>
+      <p style={{ marginBottom: '3rem', display: 'inline-block' }}>
+        <i style={{ fontWeight: '600' }}>
           Какие иски и к кому может предъявить Дубовяз? Необходимо ли
           привлечение к участию в деле третьих лиц, не заявляющих
           самостоятельные требования относительно предмета спора?
@@ -128,7 +128,7 @@ const Post_3 = () => {
         помещен в организацию для детей-сирот.
       </p>
       <p>
-        <em style={{ fontWeight: "600" }}>
+        <em style={{ fontWeight: '600' }}>
           Какие процессуальные вопросы в данной ситуации возникают, и как они
           должны быть разрешены?
         </em>
@@ -165,16 +165,16 @@ const Post_3 = () => {
         на ж/д вокзале, не в кафе &laquo;Аллигатор&raquo;, не в буфете
         правительства Свердловской области и даже не в благотворительной
         столовой, а в очень бюджетном-пребюджетном пабе. В связи с чем прошу в
-        срок <strong>до 27 сентября 2012 г.</strong> (включительно){" "}
+        срок <strong>до 27 сентября 2012 г.</strong> (включительно){' '}
         <strong>
           подтвердить свое участие в работе группы посредством
           устного/письменного сообщения лаборанту <RedactedText />
-        </strong>{" "}
+        </strong>{' '}
         (в этот раз ей предоставлено право отсеивать всех, кто с нарушением
         сроков сдал преподавательский журнал либо допустил арифметические ошибки
         при вычислении фактической нагрузки, два и более раза за последние 10
-        лет пропустил заседание кафедры, не сдал 500 рублей для оплаты{" "}
-        <span style={{ textDecoration: "line-through" }}>её</span> кафедрального
+        лет пропустил заседание кафедры, не сдал 500 рублей для оплаты{' '}
+        <span style={{ textDecoration: 'line-through' }}>её</span> кафедрального
         сотового телефона, не подошел в установленный срок в управление кадров,
         а равно всех тех, к кому она не питает симпатий).
       </p>

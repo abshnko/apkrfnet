@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import MainLayout from '../../components/MainLayout';
 import { renderSwitch } from '../../utils/funcs';
 import PostsMobile from '../../components/Posts/PostsMobile/PostsMobile';
-import NewBadge from '../../UI/NewBadge/NewBadge';
+import NewBadge from '../../components/UI/NewBadge/NewBadge';
 
 const Posts: NextPage = () => {
   const [postId, setPostId] = useState('17');

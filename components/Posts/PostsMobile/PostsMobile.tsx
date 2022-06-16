@@ -3,7 +3,7 @@ import Image from 'next/image';
 import s from './PostsMobile.module.scss';
 import { posts } from '../../../data/posts';
 import { renderSwitch } from '../../../utils/funcs';
-import NewBadge from '../../../UI/NewBadge/NewBadge';
+import NewBadge from '../../UI/NewBadge/NewBadge';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const PostsMobile = ({ postId, post, setPostId }: any) => {
