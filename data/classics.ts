@@ -24,6 +24,29 @@ export const classics = [
   },
   {
     id: '1',
+    name: 'Кузьма Иванович Комиссаров',
+    dateOfBirth: '',
+    shortBio: `один из наиболее ярких представителей уральской школы гражданского процесса, фронтовик, автор ряда фундаментальных работ, связанных с деятельностью судов проверочных инстанций
+    `,
+    image: '/images/classics/man_3.png',
+    link: 'osipov',
+    fullBio: `Кузьма Иванович Комиссаров родился 26 октября 1923 года в деревне Сикияз-Тамак Саткинского района Челябинской области.
+    Трудовую деятельность начал в 1941 году вычислителем токо-геодезической партии Наркомата цветной металлургии СССР.
+    С февраля 1942 года по апрель 1947 года служил в рядах Советской армии; участвовал в боях Великой Отечественной войны в составе Ленинградского, Волховского и трех прибалтийских фронтов;
+    демобилизован в звании командующего отделением.
+    По окончании службы работал контролером 2-ой дистанции Службы путей Южно-Уральской железной дороги.
+    В период с 1947 по 1951 годы обучался сначала в Свердловской юридической школе, а затем экстерном в Свердловском юридическом институте.
+    В период учебы работал народным судьей Чкаловского районного суда города Свердловска.
+    С 1951 по 1962 годы – судья Свердловского областного суда.
+    В 1957 году начал работать по совместительству (нагрузка – более 240 часов в год), а с 1962 года на постоянной основе в Свердловском юридическом институте.
+    \rПо итогам сдачи кандидатских экзаменов получил следующие оценки: диалектический и исторический материализм – «хорошо»; советский гражданский процесс – «отлично»; теория государства и права – «удовлетворительно»; немецкий язык – «хорошо».\r
+    В 1962 году защитил кандидатскую, а в 1971 году - докторскую диссертацию.
+    Трудовую деятельность К.И. Комиссаров завершил в Уральской государственной юридической академии в начале 2000-х годов.
+    Награжден орденом «Красная звезда», медалями «За отвагу» и «За оборону Ленинграда».`,
+    title: '',
+  },
+  {
+    id: '2',
     name: 'Осипов Юрий Кузьмич',
     dateOfBirth: '',
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupidit"ate" providen"t" esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem"," animi possimus fugit corporis voluptatem molestias.
@@ -34,7 +57,7 @@ export const classics = [
     title: '',
   },
   {
-    id: '2',
+    id: '3',
     name: 'MAN 2',
     dateOfBirth: '',
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupidit"ate" providen"t" esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem"," animi possimus fugit corporis voluptatem molestias.
@@ -45,17 +68,6 @@ export const classics = [
     title: '',
   },
 
-  {
-    id: '3',
-    name: 'Осипов Юрий Кузьмич',
-    dateOfBirth: '',
-    shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupidit"ate" providen"t" esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem"," animi possimus fugit corporis voluptatem molestias.
-    `,
-    image: '/images/classics/man_3.png',
-    link: 'osipov',
-    fullBio: '',
-    title: '',
-  },
   {
     id: '4',
     name: 'Осипов Юрий Кузьмич',

@@ -62,7 +62,8 @@
         background-color: $black_background;
         padding: 30px 50px;
         border-radius: 20px;
-        height: 550px;
+        height: max-content;
+        max-height: 550px;
 
         .name {
           font-size: 36px;
