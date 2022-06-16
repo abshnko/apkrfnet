@@ -70,6 +70,16 @@ const NavbarMobile = ({
                 />
               </div>
             </li>
+            <li className={s.link}>
+              <Link href="/gallery">галерея участников</Link>
+              <div className={s.arrow}>
+                <Image
+                  src={'/images/right_chevron.svg'}
+                  alt="arrow"
+                  layout="fill"
+                />
+              </div>
+            </li>
             <li
               className={s.link}
               onClick={() => {

@@ -1,11 +1,11 @@
-import React from "react";
-import AccentedText from "../../UI/AccentedText/AccentedText";
-import MainContainer from "../MainContainer";
-import s from "./Gallery.module.scss";
-import arrow from "../../public/images/right_arrow.svg";
-import Image from "next/image";
-import protectedFile from "../../public/images/file_protected.svg";
-import Link from "next/link";
+import React from 'react';
+import AccentedText from '../UI/AccentedText/AccentedText';
+import MainContainer from '../MainContainer';
+import s from './Gallery.module.scss';
+import arrow from '../../public/images/right_arrow.svg';
+import Image from 'next/image';
+import protectedFile from '../../public/images/file_protected.svg';
+import Link from 'next/link';
 
 const Gallery = () => {
   return (
@@ -18,7 +18,7 @@ const Gallery = () => {
           </div>
           <Link href="/">
             <div className={s.button}>
-              <span>на главную</span>{" "}
+              <span>на главную</span>{' '}
               <Image src={arrow} alt="arrow" width={28} height={28} />
             </div>
           </Link>
