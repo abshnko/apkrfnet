@@ -1,5 +1,5 @@
 import React from 'react';
-import MainContainer from '../components/MainContainer';
+import MainContainer from '../components/MainContainer/MainContainer';
 import MainLayout from '../components/MainLayout';
 import error from '../public/images/error404.svg';
 import s from '../styles/404.module.scss';

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import MainLayout from '../../components/MainLayout';
-import MainContainer from '../../components/MainContainer';
+import MainContainer from '../../components/MainContainer/MainContainer';
 import s from './Classic.module.scss';
 import { classics } from '../../data/classics';
 import Link from 'next/link';

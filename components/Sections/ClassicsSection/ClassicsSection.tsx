@@ -96,12 +96,13 @@ const ClassicsSection: NextComponentType = () => {
                     <Link href={`/classics/${selectedClassic.id}`} passHref>
                       <div className={s.button}>
                         <span> Подробнее</span>
-                        <Image
-                          src="/images/right_arrow.svg"
-                          alt="right_arrow"
-                          width="30px"
-                          height="15px"
-                        />
+                        <div className={s.more_info_arrow}>
+                          <Image
+                            src="/images/right_arrow.svg"
+                            alt="right_arrow"
+                            layout="fill"
+                          />
+                        </div>
                       </div>
                     </Link>
                   </div>

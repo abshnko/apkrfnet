@@ -1,35 +1,36 @@
 import React from 'react';
 import AccentedText from '../UI/AccentedText/AccentedText';
-import MainContainer from '../MainContainer';
+import MainContainer from '../MainContainer/MainContainer';
 import s from './Gallery.module.scss';
 import arrow from '../../public/images/right_arrow.svg';
 import Image from 'next/image';
 import protectedFile from '../../public/images/file_protected.svg';
 import Link from 'next/link';
+import Breadcrumbs from '../UI/Breadcrumbs/Breadcrumbs';
 
 const Gallery = () => {
   return (
     <MainContainer>
+      <Breadcrumbs crumbs={['Галерея']} links={['/gallery']} />
       <div className={s.container}>
         <div className={s.left_side}>
           <div className={s.title}>
             К сожалению, ни один из участников не согласился на публикацию
             фотографий.
           </div>
-          <Link href="/">
+          <Link href="/" passHref>
             <div className={s.button}>
               <span>на главную</span>{' '}
-              <Image src={arrow} alt="arrow" width={28} height={28} />
+              <div className={s.img_container}>
+                <Image src={arrow} alt="arrow" layout="fill" />
+              </div>
             </div>
           </Link>
         </div>
         <div className={s.right_side}>
-          <Image
-            src={protectedFile}
-            alt="protectedFile"
-            width={300}
-            height={300}
-          />
+          <div className={s.img_container_lock}>
+            <Image src={protectedFile} alt="protectedFile" layout="fill" />
+          </div>
         </div>
       </div>
     </MainContainer>

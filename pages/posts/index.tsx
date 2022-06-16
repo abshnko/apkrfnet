@@ -10,6 +10,7 @@ import MainLayout from '../../components/MainLayout';
 import { renderSwitch } from '../../utils/funcs';
 import PostsMobile from '../../components/Posts/PostsMobile/PostsMobile';
 import NewBadge from '../../components/UI/NewBadge/NewBadge';
+import Breadcrumbs from '../../components/UI/Breadcrumbs/Breadcrumbs';
 
 const Posts: NextPage = () => {
   const [postId, setPostId] = useState('17');
@@ -50,6 +51,9 @@ const Posts: NextPage = () => {
           }}
           exit="out"
         >
+          <div className={s.bread}>
+            <Breadcrumbs crumbs={['Объявления']} links={['/posts']} />
+          </div>
           <div className={s.container}>
             <div className={s.left_side}>
               <div className={s.posts_title}>Объявления</div>

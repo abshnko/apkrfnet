@@ -54,3 +54,37 @@
     }
   }
 }
+
+@media only screen and (max-width: 350px) {
+  .container {
+    .right_side {
+      .links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        button {
+          font-size: inherit;
+          text-transform: inherit;
+        }
+
+        .link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          a {
+            width: min-content;
+          }
+          .arrow {
+            width: 18px;
+            height: 18px;
+            position: relative;
+            filter: invert(12%) sepia(1%) saturate(0%) hue-rotate(70deg)
+              brightness(105%) contrast(89%);
+          }
+        }
+      }
+    }
+  }
+}

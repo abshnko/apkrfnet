@@ -2,7 +2,7 @@
 .container {
   width: 80%;
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 1.5rem;
   min-height: calc(100vh - 60px);
 
   .title {
@@ -13,12 +13,13 @@
   .dropdown {
     position: relative;
     background-color: $black_background;
-    margin-top: 2rem;
+    // margin-top: 1rem;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     border-radius: 13px;
     color: white;
+    margin-bottom: 2rem;
 
     .dropdown_title_container {
       display: flex;
@@ -79,7 +80,7 @@
     position: absolute;
     background-color: $black_background;
     border-radius: 20px;
-    margin-top: 0.5rem;
+    margin-top: -1.5rem;
     padding: 20px 30px;
     color: white;
     width: inherit;

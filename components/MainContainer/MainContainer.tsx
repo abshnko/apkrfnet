@@ -1,5 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
+import s from './MainContainer.module.scss';
 
 const MainContainer = ({ children }: any) => {
   return (
@@ -11,9 +12,7 @@ const MainContainer = ({ children }: any) => {
         duration: 0.25,
       }}
     >
-      <div style={{ width: "80%", margin: "0 auto", marginTop: "8rem" }}>
-        {children}
-      </div>
+      <div className={s.container}>{children}</div>
     </motion.div>
   );
 };

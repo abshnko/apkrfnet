@@ -10,7 +10,7 @@ const PostsMobile = ({ postId, post, setPostId }: any) => {
   const [showDropdown, setShowDropdown] = useState(false);
   return (
     <div className={s.container} onClick={() => setShowDropdown(false)}>
-      <div className={s.title}>Объявления</div>
+      {/* <div className={s.title}>Объявления</div> */}
       <div
         className={s.dropdown}
         onClick={(e) => {

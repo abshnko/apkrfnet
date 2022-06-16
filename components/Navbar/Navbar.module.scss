@@ -54,15 +54,24 @@
     }
   }
 }
+.navbar_fixed li {
+  margin-top: 0;
+  line-height: 24px;
+}
 
 @media only screen and (max-width: 500px) {
   .navbar_fixed {
+    height: 50px;
     .navbar {
       align-items: center;
+      .logo {
+        font-size: 16px;
+        line-height: 16px;
+      }
       .menu_icon {
         display: block;
-        width: 25px;
-        height: 25px;
+        width: 22px;
+        height: 22px;
         position: relative;
       }
       .links {
@@ -73,9 +82,4 @@
   .container {
     display: none;
   }
-}
-
-.navbar_fixed li {
-  margin-top: 0;
-  line-height: 24px;
 }

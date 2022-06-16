@@ -1,11 +1,17 @@
 @import '/styles/variables.scss';
 
+.bread {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 7rem;
+}
+
 .container {
   min-height: min-content;
   max-height: calc(100vh - 10rem);
   width: 80%;
   margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
 
@@ -37,14 +43,13 @@
       }
       .post {
         border-bottom: 1px solid rgba(255, 255, 255, 0.516);
-        // margin-bottom: 2.5rem;
         padding-bottom: 1rem;
         padding-top: 2.5rem;
         position: relative;
         cursor: pointer;
 
         .title {
-          font-size: 24px;
+          font-size: 20px;
           opacity: 60%;
         }
 
@@ -58,8 +63,9 @@
 
         .badge {
           position: absolute;
-          bottom: 40px;
+          bottom: 30px;
           right: 0;
+          font-size: 16px !important;
         }
       }
 
@@ -84,19 +90,18 @@
   .right_side {
     width: 68%;
     overflow-y: auto;
-
     height: 80vh;
     .post_title {
       @include accentedButton;
-      font-size: 28px;
+      font-size: 26px;
     }
 
     .post_date_container {
       margin-top: 1rem;
-      font-size: 18px;
+      font-size: 16px;
       display: block;
       width: min-content;
-      padding-left: 10px;
+      //   padding-left: 10px;
 
       .post_date {
         opacity: 80%;
@@ -106,14 +111,33 @@
       height: 70vh;
       //   overflow-y: auto;
       padding: 0 2rem 5rem 0;
-      font-size: 20px;
+      font-size: 18px;
       margin-top: 1rem;
     }
   }
 }
 
+@media (max-width: 1400px) {
+  .container {
+    width: 90%;
+    .left_side {
+      .posts_title {
+        font-size: 26px;
+      }
+    }
+  }
+  .bread {
+    width: 90%;
+  }
+}
+//Mobile
 @media only screen and (max-width: 500px) {
   .container {
     display: none;
+  }
+  .bread {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
   }
 }
