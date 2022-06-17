@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
 import Head from 'next/head';
-import SpyCheckModal_Portal from './SpyCheckModal/SpyCheckModal_Portal';
+import SpyCheckModal from './SpyCheckModal/SpyCheckModal';
 import { useSpyCheckContext } from '../context/spyCheck';
 import { fixBackground } from '../utils/funcs';
 
@@ -71,7 +71,7 @@ const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
       </Head>
       {showSpyCheck && (
         <div style={{ width: 'inherit' }}>
-          <SpyCheckModal_Portal
+          <SpyCheckModal
             setShowSpyCheck={setShowSpyCheck}
             setDidntPass={setDidntPass}
           />

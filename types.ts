@@ -54,6 +54,7 @@ export interface IClassic {
   dateOfBirth: string;
   shortBio: string;
   image: string;
+  contentImage?: string;
   link: string;
   fullBio: string;
   title: string;

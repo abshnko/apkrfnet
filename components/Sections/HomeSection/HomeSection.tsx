@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { showAlertWriteToUs } from '../../../utils/Alerts/alerts';
 import { motion } from 'framer-motion';
 import useLocalStorage from 'use-local-storage';
-import SpyCheckModal_Portal from '../../SpyCheckModal/SpyCheckModal_Portal';
+import SpyCheckModal_Portal from '../../SpyCheckModal/SpyCheckModal';
 import { IHomeSection } from '../../../types';
 
 const HomeSection = () =>

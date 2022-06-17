@@ -26,6 +26,8 @@ const Classic = () => {
   }, [id]);
 
   useEffect(() => {
+    console.log(classic?.contentImage);
+
     if (classic !== undefined) {
       classic?.fullBio.split('\\n').map((p) => {
         if (p.includes('\\a')) {
@@ -76,6 +78,19 @@ const Classic = () => {
                     return <p key={classic.id}>{p}</p>;
                   })}
                 </div>
+                {'contentImage' in classic! &&
+                classic.contentImage !== undefined ? (
+                  <div className={s.content_image_container}>
+                    <div className={s.content_image}>
+                      <Image
+                        src={classic!.contentImage}
+                        alt="classic img"
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
+                  </div>
+                ) : null}
               </div>
               <div className={s.right_side}>
                 <div className={s.main_img}>
