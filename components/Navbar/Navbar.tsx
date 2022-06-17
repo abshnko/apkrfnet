@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import toastStyle from '../../utils/Alerts/Toast/Toast.module.scss';
 import { showAlertEN } from '../../utils/Alerts/alerts';
 import menu_img from '../../public/images/menu.svg';
-import { useGlobalContext } from '../../context/state';
+import { useGlobalContext } from '../../context/refs';
 import Image from 'next/image';
 import NavbarMobile from './NavbarMobile/NavbarMobile';
 import { removeScrollUnderModal, scrollToRef } from '../../utils/funcs';

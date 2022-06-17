@@ -4,8 +4,9 @@ import { spyQuestions } from '../../data/spyQuestions';
 import Footnote from '../UI/Footnote/Footnote';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSpyCheckContext } from '../../context/spyCheck';
 
-const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
+const SpyCheckModal = () => {
   const [id, setId] = useState(randomIntFromInterval(0, 4));
   const [question, setQuestion] = useState(
     spyQuestions.find((q) => q.id === id)
@@ -13,6 +14,8 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
   const [chosenAnswer, setChosenAnswer] = useState<number>();
   const [passed, setPassed] = useState(false);
   const [failed, setFailed] = useState(false);
+  const { setShowSpyCheck, setDidntPass } = useSpyCheckContext();
+
   function randomIntFromInterval(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }

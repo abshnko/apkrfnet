@@ -1,19 +1,19 @@
 import { createContext, useContext, useState } from 'react';
-import { GlobalContent } from '../types';
+import { IRefsContent } from '../types';
 
-const GlobalContext = createContext<GlobalContent>({
+const RefsContext = createContext<IRefsContent>({
   scrollToTeam: false,
   setScrollToTeam: () => {},
   scrollToClassics: false,
   setScrollToClassics: () => {},
 });
 
-export const Provider = ({ children }: any) => {
+export const RefsProvider = ({ children }: any) => {
   const [scrollToTeam, setScrollToTeam] = useState(false);
   const [scrollToClassics, setScrollToClassics] = useState(false);
 
   return (
-    <GlobalContext.Provider
+    <RefsContext.Provider
       value={{
         scrollToTeam,
         setScrollToTeam,
@@ -22,10 +22,10 @@ export const Provider = ({ children }: any) => {
       }}
     >
       {children}
-    </GlobalContext.Provider>
+    </RefsContext.Provider>
   );
 };
 
 export const useGlobalContext = () => {
-  return useContext(GlobalContext);
+  return useContext(RefsContext);
 };

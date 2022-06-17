@@ -9,7 +9,7 @@ import Image from 'next/image';
 import AccentedText from '../../components/UI/AccentedText/AccentedText';
 import { IClassic } from '../../types';
 import AccentedBlock from '../../components/UI/AccentedParagraph/AccentedParagraph';
-import { useGlobalContext } from '../../context/state';
+import { useGlobalContext } from '../../context/refs';
 import Breadcrumbs from '../../components/UI/Breadcrumbs/Breadcrumbs';
 
 const Classic = () => {

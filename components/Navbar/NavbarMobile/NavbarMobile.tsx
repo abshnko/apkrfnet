@@ -70,7 +70,7 @@ const NavbarMobile = ({
                 />
               </div>
             </li>
-            <li className={s.link}>
+            <li className={s.link} onClick={() => setShowMobileNav(false)}>
               <Link href="/gallery">галерея участников</Link>
               <div className={s.arrow}>
                 <Image

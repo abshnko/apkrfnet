@@ -11,12 +11,6 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
   const [question, setQuestion] = useState(
     spyQuestions.find((q) => q.id === id)
   );
-  const [isBrowser, setIsBrowser] = useState(false);
-
-  useEffect(() => {
-    setIsBrowser(true);
-  }, []);
-
   const [chosenAnswer, setChosenAnswer] = useState<number | undefined>(
     undefined
   );
@@ -25,6 +19,7 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
   function randomIntFromInterval(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
+
   const onSubmit = () => {
     if (chosenAnswer !== undefined) {
       if (chosenAnswer === question?.rightAnswer) {
@@ -70,7 +65,7 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
     setChosenAnswer(undefined);
   }, [question]);
 
-  const modalContent = (
+  return (
     <>
       <AnimatePresence>
         <div className={s.background}>
@@ -85,7 +80,6 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
           >
             <div className={s.modal}>
               <div className={s.container} key={question!.id}>
-                {/* <AnimatePresence> */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -167,7 +161,6 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
                     </div>
                   </div>
                 </motion.div>
-                {/* </AnimatePresence> */}
                 <AnimatePresence>
                   {failed && (
                     <motion.div
@@ -192,15 +185,6 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
       </AnimatePresence>
     </>
   );
-
-  if (isBrowser) {
-    return ReactDOM.createPortal(
-      modalContent,
-      document.getElementById('modal-root') as unknown as HTMLElement
-    );
-  } else {
-    return null;
-  }
 };
 
 export default SpyCheckModal;

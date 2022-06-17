@@ -1,10 +1,19 @@
 import { Dispatch, SetStateAction } from 'react';
 
-export type GlobalContent = {
+export type IRefsContent = {
   scrollToTeam: boolean;
   setScrollToTeam: Dispatch<SetStateAction<boolean>>;
   scrollToClassics: boolean;
   setScrollToClassics: Dispatch<SetStateAction<boolean>>;
+};
+
+export type ISpyCheckContext = {
+  showSpyCheck: boolean;
+  setShowSpyCheck: Dispatch<SetStateAction<boolean>>;
+  didntPass: boolean;
+  setDidntPass: any;
+  passedSpyCheck: boolean;
+  setPassedSpyCheck: any;
 };
 
 export type INavbarMobile = {
