@@ -90,7 +90,8 @@
       }
       .write_button {
         padding: 4px 20px;
-        background-color: $yellow;
+        // background-color: $yellow;
+        background-color: $grey_background;
         font-size: 22px;
         font-weight: 600;
         border-radius: 20px;
@@ -187,7 +188,7 @@
       padding: 0;
       .title {
         font-size: 28px;
-        line-height: 28px;
+        line-height: 34px;
       }
       .subtitle {
         font-size: 20px;
@@ -198,19 +199,23 @@
       display: block;
       .left_side {
         width: 100%;
-        margin: 4rem 0 0;
+        margin: 5rem 0 0;
 
         .events_title {
           display: none;
         }
         .events_subtitle {
           margin: 2rem 0 0;
-          font-size: 20px;
+          font-size: 22px;
           padding: 20px 30px 25px;
           width: 100%;
           .new_event {
             width: 40px;
             height: 40px;
+            right: -10px;
+          }
+          .new_event_icon {
+            margin-left: 10px;
           }
 
           &:hover {
@@ -219,7 +224,7 @@
         }
         .write_to_us_btn {
           margin-top: 2rem;
-          font-size: 16px;
+          font-size: 17px;
           width: 100%;
           p {
             // text-align: center;
@@ -231,6 +236,8 @@
             align-items: center;
             justify-content: center;
             border-radius: 15px;
+            padding: 7px 0 12px;
+            margin-top: 7px;
 
             &:hover {
               transform: none;

@@ -10,16 +10,19 @@ import AccentedText from '../../components/UI/AccentedText/AccentedText';
 import { IClassic } from '../../types';
 import AccentedBlock from '../../components/UI/AccentedParagraph/AccentedParagraph';
 import { useGlobalContext } from '../../context/state';
+import Breadcrumbs from '../../components/UI/Breadcrumbs/Breadcrumbs';
 
 const Classic = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
+  const [href, setHref] = useState('');
   const [classic, setClassic] = useState<IClassic>();
   const { id } = router.query;
   const { scrollToClassics, setScrollToClassics } = useGlobalContext();
 
   useEffect(() => {
     setClassic(classics.find((a) => a.id === id!));
+    setHref(`/classics/${id}`);
   }, [id]);
 
   useEffect(() => {
@@ -37,6 +40,7 @@ const Classic = () => {
   return (
     <MainLayout title="Классики | АПКРФ НЕТ">
       <MainContainer>
+        <Breadcrumbs crumbs={['Классики']} links={[href]} />
         <div className={s.container}>
           {loading ? (
             'Loading'

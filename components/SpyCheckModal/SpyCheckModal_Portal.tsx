@@ -130,12 +130,7 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
                                 </div>
                               )}
                               <div className={s.img}>
-                                <Image
-                                  src={a.img}
-                                  alt={a.img}
-                                  width={200}
-                                  height={200}
-                                />
+                                <Image src={a.img} alt={a.img} layout="fill" />
                               </div>
                             </div>
                           </div>
@@ -160,6 +155,7 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
                                     src="/images/check.svg"
                                     alt={a.img}
                                     layout="fill"
+                                    objectFit="contain"
                                   />
                                 </div>
                               </motion.div>

@@ -83,4 +83,8 @@ ol {
   body {
     scroll-padding-top: 80px;
   }
+  h2 {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }

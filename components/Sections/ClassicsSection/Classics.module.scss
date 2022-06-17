@@ -76,21 +76,26 @@
         }
         .more_info {
           @include accentedButton;
+          background-color: $grey_background !important;
           display: inline-block;
           margin-top: 3rem;
           cursor: pointer;
+
           .button {
-            display: flex;
-            align-items: flex-end;
             gap: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 18px !important;
+            line-height: 20px;
+
             span {
-              margin-top: 2px;
               align-self: baseline;
             }
             .more_info_arrow {
               position: relative;
-              width: 30px;
-              height: 15px;
+              width: 20px;
+              height: 11px;
+              padding-top: 20px;
             }
           }
         }
@@ -101,7 +106,7 @@
 
 @media screen and (max-width: 500px) {
   .container {
-    min-height: min-content;
+    min-height: calc(100vh - 60px);
     margin-top: 4rem;
     .title {
       font-size: 26px;
@@ -133,7 +138,7 @@
           padding: 20px 30px 30px;
           height: min-content;
           .name {
-            font-size: 30px;
+            font-size: 26px;
           }
           .bio {
             font-size: 18px;
@@ -144,6 +149,14 @@
           }
           .more_info {
             margin-top: 1rem;
+            font-size: 16px;
+            .button {
+              .more_info_arrow {
+                position: relative;
+                width: 17px;
+                height: 16px;
+              }
+            }
           }
         }
       }

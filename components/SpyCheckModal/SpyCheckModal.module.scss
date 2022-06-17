@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .background {
   height: 100vh;
@@ -53,6 +53,9 @@
 
     .img {
       margin-bottom: -3px;
+      position: relative;
+      width: 200px;
+      height: 200px;
     }
   }
   .passed {
@@ -135,4 +138,140 @@
   width: fit-content;
   align-self: center;
   margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .background {
+    .modal {
+      width: 90%;
+      margin: 1rem auto 0 auto;
+      height: min-content;
+      overflow-y: scroll !important;
+      max-height: calc(100vh - 100px);
+      //   padding: rem;
+    }
+
+    .container {
+      padding: 20px;
+    }
+  }
+
+  .instruction {
+    font-size: 14px;
+    margin: 0 auto !important;
+  }
+
+  .answers {
+    margin-top: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .img_wrapper {
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .img_container {
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+
+      .img {
+        margin-bottom: -3px;
+        position: relative;
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .passed {
+      // border: 5px solid rgb(0, 209, 21);
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 50px;
+      height: 50px;
+      z-index: 10;
+    }
+  }
+  .answers_text {
+    .text {
+      margin-bottom: 0.7rem;
+      font-size: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .button {
+    font-size: 17px;
+    padding: 3px 30px;
+    padding-bottom: 6px;
+    margin-top: 1rem;
+  }
+  .failed {
+    font-size: 16px;
+    padding: 5px 20px 7px;
+    margin-top: 1rem;
+  }
+
+  .content {
+    p {
+      margin-top: 0 !important;
+      text-align: center !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .instruction {
+    // font-size: 14px;
+    line-height: 14px;
+  }
+  .answers {
+    .img_wrapper {
+      border-radius: 15px;
+    }
+    .img_container {
+      border-radius: 15px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+
+      .img {
+        margin-bottom: -3px;
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .passed {
+      // border: 5px solid rgb(0, 209, 21);
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 50px;
+      height: 50px;
+      z-index: 10;
+    }
+  }
+  .answers_text {
+    .text {
+      margin-bottom: 0.7rem;
+      font-size: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .active {
+    //   border: 4px solid $black_background;
+    -webkit-box-shadow: 0px 0px 0px 3px $black_background;
+    -moz-box-shadow: 0px 0px 0px 3px $black_background;
+    box-shadow: 0px 0px 0px 3px $black_background;
+    border-radius: 15px;
+  }
 }
