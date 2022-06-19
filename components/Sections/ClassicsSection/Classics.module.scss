@@ -5,11 +5,15 @@
 
   .title {
     margin-top: 1rem;
-    font-size: 34px;
+    // font-size: 34px;
+    font-size: clamp(1.5rem, 6.5vw, 2.1rem);
     font-weight: 600;
     span {
       @include accentedButton;
-      font-size: 34px;
+      //   font-size: 34px;
+      font-size: clamp(1.5rem, 6.5vw, 2.1rem) !important;
+      padding: 0.35em 0.7em 0.5em;
+      border-radius: 25px;
     }
   }
 
@@ -78,14 +82,14 @@
           @include accentedButton;
           background-color: $grey_background !important;
           display: inline-block;
-          margin-top: 3rem;
+          margin-top: 2rem;
           cursor: pointer;
 
           .button {
             gap: 10px;
             display: flex;
             align-items: center;
-            font-size: 18px !important;
+            // font-size: 18px !important;
             line-height: 20px;
 
             span {
@@ -109,11 +113,11 @@
     min-height: calc(100vh - 60px);
     margin-top: 4rem;
     .title {
-      font-size: 26px;
+      //   font-size: 26px;
       height: fit-content;
       text-align: center;
       span {
-        font-size: 26px;
+        // font-size: 26px;
       }
     }
     .content {
@@ -149,7 +153,7 @@
           }
           .more_info {
             margin-top: 1rem;
-            font-size: 16px;
+            // font-size: 16px;
             .button {
               .more_info_arrow {
                 position: relative;
@@ -167,10 +171,10 @@
 @media screen and (max-width: 350px) {
   .container {
     .title {
-      font-size: 24px;
+      //   font-size: 24px;
       line-height: 24px;
       span {
-        font-size: 24px;
+        // font-size: 24px;
       }
     }
     .content {

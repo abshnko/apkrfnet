@@ -1,7 +1,7 @@
-import { ToastContainer, toast } from "react-toastify";
-import Toast from "./Toast/Toast";
-import toastStyle from "../Alerts/Toast/Toast.module.scss";
-import { IToast } from "../../types";
+import { ToastContainer, toast } from 'react-toastify';
+import Toast from '../../components/UI/ToastAlert/Toast';
+import toastStyle from '../Alerts/Toast/Toast.module.scss';
+import { IToast } from '../../types';
 
 export const showAlertEN = () => {
   toast(

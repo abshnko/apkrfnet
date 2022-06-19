@@ -1,5 +1,4 @@
 import React from 'react';
-import AccentedText from '../UI/AccentedText/AccentedText';
 import MainContainer from '../MainContainer/MainContainer';
 import s from './Gallery.module.scss';
 import arrow from '../../public/images/right_arrow.svg';

@@ -11,40 +11,6 @@ import { fixBackground } from '../utils/funcs';
 const Home: NextPage = () => {
   const refTeam = useRef<null | HTMLDivElement>(null);
   const refClassics = useRef<null | HTMLDivElement>(null);
-  //   const [showSpyCheck, setShowSpyCheck] = useState(false);
-  //   const [didntPass, setDidntPass] = useLocalStorage("didn't Pass", false);
-  //   const [passedSpyCheck, setPassedSpyCheck] = useLocalStorage(
-  //     'passedSpyCheck',
-  //     false
-  //   );
-  //   useEffect(() => {
-  //     if (didntPass) {
-  //       const time = setTimeout(() => {
-  //         setShowSpyCheck(true);
-  //       }, 1000);
-  //       return () => clearTimeout(time);
-  //     }
-  //     if (!passedSpyCheck) {
-  //       const time = setTimeout(() => {
-  //         setShowSpyCheck(true);
-  //       }, 300000);
-  //       return () => clearTimeout(time);
-  //     }
-  //   }, []);
-
-  //   useEffect(() => {
-  //     fixBackground(showSpyCheck);
-  //     if (!showSpyCheck) {
-  //       const scrollY = document.body.style.top;
-  //       document.body.style.position = '';
-  //       document.body.style.top = '';
-  //       window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  //       const time = setTimeout(() => {
-  //         setShowSpyCheck(true);
-  //       }, 300000);
-  //       return () => clearTimeout(time);
-  //     }
-  //   }, [showSpyCheck]);
 
   return (
     <>
@@ -53,11 +19,7 @@ const Home: NextPage = () => {
         myRefTeam={refTeam}
         refClassics={refClassics}
       >
-        <HomeSection
-        //   setDidntPass={setDidntPass}
-        //   setShowSpyCheck={setShowSpyCheck}
-        //   showSpyCheck={showSpyCheck}
-        />
+        <HomeSection />
         <div className={s.container}>
           <div ref={refClassics}>
             <ClassicsSection />

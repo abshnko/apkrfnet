@@ -48,7 +48,27 @@ export const classics = [
   },
   {
     id: '2',
-    name: 'Осипов Юрий Кузьмич',
+    name: 'Виталий Петрович Воложанин',
+    dateOfBirth: '',
+    shortBio: `один из признанных классиков уральской школы гражданского процесса. При этом о преподавательской деятельности В.П. Воложанина помнят в Хабаровске,Минске и Ульяновске.\n перу В. П. Воложанина принадлежит ряд весомых в научном плане работ, в том числе по юридическим предположениям, третейскому разбирательству, проблемам защиты гражданских прав в рамках несудебных форм, ответственности за нарушение процессуальных норм.
+  `,
+    image: '/images/classics/man_4.png',
+    contentImage: '/images/classics/volozhanin_content.png',
+    link: 'osipov',
+    fullBio: `Виталий Петрович Воложанин родился 15 сентября 1927 года в деревне Канаши Шадринского района Курганской области. До 1945 года семья Воложаниных жила на Дальнем Востоке в городе Благовещенск Амурской области.
+    В период с 1945 по 1949 годы обучался в Свердловском юридическом институте.
+    Трудовую деятельность начал по окончании вуза в должности помощника прокурора Сысертского района Свердловской области.
+    С 1953 по 1956 год работал старшим преподавателем в Белорусском государственном университете, с 1956 по 1961 год – старшим преподавателем, а затем доцентом в Хабаровском факультете ВЮЗИ.
+    В 1961 году начал преподавательскую деятельность в Свердловском юридическом институте, которая была прервана на короткий промежуток (с 1997 по 2000 год), когда В. П. Воложанин работал в должности профессора кафедры гражданского права и процесса Института права и госслужбы Ульяновского государственного университета.
+    \rВ 1976 году приказом и.о. ректора СЮИ Семенова В.М. профессору В. П. Воложанину было указано «на ослабление контроля и руководства аспиранткой Щедриной Л.П.», поскольку тема диссертации указанной аспирантки была утверждена на кафедре не в январе, а в мае.\r
+    В 1953 году защитил кандидатскую, а в 1975 году - докторскую диссертацию.
+    Трудовую деятельность В. П. Воложанин завершил в Уральской государственной юридической академии в начале 2000-х годов.
+    Награжден значком «За отличные успехи в работе».`,
+    title: '',
+  },
+  {
+    id: '3',
+    name: 'Classic',
     dateOfBirth: '',
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupidit"ate" providen"t" esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem"," animi possimus fugit corporis voluptatem molestias.
      `,
@@ -58,7 +78,7 @@ export const classics = [
     title: '',
   },
   {
-    id: '3',
+    id: '4',
     name: 'MAN 2',
     dateOfBirth: '',
     shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupidit"ate" providen"t" esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem"," animi possimus fugit corporis voluptatem molestias.
@@ -69,17 +89,6 @@ export const classics = [
     title: '',
   },
 
-  {
-    id: '4',
-    name: 'Осипов Юрий Кузьмич',
-    dateOfBirth: '',
-    shortBio: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas modi nihil magnam aperiam suscipit! Ab libero deserunt laudantium qui maxime doloribus dicta beatae, cumque enim sint dolorum excepturi sunt. Architecto quasi veniam cupidit"ate" providen"t" esse aspernatur iusto dolore dolor earum, quae magni quas, quod maxime voluptates atque tenetur consequuntur velit quidem"," animi possimus fugit corporis voluptatem molestias.
-  `,
-    image: '/images/classics/man_4.png',
-    link: 'osipov',
-    fullBio: '',
-    title: '',
-  },
   {
     id: '5',
     name: 'Осипов Юрий Кузьмич',

@@ -70,7 +70,7 @@ const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       {showSpyCheck && (
-        <div style={{ width: 'inherit' }}>
+        <div style={{ width: '100%' }}>
           <SpyCheckModal
             setShowSpyCheck={setShowSpyCheck}
             setDidntPass={setDidntPass}

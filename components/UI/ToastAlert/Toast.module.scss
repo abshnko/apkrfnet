@@ -21,6 +21,8 @@
 .toast_container {
   top: 5rem !important;
   min-width: 550px;
+  max-width: fit-content;
+  position: fixed;
 }
 .toast_wrapper {
   border-radius: 20px !important;
@@ -41,10 +43,11 @@
   .toast_container {
     top: 4rem !important;
     min-width: 250px;
+    width: 100%;
   }
   .toast_wrapper {
     border-radius: 20px !important;
     width: 90% !important;
-    margin: 1rem auto 0 !important;
+    margin: 1rem auto 0 auto !important;
   }
 }

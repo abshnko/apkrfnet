@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import s from './Navbar.module.scss';
 import { ToastContainer, toast } from 'react-toastify';
-import toastStyle from '../../utils/Alerts/Toast/Toast.module.scss';
+import toastStyle from '../UI/ToastAlert/Toast.module.scss';
 import { showAlertEN } from '../../utils/Alerts/alerts';
 import menu_img from '../../public/images/menu.svg';
 import { useGlobalContext } from '../../context/refs';
@@ -43,7 +43,7 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
   return (
     <>
       <ToastContainer
-        autoClose={6000}
+        autoClose={60000}
         closeButton={false}
         className={toastStyle.toast_container}
         toastClassName={toastStyle.toast_wrapper}
