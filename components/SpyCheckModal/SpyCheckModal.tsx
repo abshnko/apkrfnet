@@ -91,13 +91,11 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
                     <p>
                       <h2>{question?.title}</h2>
                     </p>
-                    <Footnote>
-                      <div className={s.instruction}>
-                        Вы находитесь на сайте уже более 5-ти минут, что очень
-                        подозрительно для среднестатистического участика
-                        учебно-методической группы. Ответьте-ка на вопрос.
-                      </div>
-                    </Footnote>
+                    <div className={s.instruction}>
+                      Вы находитесь на сайте уже подозрительно долго для
+                      среднестатистического участика учебно-методической группы.
+                      Ответьте-ка на вопрос.
+                    </div>
 
                     <div
                       className={`${s.answers} ${
@@ -113,7 +111,7 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
                             onClick={() => setChosenAnswer(a.id)}
                           >
                             <div className={s.img_container}>
-                              {passed && a.id === question.rightAnswer && (
+                              {passed && a.id === question?.rightAnswer && (
                                 <div className={s.passed}>
                                   <Image
                                     src="/images/check.svg"

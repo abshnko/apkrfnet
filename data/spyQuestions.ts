@@ -1,114 +1,113 @@
 export const spyQuestions = [
   {
     id: 0,
-    rightAnswer: 1,
-    title:
-      "Выберите фотографию, на которой изображено здание университета на Комсомольской",
+    rightAnswer: 2,
+    title: 'Укажите, от какого вуза берет свое начало СЮИ-УрГЮА-УрГЮУ',
     answers: [
       {
         id: 0,
-        text: "Answer smthing long long answer that dad likes to come up with bla bla ",
-        img: "",
+        text: 'от Мардебургского университета',
+        img: '',
       },
       {
         id: 1,
-        text: "Answer smthing",
-        img: "",
+        text: 'от Всесоюзного юридического заочного института',
+        img: '',
       },
       {
         id: 2,
-        text: "Answer smthing",
-        img: "",
+        text: 'от Сибирского института советского права',
+        img: '',
       },
       {
         id: 3,
-        text: "Answer smthing",
-        img: "",
+        text: 'от Саратовского института советского права',
+        img: '',
       },
     ],
   },
   {
     id: 1,
-    rightAnswer: 1,
+    rightAnswer: 2,
     title:
-      "2 Выберите фотографию, на которой изображено здание университета на Комсомольской",
+      'Укажите, по какому из кандидатских экзаменов К.И. Комиссаров получил оценку «удовлетворительно»',
     answers: [
       {
         id: 0,
-        text: "Answer smthing",
-        img: "",
+        text: 'диалектический и исторический материализм',
+        img: '',
       },
       {
         id: 1,
-        text: "Answer smthing",
-        img: "",
+        text: 'советский гражданский процесс',
+        img: '',
       },
       {
         id: 2,
-        text: "Answer smthing",
-        img: "",
+        text: 'теория государства и права',
+        img: '',
       },
       {
         id: 3,
-        text: "Answer smthing",
-        img: "",
+        text: 'занзибарский язык',
+        img: '',
       },
     ],
   },
   {
     id: 2,
-    rightAnswer: 1,
+    rightAnswer: 2,
     title:
-      "3 Выберите фотографию, на которой изображено здание университета на Комсомольской",
+      'Выберите фотографию, на которой изображено здание университета на Комсомольской',
     visualQuestion: true,
     answers: [
       {
         id: 0,
-        text: "Answer smthing",
-        img: "/images/schools/mgu.jpg",
+        text: 'Answer smthing',
+        img: '/images/schools/mgu.jpg',
       },
       {
         id: 1,
-        text: "Answer smthing",
-        img: "/images/schools/mgu.jpg",
+        text: 'Answer smthing',
+        img: '/images/schools/sgu.jpg',
       },
       {
         id: 2,
-        text: "Answer smthing",
-        img: "/images/schools/mgu.jpg",
+        text: 'Answer smthing',
+        img: '/images/schools/urgua.jpg',
       },
       {
         id: 3,
-        text: "Answer smthing",
-        img: "/images/schools/mgu.jpg",
+        text: 'Answer smthing',
+        img: '/images/schools/hse.jpg',
       },
     ],
   },
   {
     id: 3,
-    rightAnswer: 1,
+    rightAnswer: 0,
     title:
-      "4 Выберите фотографию, на которой изображено здание университета на Комсомольской",
+      'Укажите, какую кафедру в Саратовском юридическом институте им. Д.И. Курского возглавил К.С. Юдельсон в 1965 году',
     answers: [
       {
         id: 0,
-        text: "Answer smthing",
-        img: "",
+        text: 'кафедру гражданского права и процесса',
+        img: '',
       },
       {
         id: 1,
-        text: "Answer smthing",
-        img: "",
+        text: 'кафедру физкультуры',
+        img: '',
       },
       {
         id: 2,
-        text: "Answer smthing",
-        img: "",
+        text: 'кафедру физкультуры',
+        img: '',
       },
       {
         id: 3,
-        text: "Answer smthing",
-        img: "",
+        text: 'кафедру физкультуры',
+        img: '',
       },
     ],
   },
@@ -116,27 +115,137 @@ export const spyQuestions = [
     id: 4,
     rightAnswer: 1,
     title:
-      "5 Выберите фотографию, на которой изображено здание университета на Комсомольской",
+      'Укажите, на каком этаже находится IV-ая римская аудитория на Колмогорова, 54',
     answers: [
       {
         id: 0,
-        text: "Answer smthing",
-        img: "",
+        text: 'на четвертом этаже',
+        img: '',
       },
       {
         id: 1,
-        text: "Answer smthing",
-        img: "",
+        text: 'на первом этаже',
+        img: '',
       },
       {
         id: 2,
-        text: "Answer smthing",
-        img: "",
+        text: 'в подвале',
+        img: '',
       },
       {
         id: 3,
-        text: "Answer smthing",
-        img: "",
+        text: 'такой аудитории вообще нет',
+        img: '',
+      },
+    ],
+  },
+  {
+    id: 5,
+    rightAnswer: 3,
+    title: 'Укажите, кому выдаются ключи от кафедры гражданского процесса',
+    answers: [
+      {
+        id: 0,
+        text: 'всем преподавателям, соискателям и аспирантам',
+        img: '',
+      },
+      {
+        id: 1,
+        text: 'только заведующему кафедрой и лаборанту',
+        img: '',
+      },
+      {
+        id: 2,
+        text: 'всем, кто попросит',
+        img: '',
+      },
+      {
+        id: 3,
+        text: 'только штатным преподавателям',
+        img: '',
+      },
+    ],
+  },
+  {
+    id: 6,
+    rightAnswer: 0,
+    title: 'Укажите, какой наградой награжден В.П. Воложанин',
+    answers: [
+      {
+        id: 0,
+        text: 'значком «За отличные успехи в работе»',
+        img: '',
+      },
+      {
+        id: 1,
+        text: 'медалью «За трудовую доблесть»',
+        img: '',
+      },
+      {
+        id: 2,
+        text: 'медалью «За оборону Севастополя»',
+        img: '',
+      },
+      {
+        id: 3,
+        text: 'медалью «За оборону Севастополя»',
+        img: '',
+      },
+    ],
+  },
+  {
+    id: 7,
+    rightAnswer: 2,
+    title:
+      'Укажите, на каком этаже располагалась кафедра гражданского процесса в момент, когда заведующим был впервые избран В.В. Ярков',
+    answers: [
+      {
+        id: 0,
+        text: 'на первом этаже',
+        img: '',
+      },
+      {
+        id: 1,
+        text: 'на втором этаже',
+        img: '',
+      },
+      {
+        id: 2,
+        text: 'на третьем этаже',
+        img: '',
+      },
+      {
+        id: 3,
+        text: 'кафедра не имела своего помещения',
+        img: '',
+      },
+    ],
+  },
+  {
+    id: 8,
+    rightAnswer: 1,
+    title:
+      'Укажите, на какой кафедре в Свердловском юридическом институте началось в сентябре 1935 года преподавание гражданского процесса',
+    answers: [
+      {
+        id: 0,
+        text: 'на кафедре гражданского процесса',
+        img: '',
+      },
+      {
+        id: 1,
+        text: 'на кафедре хозяйственного права',
+        img: '',
+      },
+      {
+        id: 2,
+        text: 'на кафедре судебного права',
+        img: '',
+      },
+      {
+        id: 3,
+        text: 'на кафедре уголовного права и процесса',
+        img: '',
       },
     ],
   },

@@ -42,7 +42,7 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
 
   return (
     <>
-      <ToastContainer
+      {/* <ToastContainer
         autoClose={60000}
         closeButton={false}
         className={toastStyle.toast_container}
@@ -50,7 +50,7 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
         newestOnTop
         limit={6}
         hideProgressBar
-      />
+      /> */}
 
       <div className={s.navbar_fixed}>
         <nav className={s.navbar}>

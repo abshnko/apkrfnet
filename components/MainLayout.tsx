@@ -5,6 +5,8 @@ import Head from 'next/head';
 import SpyCheckModal from './SpyCheckModal/SpyCheckModal';
 import { useSpyCheckContext } from '../context/spyCheck';
 import { fixBackground } from '../utils/funcs';
+import { ToastContainer } from 'react-toastify';
+import toastStyle from './UI/ToastAlert/Toast.module.scss';
 
 const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
   const {
@@ -77,6 +79,15 @@ const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
           />
         </div>
       )}
+      <ToastContainer
+        autoClose={7000}
+        closeButton={false}
+        className={toastStyle.toast_container}
+        toastClassName={toastStyle.toast_wrapper}
+        newestOnTop
+        limit={6}
+        hideProgressBar
+      />
       <Navbar myRefTeam={myRefTeam} refClassics={refClassics} />
       <main>{children}</main>
       <Footer />
