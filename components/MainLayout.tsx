@@ -79,7 +79,7 @@ const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
           />
         </div>
       )}
-      <ToastContainer
+      {/* <ToastContainer
         autoClose={7000}
         closeButton={false}
         className={toastStyle.toast_container}
@@ -87,7 +87,7 @@ const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
         newestOnTop
         limit={6}
         hideProgressBar
-      />
+      /> */}
       <Navbar myRefTeam={myRefTeam} refClassics={refClassics} />
       <main>{children}</main>
       <Footer />
