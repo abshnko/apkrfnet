@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 import type { AppProps } from 'next/app';
 import { RefsProvider } from '../context/refs';
 import { SpyCheckProvider } from '../context/spyCheck';
