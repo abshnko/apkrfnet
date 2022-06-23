@@ -8,7 +8,19 @@ import { fixBackground } from '../utils/funcs';
 import { ToastContainer } from 'react-toastify';
 import toastStyle from './UI/ToastAlert/Toast.module.scss';
 
-const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
+type IMainLayout = {
+  children: any;
+  title: string;
+  myRefTeam?: any;
+  refClassics?: any;
+};
+
+const MainLayout = ({
+  children,
+  title,
+  myRefTeam,
+  refClassics,
+}: IMainLayout) => {
   const {
     didntPass,
     passedSpyCheck,
@@ -79,15 +91,6 @@ const MainLayout = ({ children, title, myRefTeam, refClassics }: any) => {
           />
         </div>
       )}
-      {/* <ToastContainer
-        autoClose={7000}
-        closeButton={false}
-        className={toastStyle.toast_container}
-        toastClassName={toastStyle.toast_wrapper}
-        newestOnTop
-        limit={6}
-        hideProgressBar
-      /> */}
       <Navbar myRefTeam={myRefTeam} refClassics={refClassics} />
       <main>{children}</main>
       <Footer />

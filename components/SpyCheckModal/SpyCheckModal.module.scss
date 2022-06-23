@@ -14,7 +14,7 @@
 
   .modal {
     width: 1100px;
-    height: 720px;
+    height: min(620px, 720px);
     background-color: white;
     margin: auto;
     border-radius: 20px;

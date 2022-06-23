@@ -21,7 +21,7 @@ const Footer = () => {
           <div className={s.icon}>
             <CopyrightIcon />
           </div>
-          2021 - 2022. АПКРФ.НЕТ
+          2020 - 2022. АПКРФ.НЕТ
         </div>
       </div>
     </div>

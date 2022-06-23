@@ -5,12 +5,10 @@
 
   .title {
     margin-top: 1rem;
-    // font-size: 34px;
     font-size: clamp(1.5rem, 6.5vw, 2.1rem);
     font-weight: 600;
     span {
       @include accentedButton;
-      //   font-size: 34px;
       font-size: clamp(1.5rem, 6.5vw, 2.1rem) !important;
       padding: 0.35em 0.7em 0.5em;
       border-radius: 25px;
@@ -84,12 +82,13 @@
           display: inline-block;
           margin-top: 2rem;
           cursor: pointer;
+          font-size: 16px;
+          transition: all 0.2s;
 
           .button {
             gap: 10px;
             display: flex;
             align-items: center;
-            // font-size: 18px !important;
             line-height: 20px;
 
             span {
@@ -101,6 +100,9 @@
               height: 11px;
               padding-top: 20px;
             }
+          }
+          &:hover {
+            transform: scale(1.05);
           }
         }
       }

@@ -92,8 +92,8 @@ const ClassicsSection: NextComponentType = () => {
                       return <p key={i}>{p}</p>;
                     })}
                   </p>
-                  <div className={s.more_info}>
-                    <Link href={`/classics/${selectedClassic.id}`} passHref>
+                  <Link href={`/classics/${selectedClassic.id}`} passHref>
+                    <div className={s.more_info}>
                       <div className={s.button}>
                         <span> Подробнее</span>
                         <div className={s.more_info_arrow}>
@@ -104,8 +104,8 @@ const ClassicsSection: NextComponentType = () => {
                           />
                         </div>
                       </div>
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                 </motion.div>
               </div>
             </div>

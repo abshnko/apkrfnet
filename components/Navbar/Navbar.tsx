@@ -42,16 +42,6 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
 
   return (
     <>
-      {/* <ToastContainer
-        autoClose={60000}
-        closeButton={false}
-        className={toastStyle.toast_container}
-        toastClassName={toastStyle.toast_wrapper}
-        newestOnTop
-        limit={6}
-        hideProgressBar
-      /> */}
-
       <div className={s.navbar_fixed}>
         <nav className={s.navbar}>
           <div className={s.logo}>
@@ -73,6 +63,9 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
             </li>
             <li>
               <Link href="/gallery">галерея участников</Link>
+            </li>
+            <li>
+              <Link href="/autographs">дорогие автографы</Link>
             </li>
             <li>
               <button onClick={showAlertEN}>en</button>
