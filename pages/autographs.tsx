@@ -7,7 +7,7 @@ import s from '../styles/autographs.module.scss';
 
 const Autographs = () => {
   return (
-    <MainLayout title="Автографы">
+    <MainLayout title="Автографы | АПКРФ.НЕТ">
       <MainContainer>
         <Breadcrumbs crumbs={['Дорогие автографы']} links={['/autographs']} />
         <div className={s.container}>

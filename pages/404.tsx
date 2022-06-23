@@ -9,7 +9,7 @@ import arrow from '../public/images/right_arrow.svg';
 
 const Page404 = () => {
   return (
-    <MainLayout>
+    <MainLayout title="404 | Такой страницы нет">
       <MainContainer>
         <div className={s.container}>
           <div className={s.left_side}>
