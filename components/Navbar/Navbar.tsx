@@ -45,10 +45,17 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
     <>
       <div className={s.navbar_fixed}>
         <nav className={s.navbar}>
-          <div className={s.logo}>
-            {/* <div className={s.circle}></div> */}
-            <Link href="/">Апкрф.нет</Link>
-          </div>
+          <Link href="/" passHref>
+            <div className={s.logo}>
+              <span> Апкрф.нет</span>
+              <Image
+                className={s.logo_img}
+                src={'/images/logo_bottle.svg'}
+                alt="menu"
+                layout="fill"
+              />
+            </div>
+          </Link>
           <button
             type="button"
             onClick={() => setShowMobileNav((e) => !e)}

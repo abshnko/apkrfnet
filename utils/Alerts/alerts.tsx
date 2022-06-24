@@ -23,7 +23,7 @@ export const showAlertWriteToUs = () =>
 export const showAlertFoundMistake = () =>
   toast(
     <Toast
-      message="Вы уверены? Перечитайте Дитмара Ильяшевича и подумайте еще раз."
+      message="Вы уверены? Перечитайте Дитмара\nbspИльяшевича и подумайте еще раз."
       button="Ладно"
     />
   );
