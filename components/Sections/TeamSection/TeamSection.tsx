@@ -17,7 +17,7 @@ const TeamSection: NextComponentType = () => {
                 <div className={s.image_dad}>
                   <Image
                     src="/images/team/dad.png"
-                    alt="фотка ИВ"
+                    alt="ideator"
                     layout="fill"
                     objectFit="cover"
                   />
@@ -27,8 +27,8 @@ const TeamSection: NextComponentType = () => {
                 <div className={s.name}>Дмитрий Борисович А.</div>
                 <div className={s.position}>Идейный вдохновитель</div>
                 <div className={s.description}>
-                  Генерирует все более и более оторванные от реальности и
-                  заставляющие беспокоиться идеи.
+                  Генерирует все более оторванные от реальности теории про
+                  зачет.
                 </div>
               </div>
             </div>
@@ -37,7 +37,7 @@ const TeamSection: NextComponentType = () => {
                 <div className={s.image_starik}>
                   <Image
                     src="/images/team/starik.png"
-                    alt="фотка ИВ"
+                    alt="therapist"
                     layout="fill"
                     objectFit="cover"
                   />
@@ -47,8 +47,8 @@ const TeamSection: NextComponentType = () => {
                 <div className={s.name}>Антон Александрович С.</div>
                 <div className={s.position}>Штатный психолог</div>
                 <div className={s.description}>
-                  Антон Александрович работает с нами уже 16 лет. За эти годы он
-                  не раз помогал нам пережить темные времена.
+                  Работает с нами уже 16 лет. За эти годы он не раз разбирал и
+                  собирал мебель.
                 </div>
               </div>
             </div>
