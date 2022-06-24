@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import s from './SpyCheckModal.module.scss';
 import { spyQuestions } from '../../data/spyQuestions';
-import Footnote from '../UI/Footnote/Footnote';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 

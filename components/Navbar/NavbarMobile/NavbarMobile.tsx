@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { INavbarMobile } from '../../../types';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const NavbarMobile = ({
   showAlertEN,
@@ -13,7 +13,6 @@ const NavbarMobile = ({
 }: INavbarMobile) => {
   const router = useRouter();
   return (
-    // <AnimatePresence>
     <motion.div
       key="mobile nav"
       initial={{
@@ -110,7 +109,6 @@ const NavbarMobile = ({
         </ul>
       </div>
     </motion.div>
-    // </AnimatePresence>
   );
 };
 

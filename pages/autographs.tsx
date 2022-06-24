@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import useLocalStorage from 'use-local-storage';
 import MainContainer from '../components/MainContainer/MainContainer';
 import MainLayout from '../components/MainLayout';

@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import type { NextComponentType } from 'next';
 import Link from 'next/link';
 import s from './Classics.module.scss';

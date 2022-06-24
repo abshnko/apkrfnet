@@ -1,12 +1,10 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
 import Head from 'next/head';
 import SpyCheckModal from './SpyCheckModal/SpyCheckModal';
 import { useSpyCheckContext } from '../context/spyCheck';
 import { fixBackground } from '../utils/funcs';
-import { ToastContainer } from 'react-toastify';
-import toastStyle from './UI/ToastAlert/Toast.module.scss';
 
 type IMainLayout = {
   children: any;
