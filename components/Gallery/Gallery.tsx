@@ -15,7 +15,7 @@ const Gallery = () => {
         <div className={s.left_side}>
           <div className={s.title}>
             К сожалению, ни один из участников не согласился на публикацию
-            фотографий.
+            фотографий. Может, это и к лучшему
           </div>
           <Link href="/" passHref>
             <div className={s.button}>

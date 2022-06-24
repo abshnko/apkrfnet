@@ -19,3 +19,11 @@ export const showAlertWriteToUs = () =>
       button="Ладно"
     />
   );
+
+export const showAlertFoundMistake = () =>
+  toast(
+    <Toast
+      message="Вы уверены? Перечитайте Дитмара Ильяшевича и подумайте еще раз."
+      button="Ладно"
+    />
+  );

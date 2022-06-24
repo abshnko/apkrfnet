@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { posts } from '../../data/posts';
 import s from './Posts.module.scss';
 import type { NextPage } from 'next';
-import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import MainLayout from '../../components/MainLayout';
@@ -17,6 +15,15 @@ const Posts: NextPage = () => {
   const [post, setPost] = useState(posts.find((post) => post.id === postId));
   const [postContentElement, setPostContentElement] = useState<any>(null);
   const [_document, setDocument] = useState<any>(null);
+
+  const handleClick = () => {
+    let postsDiv = document.getElementById('posts');
+    let postDiv = document.getElementById('post');
+    if (postsDiv != undefined) {
+      postsDiv.style.scrollBehavior = 'smooth';
+      postsDiv.scrollTop += postDiv!.offsetHeight + 40;
+    }
+  };
 
   useEffect(() => {
     setPost(posts.find((post) => post.id === postId));
@@ -57,13 +64,14 @@ const Posts: NextPage = () => {
           <div className={s.container}>
             <div className={s.left_side}>
               <div className={s.posts_title}>Объявления</div>
-              <div className={s.all_posts}>
+              <div className={s.all_posts} id={'posts'}>
                 {posts
                   .slice(0)
                   .reverse()
                   .map((post) => {
                     return (
                       <div
+                        id="post"
                         key={post.id}
                         className={`${s.post} ${
                           post.id === postId ? s.active_post : ''
@@ -82,7 +90,7 @@ const Posts: NextPage = () => {
                   })}
               </div>
 
-              <div className={s.arrow}>
+              <div className={s.arrow} onClick={() => handleClick()}>
                 <Image
                   src="/images/right_chevron.svg"
                   alt="right_chevron"

@@ -11,6 +11,7 @@ import { useGlobalContext } from '../../context/refs';
 import Image from 'next/image';
 import NavbarMobile from './NavbarMobile/NavbarMobile';
 import { removeScrollUnderModal, scrollToRef } from '../../utils/funcs';
+import { AnimatePresence } from 'framer-motion';
 
 const Navbar = ({ myRefTeam, refClassics }: any) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -45,6 +46,7 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
       <div className={s.navbar_fixed}>
         <nav className={s.navbar}>
           <div className={s.logo}>
+            {/* <div className={s.circle}></div> */}
             <Link href="/">Апкрф.нет</Link>
           </div>
           <button
@@ -73,13 +75,15 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
           </ul>
         </nav>
       </div>
-      {showMobileNav && (
-        <NavbarMobile
-          setShowMobileNav={setShowMobileNav}
-          showAlertEN={showAlertEN}
-          handleClick={handleClick}
-        />
-      )}
+      <AnimatePresence>
+        {showMobileNav && (
+          <NavbarMobile
+            setShowMobileNav={setShowMobileNav}
+            showAlertEN={showAlertEN}
+            handleClick={handleClick}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };

@@ -7,6 +7,7 @@
   margin: 0 auto;
   margin-bottom: 8rem;
   width: 80%;
+  justify-content: space-between;
 
   .infos {
     opacity: 90%;
@@ -47,10 +48,36 @@
       }
     }
   }
+
+  .right_side {
+    font-size: 15px;
+    text-align: center;
+    .notify_us {
+      @include accentedButton;
+      background-color: $grey_background;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 0.5rem;
+      display: flex;
+      .img_container {
+        margin-left: 10px;
+        width: 15px;
+        height: 15px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 2.5px;
+      }
+    }
+  }
 }
 
 @media only screen and(max-width:500px) {
   .container {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
     .infos {
       .agent {
         font-size: 16px;
@@ -69,6 +96,11 @@
           background-color: transparent;
         }
       }
+    }
+    .right_side {
+      order: -1;
+      margin-bottom: 4rem;
+      align-self: center;
     }
   }
 }

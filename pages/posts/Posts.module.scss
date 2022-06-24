@@ -27,7 +27,7 @@
     overflow-y: hidden;
 
     .posts_title {
-      font-size: 34px;
+      font-size: 30px;
       margin-top: 1rem;
       font-weight: 600;
     }
@@ -78,13 +78,14 @@
     }
 
     .arrow {
+      cursor: pointer;
       transform: rotate(90deg);
       filter: $filter_to_white;
       display: flex;
       width: 100%;
       justify-content: center;
       margin-top: 2rem;
-      opacity: 80%;
+      opacity: 100%;
     }
   }
   .right_side {
