@@ -17,12 +17,6 @@ import Post_7 from '../components/Posts/Post_7';
 import Post_8 from '../components/Posts/Post_8';
 import Post_9 from '../components/Posts/Post_9';
 
-// export const scroll = (ref: any) => {
-//   if (ref && ref.current) {
-//     ref.current.scrollIntoView({ behavior: 'smooth' });
-//   }
-// };
-
 export const fixBackground = (showSpyCheck: boolean) => {
   if (showSpyCheck) {
     document.body.style.top = `-${window.scrollY}px`;
