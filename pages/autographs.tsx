@@ -38,7 +38,7 @@ const Autographs = () => {
                 key={show}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: [-60, 0] }}
-                exit={{ opacity: 0, y: [0, -50] }}
+                // exit={{ opacity: 0, y: [0, -50] }}
                 transition={{
                   duration: 0.35,
                 }}
@@ -63,6 +63,84 @@ const Autographs = () => {
                   <div className={s.image}>
                     <Image
                       src="/images/autographs/krash/autograph_3.jpg"
+                      alt="autograph"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <div className={s.list_item} onClick={() => handleClick('1')}>
+            <span>К. И. Комиссаров</span>
+            <div className={`${s.icon} ${show === '1' && s.active_icon}`}>
+              <Image
+                src="/images/right_chevron.svg"
+                alt="autograph"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          </div>
+          <AnimatePresence>
+            {show === '1' && (
+              <motion.div
+                key={show}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: [-60, 0] }}
+                // exit={{ opacity: 0, y: [0, -50] }}
+                transition={{
+                  duration: 0.35,
+                }}
+              >
+                <div className={s.image_container}>
+                  <div className={s.image}>
+                    <Image
+                      src="/images/autographs/komissarov/1.jpg"
+                      alt="autograph"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
+                  <div className={s.image}>
+                    <Image
+                      src="/images/autographs/komissarov/2.jpg"
+                      alt="autograph"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <div className={s.list_item} onClick={() => handleClick('2')}>
+            <span>М. К. Треушников</span>
+            <div className={`${s.icon} ${show === '2' && s.active_icon}`}>
+              <Image
+                src="/images/right_chevron.svg"
+                alt="autograph"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          </div>
+          <AnimatePresence>
+            {show === '2' && (
+              <motion.div
+                key={show}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: [-60, 0] }}
+                // exit={{ opacity: 0, y: [0, -50] }}
+                transition={{
+                  duration: 0.35,
+                }}
+              >
+                <div className={s.image_container}>
+                  <div className={s.image}>
+                    <Image
+                      src="/images/autographs/treush/1.jpg"
                       alt="autograph"
                       layout="fill"
                       objectFit="contain"

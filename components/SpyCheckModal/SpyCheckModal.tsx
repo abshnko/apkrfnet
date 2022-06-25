@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
-  const [id, setId] = useState(randomIntFromInterval(0, 4));
+  const [id, setId] = useState(randomIntFromInterval(0, 20));
   const [question, setQuestion] = useState(
     spyQuestions.find((q) => q.id === id)
   );
@@ -48,9 +48,9 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
   useEffect(() => {
     const time = setTimeout(() => {
       if (failed) {
-        let newId = randomIntFromInterval(0, 4);
+        let newId = randomIntFromInterval(0, 20);
         while (newId === id) {
-          newId = randomIntFromInterval(0, 4);
+          newId = randomIntFromInterval(0, 20);
         }
         setId(newId);
       }
