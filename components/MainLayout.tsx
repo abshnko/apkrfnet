@@ -37,7 +37,7 @@ const MainLayout = ({
     if (!passedSpyCheck) {
       const time = setTimeout(() => {
         setShowSpyCheck(true);
-      }, 300000);
+      }, 600000);
       return () => clearTimeout(time);
     }
   }, []);
@@ -51,7 +51,7 @@ const MainLayout = ({
       window.scrollTo(0, parseInt(scrollY || '0') * -1);
       const time = setTimeout(() => {
         setShowSpyCheck(true);
-      }, 300000);
+      }, 600000);
       return () => clearTimeout(time);
     }
   }, [showSpyCheck]);

@@ -3,9 +3,23 @@ import s from './SpyCheckModal.module.scss';
 import { spyQuestions } from '../../data/spyQuestions';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import useLocalStorage from 'use-local-storage';
 
 const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
-  const [id, setId] = useState(randomIntFromInterval(0, 20));
+  const [shownQuestions, setShownQuestions] = useLocalStorage<number[]>(
+    'shown questions',
+    []
+  );
+  const [id, setId] = useState(() => {
+    let id = randomIntFromInterval(0, spyQuestions.length - 1);
+    while (
+      shownQuestions.length < spyQuestions.length &&
+      shownQuestions.includes(id)
+    ) {
+      id = randomIntFromInterval(0, spyQuestions.length - 1);
+    }
+    return id;
+  });
   const [question, setQuestion] = useState(
     spyQuestions.find((q) => q.id === id)
   );
@@ -20,6 +34,7 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
 
   const onSubmit = () => {
     if (chosenAnswer !== undefined) {
+      //   shownQuestions.push(id);
       if (chosenAnswer === question?.rightAnswer) {
         setPassed(true);
         setDidntPass(false);
@@ -42,15 +57,28 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
   }, [chosenAnswer]);
 
   useEffect(() => {
+    console.log(shownQuestions);
+  }, [shownQuestions]);
+
+  useEffect(() => {
     setQuestion(spyQuestions.find((q) => q.id === id));
+    if (shownQuestions.length < spyQuestions.length) {
+      setShownQuestions([...shownQuestions, id]);
+    } else {
+      setShownQuestions([id]);
+    }
   }, [id]);
 
   useEffect(() => {
     const time = setTimeout(() => {
       if (failed) {
-        let newId = randomIntFromInterval(0, 20);
-        while (newId === id) {
-          newId = randomIntFromInterval(0, 20);
+        let newId = randomIntFromInterval(0, spyQuestions.length - 1);
+        while (
+          newId === id ||
+          (shownQuestions.length < spyQuestions.length &&
+            shownQuestions.includes(newId))
+        ) {
+          newId = randomIntFromInterval(0, spyQuestions.length - 1);
         }
         setId(newId);
       }
