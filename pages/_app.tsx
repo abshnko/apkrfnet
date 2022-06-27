@@ -3,14 +3,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import type { AppProps } from 'next/app';
 import { RefsProvider } from '../context/refs';
 import { SpyCheckProvider } from '../context/spyCheck';
-import _ToastContainer from '../components/UI/ToastAlert/_ToastContainer';
+import MyToastContainer from '../components/UI/ToastAlert/MyToastContainer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RefsProvider>
       <SpyCheckProvider>
         <Component {...pageProps} />
-        <_ToastContainer />
+        <MyToastContainer />
       </SpyCheckProvider>
     </RefsProvider>
   );

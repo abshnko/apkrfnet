@@ -6,7 +6,7 @@ export const spyQuestions = [
     answers: [
       {
         id: 0,
-        text: 'от Мардебургского университета',
+        text: 'от Марбургского университета',
         img: '',
       },
       {

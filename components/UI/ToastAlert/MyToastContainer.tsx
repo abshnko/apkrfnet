@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { ToastContainer } from 'react-toastify';
 import toastStyle from './Toast.module.scss';
 
-const _ToastContainer = () => {
+const MyToastContainer = () => {
   const modalContent = (
     <ToastContainer
       autoClose={7000}
@@ -32,4 +32,4 @@ const _ToastContainer = () => {
   }
 };
 
-export default _ToastContainer;
+export default MyToastContainer;

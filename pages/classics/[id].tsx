@@ -11,6 +11,7 @@ import { IClassic } from '../../types';
 import AccentedBlock from '../../components/UI/AccentedParagraph/AccentedParagraph';
 import { useGlobalContext } from '../../context/refs';
 import Breadcrumbs from '../../components/UI/Breadcrumbs/Breadcrumbs';
+import { addNBSP } from '../../utils/funcs';
 
 const Classic = () => {
   const router = useRouter();
@@ -68,14 +69,15 @@ const Classic = () => {
                 </div>
                 <div className={s.text}>
                   {classic?.fullBio.split('\n').map((p) => {
-                    if (p.includes('\r')) {
+                    const newP = addNBSP(p);
+                    if (newP.includes('\r')) {
                       return (
                         <AccentedBlock>
-                          <p>{p.split('\r')}</p>
+                          <p>{newP.join().split('\r')}</p>
                         </AccentedBlock>
                       );
                     }
-                    return <p key={classic.id}>{p}</p>;
+                    return <p key={classic.id}>{newP}</p>;
                   })}
                 </div>
                 {'contentImage' in classic! &&

@@ -5,7 +5,7 @@ import s from './Classics.module.scss';
 import { classics } from '../../../data/classics';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { decrementId, incrementId } from '../../../utils/funcs';
+import { addNBSP, decrementId, incrementId } from '../../../utils/funcs';
 import useLocalStorage from 'use-local-storage';
 
 const ClassicsSection: NextComponentType = () => {
@@ -92,7 +92,8 @@ const ClassicsSection: NextComponentType = () => {
                 </div>
                 <p className={s.bio}>
                   {selectedClassic.shortBio.split('\n').map((p, i) => {
-                    return <p key={i}>{p}</p>;
+                    const newP = addNBSP(p);
+                    return <p key={i}>{newP}</p>;
                   })}
                 </p>
                 <Link href={`/classics/${selectedClassic.id}`} passHref>

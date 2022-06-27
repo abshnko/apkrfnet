@@ -62,6 +62,15 @@ export const removeScrollUnderModal = (show: boolean) => {
     : (document.body.style.overflow = 'visible');
 };
 
+//parse string from json for non breaking spaces
+//should be \nbsp in passed message
+export const addNBSP = (message: string) => {
+  const messageWithNBSP = message.split('\\nbsp').map((m) => {
+    return m + '\xa0';
+  });
+  return messageWithNBSP;
+};
+
 // !post 12 table not adaptive
 export const renderSwitch = (id: string) => {
   switch (id) {

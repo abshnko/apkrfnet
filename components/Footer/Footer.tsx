@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import s from './Footer.module.scss';
-import Link from 'next/link';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import Image from 'next/image';
 import { showAlertFoundMistake } from '../../utils/Alerts/alerts';
 
 const Footer = () => {
-  //   const [showAlertFoundMistake, setShowAlertFoundMistake] = useState(false);
   return (
     <div className={s.container}>
       <div className={s.infos}>
@@ -24,7 +22,7 @@ const Footer = () => {
           <div className={s.icon}>
             <CopyrightIcon />
           </div>
-          2020 - 2022. АПКРФ.НЕТ
+          2020 - 2022. АПКРФ.НЕТ. Все права на сайт принадлежат кому надо
         </div>
       </div>
       <div className={s.right_side}>

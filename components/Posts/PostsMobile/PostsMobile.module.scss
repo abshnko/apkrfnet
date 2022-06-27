@@ -84,11 +84,12 @@
     padding: 20px 30px;
     color: white;
     width: inherit;
-    height: 400px;
+    height: calc(100vh - 80px);
     margin-bottom: 2rem;
 
     .dropdown_container {
-      height: 350px;
+      height: calc(100vh - 130px);
+
       overflow-y: scroll;
 
       .post {

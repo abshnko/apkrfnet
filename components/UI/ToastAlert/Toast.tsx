@@ -1,11 +1,10 @@
 import React from 'react';
 import { IToastCustom } from '../../../types';
+import { addNBSP } from '../../../utils/funcs';
 import s from './Toast.module.scss';
 
 const Toast = ({ message, button }: IToastCustom) => {
-  const _message = message.split('\\nbsp').map((m) => {
-    return m + '\xa0';
-  });
+  const _message = addNBSP(message);
 
   return (
     <div className={s.container}>
