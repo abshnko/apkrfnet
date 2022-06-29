@@ -22,7 +22,8 @@ const Footer = () => {
           <div className={s.icon}>
             <CopyrightIcon />
           </div>
-          2020 - 2022. АПКРФ.НЕТ. Все права на сайт принадлежат кому надо
+          2020 - 2022. АПКРФ.НЕТ. <br></br>Все права на сайт принадлежат кому
+          надо
         </div>
       </div>
       <div className={s.right_side}>
