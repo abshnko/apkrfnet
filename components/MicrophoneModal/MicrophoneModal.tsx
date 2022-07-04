@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { fixBackground } from '../../utils/funcs';
 import s from './MicrophoneModal.module.scss';
 
 const MicrophoneModal = ({ setShowMicro }: any) => {
@@ -10,7 +9,7 @@ const MicrophoneModal = ({ setShowMicro }: any) => {
       setFail(true);
       setTimeout(() => {
         setShowMicro(false);
-      }, 2000);
+      }, 3500);
     }, 5000);
     return () => clearTimeout(time1);
   }, []);
