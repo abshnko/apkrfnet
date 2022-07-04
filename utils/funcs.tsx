@@ -22,6 +22,8 @@ export const fixBackground = (showSpyCheck: boolean) => {
     document.body.style.top = `-${window.scrollY}px`;
     document.body.style.position = 'fixed';
     document.body.style.overflowY = 'scroll';
+  } else {
+    document.body.style.position = 'static';
   }
 };
 
@@ -71,7 +73,6 @@ export const addNBSP = (message: string) => {
   return messageWithNBSP;
 };
 
-// !post 12 table not adaptive
 export const renderSwitch = (id: string) => {
   switch (id) {
     case '0':

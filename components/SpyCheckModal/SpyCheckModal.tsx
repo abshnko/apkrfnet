@@ -57,10 +57,6 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
   }, [chosenAnswer]);
 
   useEffect(() => {
-    console.log(shownQuestions);
-  }, [shownQuestions]);
-
-  useEffect(() => {
     setQuestion(spyQuestions.find((q) => q.id === id));
     if (shownQuestions.length < spyQuestions.length) {
       setShownQuestions([...shownQuestions, id]);

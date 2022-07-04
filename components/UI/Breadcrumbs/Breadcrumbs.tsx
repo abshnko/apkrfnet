@@ -8,8 +8,6 @@ interface IBreadcrumbs {
 }
 
 const Breadcrumbs = ({ crumbs, links }: IBreadcrumbs) => {
-  console.log(links);
-
   return (
     <div className={s.container}>
       <Link href="/">Главная |</Link>

@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+
+@keyframes micro {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.458);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+
+  .modal {
+    width: 900px;
+    height: min(520px, 720px);
+    background-color: white;
+    margin: auto;
+    border-radius: 20px;
+    z-index: 10;
+  }
+
+  .container {
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+    }
+
+    .img_container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+
+      animation-name: micro;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier();
+    }
+    .no_animation {
+      animation-name: none;
+    }
+
+    .fail {
+      margin-top: 0;
+      font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .background {
+    .modal {
+      width: 90%;
+      margin: 1rem auto 0 auto;
+      height: clamp(300px, 500px, 2rem);
+      overflow-y: scroll !important;
+      max-height: calc(100vh - 100px);
+      //   padding: rem;
+    }
+
+    .container {
+      padding: 20px;
+      .img_container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+        animation-name: micro;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier();
+      }
+      .no_animation {
+        animation-name: none;
+      }
+
+      .fail {
+        // margin-top: 0;
+      }
+    }
+  }
+}

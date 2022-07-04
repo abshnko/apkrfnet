@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import 'react-toastify/dist/ReactToastify.css';
 import s from './Home.module.scss';
 import Image from 'next/image';
 import { showAlertWriteToUs } from '../../../utils/Alerts/alerts';
 import { motion } from 'framer-motion';
+import MicrophoneModal from '../../MicrophoneModal/MicrophoneModal';
+import { fixBackground } from '../../../utils/funcs';
 
 const HomeSection = () => {
+  const [showMicro, setShowMicro] = useState(false);
+
+  useEffect(() => {
+    fixBackground(showMicro);
+  }, [showMicro]);
   return (
     <>
       <motion.div
@@ -61,6 +68,19 @@ const HomeSection = () => {
                     />
                   </div>
                 </button>
+                <button
+                  onClick={() => setShowMicro(true)}
+                  className={s.write_button}
+                >
+                  <span>расскажите нам</span>
+                  <div className={s.write_image}>
+                    <Image
+                      src="/images/right_arrow.svg"
+                      alt="right_arrow"
+                      layout="fill"
+                    />
+                  </div>
+                </button>
               </div>
             </div>
             <div className={s.right_side}>
@@ -93,6 +113,7 @@ const HomeSection = () => {
             </div>
           </div>
         </div>
+        {showMicro && <MicrophoneModal setShowMicro={setShowMicro} />}
       </motion.div>
     </>
   );

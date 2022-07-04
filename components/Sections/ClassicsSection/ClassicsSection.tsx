@@ -90,12 +90,12 @@ const ClassicsSection: NextComponentType = () => {
                     {selectedClassic.name}
                   </Link>
                 </div>
-                <p className={s.bio}>
+                <div className={s.bio}>
                   {selectedClassic.shortBio.split('\n').map((p, i) => {
                     const newP = addNBSP(p);
                     return <p key={i}>{newP}</p>;
                   })}
-                </p>
+                </div>
                 <Link href={`/classics/${selectedClassic.id}`} passHref>
                   <div className={s.more_info}>
                     <div className={s.button}>

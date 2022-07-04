@@ -4,7 +4,6 @@ import MainLayout from '../../components/MainLayout';
 import MainContainer from '../../components/MainContainer/MainContainer';
 import s from './Classic.module.scss';
 import { classics } from '../../data/classics';
-import Link from 'next/link';
 import Image from 'next/image';
 import AccentedText from '../../components/UI/AccentedText/AccentedText';
 import { IClassic } from '../../types';
@@ -19,7 +18,7 @@ const Classic = () => {
   const [href, setHref] = useState('');
   const [classic, setClassic] = useState<IClassic>();
   const { id } = router.query;
-  const { scrollToClassics, setScrollToClassics } = useGlobalContext();
+  const { setScrollToClassics } = useGlobalContext();
 
   useEffect(() => {
     setClassic(classics.find((a) => a.id === id!));
@@ -27,13 +26,8 @@ const Classic = () => {
   }, [id]);
 
   useEffect(() => {
-    console.log(classic?.contentImage);
-
     if (classic !== undefined) {
       classic?.fullBio.split('\\n').map((p) => {
-        if (p.includes('\\a')) {
-          console.log(p.split('\\a'));
-        }
         return <li key={classic.id}>{p}</li>;
       });
       setLoading(false);
@@ -69,15 +63,14 @@ const Classic = () => {
                 </div>
                 <div className={s.text}>
                   {classic?.fullBio.split('\n').map((p) => {
-                    const newP = addNBSP(p);
-                    if (newP.includes('\r')) {
+                    if (p.includes('\r')) {
                       return (
                         <AccentedBlock>
-                          <p>{newP.join().split('\r')}</p>
+                          <p>{addNBSP(p.split('\r').join(' '))}</p>
                         </AccentedBlock>
                       );
                     }
-                    return <p key={classic.id}>{newP}</p>;
+                    return <p key={classic.id}>{addNBSP(p)}</p>;
                   })}
                 </div>
                 {'contentImage' in classic! &&
