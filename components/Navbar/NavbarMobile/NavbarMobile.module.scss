@@ -33,6 +33,7 @@
       flex-direction: column;
       list-style: none;
       font-size: 22px;
+
       text-transform: uppercase;
       button {
         font-size: inherit;
@@ -43,6 +44,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        line-height: 30px;
         .arrow {
           width: 20px;
           height: 20px;
