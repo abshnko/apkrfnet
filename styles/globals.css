@@ -88,4 +88,9 @@ ol {
     font-size: 18px;
     line-height: 20px;
   }
+  li,
+  p {
+    margin-top: 1rem;
+    line-height: 22px;
+  }
 }
