@@ -23,7 +23,10 @@ export const fixBackground = (showSpyCheck: boolean) => {
     document.body.style.position = 'fixed';
     document.body.style.overflowY = 'scroll';
   } else {
-    document.body.style.position = 'static';
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 };
 
