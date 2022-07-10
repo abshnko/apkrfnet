@@ -54,11 +54,11 @@
       background-color: $black_background;
       border-radius: 20px;
       display: flex;
-      cursor: pointer;
+      //   cursor: pointer;
       transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
-      &:hover {
-        transform: scale(1.05);
-      }
+      //   &:hover {
+      //     transform: scale(1.05);
+      //   }
       .new_event {
         position: absolute;
         top: -20px;

@@ -89,6 +89,5 @@ export const posts = [
     id: '17',
     title: 'Партсобрание',
     date: '05.07.2022',
-    isNew: true,
   },
 ];
