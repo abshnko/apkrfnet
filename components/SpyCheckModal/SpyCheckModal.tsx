@@ -1,91 +1,78 @@
-import React, { useEffect, useState } from 'react';
-import s from './SpyCheckModal.module.scss';
-import { spyQuestions } from '../../data/spyQuestions';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import useLocalStorage from 'use-local-storage';
+import React, { useEffect, useState } from 'react'
+import s from './SpyCheckModal.module.scss'
+import { spyQuestions } from '../../data/spyQuestions'
+import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
+import useLocalStorage from 'use-local-storage'
 
 const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
-  const [shownQuestions, setShownQuestions] = useLocalStorage<number[]>(
-    'shown questions',
-    []
-  );
+  const [shownQuestions, setShownQuestions] = useLocalStorage<number[]>('shown questions', [])
   const [id, setId] = useState(() => {
-    let id = randomIntFromInterval(0, spyQuestions.length - 1);
-    while (
-      shownQuestions.length < spyQuestions.length &&
-      shownQuestions.includes(id)
-    ) {
-      id = randomIntFromInterval(0, spyQuestions.length - 1);
+    let id = randomIntFromInterval(spyQuestions[0].id, spyQuestions[spyQuestions.length - 1].id)
+    while (shownQuestions.length < spyQuestions.length && shownQuestions.includes(id)) {
+      id = randomIntFromInterval(spyQuestions[0].id, spyQuestions[spyQuestions.length - 1].id)
     }
-    return id;
-  });
-  const [question, setQuestion] = useState(
-    spyQuestions.find((q) => q.id === id)
-  );
-  const [chosenAnswer, setChosenAnswer] = useState<number | undefined>(
-    undefined
-  );
-  const [passed, setPassed] = useState(false);
-  const [failed, setFailed] = useState(false);
+    return id
+  })
+
+  const [question, setQuestion] = useState(spyQuestions.find((q) => q.id === id))
+  const [chosenAnswer, setChosenAnswer] = useState<number | undefined>(undefined)
+  const [passed, setPassed] = useState(false)
+  const [failed, setFailed] = useState(false)
   function randomIntFromInterval(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
   const onSubmit = () => {
     if (chosenAnswer !== undefined) {
       //   shownQuestions.push(id);
       if (chosenAnswer === question?.rightAnswer) {
-        setPassed(true);
-        setDidntPass(false);
+        setPassed(true)
+        setDidntPass(false)
         const time = setTimeout(() => {
-          setShowSpyCheck(false);
-        }, 2000);
-        return () => clearTimeout(time);
+          setShowSpyCheck(false)
+        }, 2000)
+        return () => clearTimeout(time)
       } else {
-        setFailed(true);
+        setFailed(true)
       }
     }
-  };
+  }
 
   useEffect(() => {
-    setDidntPass(true);
-  }, []);
+    setDidntPass(true)
+  }, [])
 
   useEffect(() => {
-    setFailed(false);
-  }, [chosenAnswer]);
+    setFailed(false)
+  }, [chosenAnswer])
 
   useEffect(() => {
-    setQuestion(spyQuestions.find((q) => q.id === id));
+    setQuestion(spyQuestions.find((q) => q.id === id))
     if (shownQuestions.length < spyQuestions.length) {
-      setShownQuestions([...shownQuestions, id]);
+      setShownQuestions([...shownQuestions, id])
     } else {
-      setShownQuestions([id]);
+      setShownQuestions([id])
     }
-  }, [id]);
+  }, [id])
 
   useEffect(() => {
     const time = setTimeout(() => {
       if (failed) {
-        let newId = randomIntFromInterval(0, spyQuestions.length - 1);
-        while (
-          newId === id ||
-          (shownQuestions.length < spyQuestions.length &&
-            shownQuestions.includes(newId))
-        ) {
-          newId = randomIntFromInterval(0, spyQuestions.length - 1);
+        let newId = randomIntFromInterval(spyQuestions[0].id, spyQuestions[spyQuestions.length - 1].id)
+        while (newId === id || (shownQuestions.length < spyQuestions.length && shownQuestions.includes(newId))) {
+          newId = randomIntFromInterval(spyQuestions[0].id, spyQuestions[spyQuestions.length - 1].id)
         }
-        setId(newId);
+        setId(newId)
       }
-    }, 1300);
-    return () => clearTimeout(time);
-  }, [failed]);
+    }, 1300)
+    return () => clearTimeout(time)
+  }, [failed])
 
   useEffect(() => {
-    setFailed(false);
-    setChosenAnswer(undefined);
-  }, [question]);
+    setFailed(false)
+    setChosenAnswer(undefined)
+  }, [question])
 
   return (
     <>
@@ -115,46 +102,26 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
                       <h2>{question?.title}</h2>
                     </p>
                     <div className={s.instruction}>
-                      Вы находитесь на сайте уже подозрительно долго для
-                      среднестатистического участика учебно-методической группы.
-                      Ответьте-ка на вопрос.
+                      Вы находитесь на сайте уже подозрительно долго для среднестатистического участика учебно-методической группы. Ответьте-ка на вопрос.
                     </div>
 
-                    <div
-                      className={`${s.answers} ${
-                        !('visualQuestion' in question!) && s.answers_text
-                      }`}
-                    >
+                    <div className={`${s.answers} ${!('visualQuestion' in question!) && s.answers_text}`}>
                       {question?.answers.map((a) => {
                         return 'visualQuestion' in question ? (
-                          <div
-                            className={`${s.img_wrapper} ${
-                              chosenAnswer === a.id && !passed && s.active
-                            }`}
-                            onClick={() => setChosenAnswer(a.id)}
-                          >
-                            <div className={s.img_container}>
+                          <div className={`${s.img_wrapper} ${chosenAnswer === a.id && !passed && s.active}`} onClick={() => setChosenAnswer(a.id)}>
+                            {/* <div className={s.img_container}>
                               {passed && a.id === question?.rightAnswer && (
                                 <div className={s.passed}>
-                                  <Image
-                                    src="/images/check.svg"
-                                    alt={a.img}
-                                    layout="fill"
-                                  />
+                                  <Image src='/images/check.svg' alt={a.img} layout='fill' />
                                 </div>
                               )}
                               <div className={s.img}>
-                                <Image src={a.img} alt={a.img} layout="fill" />
+                                <Image src={a.img} alt={a.img} layout='fill' />
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         ) : (
-                          <div
-                            onClick={() => setChosenAnswer(a.id)}
-                            className={`${s.text} ${
-                              chosenAnswer === a.id && !passed && s.active_text
-                            }`}
-                          >
+                          <div onClick={() => setChosenAnswer(a.id)} className={`${s.text} ${chosenAnswer === a.id && !passed && s.active_text}`}>
                             {passed && a.id === question.rightAnswer && (
                               <motion.div
                                 className={s.motion}
@@ -165,18 +132,13 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
                                 }}
                               >
                                 <div className={s.passed}>
-                                  <Image
-                                    src="/images/check.svg"
-                                    alt={a.img}
-                                    layout="fill"
-                                    objectFit="contain"
-                                  />
+                                  <Image src='/images/check.svg' alt={a.img} layout='fill' objectFit='contain' />
                                 </div>
                               </motion.div>
                             )}
                             {a.text}
                           </div>
-                        );
+                        )
                       })}
                     </div>
                   </div>
@@ -204,7 +166,7 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
         </div>
       </AnimatePresence>
     </>
-  );
-};
+  )
+}
 
-export default SpyCheckModal;
+export default SpyCheckModal

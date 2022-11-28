@@ -8,6 +8,7 @@ import Post_15 from '../components/Posts/Post_15';
 import Post_16 from '../components/Posts/Post_16';
 import Post_17 from '../components/Posts/Post_17';
 import Post_18 from '../components/Posts/Post_18';
+import Post_19 from '../components/Posts/Post_19';
 import Post_2 from '../components/Posts/Post_2';
 import Post_3 from '../components/Posts/Post_3';
 import Post_4 from '../components/Posts/Post_4';
@@ -115,7 +116,7 @@ export const renderSwitch = (id: string) => {
     case '17':
       return <Post_18 />;
     case '18':
-      return null;
+      return <Post_19 />;
     default:
       return null;
   }

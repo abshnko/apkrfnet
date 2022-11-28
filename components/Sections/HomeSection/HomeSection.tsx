@@ -38,23 +38,23 @@ const HomeSection = () => {
               <div className={s.events_title}>
                 предстоящие <span>заседания</span> группы
               </div>
-              {/* <Link href="/posts" passHref> */}
+              <Link href="/posts" passHref>
               <div className={s.events_subtitle}>
-                пока заседаний не планируется
-                {/* <div className={s.new_event}>!</div>
+                {/* пока заседаний не планируется */}
+                <div className={s.new_event}>!</div>
                   <div className={s.new_event_text}>
                     объявлена дата нового заседания
-                  </div> */}
-                {/* <div className={s.new_event_icon}>
+                  </div>
+                <div className={s.new_event_icon}>
                     <Image
                       src="/images/right_arrow.svg"
                       alt="right_arrow"
                       width="30px"
                       height="17px"
                     />
-                  </div> */}
+                  </div>
               </div>
-              {/* </Link> */}
+              </Link>
               <div className={s.write_to_us_btn}>
                 <p className="">появились вопросы?</p>
                 <button onClick={showAlertWriteToUs} className={s.write_button}>
