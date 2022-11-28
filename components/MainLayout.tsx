@@ -26,7 +26,7 @@ const MainLayout = ({ children, title, myRefTeam, refClassics }: IMainLayout) =>
     if (!passedSpyCheck) {
       const time = setTimeout(() => {
         setShowSpyCheck(true)
-      }, 300000)
+      }, 180000)
       return () => clearTimeout(time)
     }
   }, [])
@@ -40,7 +40,7 @@ const MainLayout = ({ children, title, myRefTeam, refClassics }: IMainLayout) =>
       window.scrollTo(0, parseInt(scrollY || '0') * -1)
       const time = setTimeout(() => {
         setShowSpyCheck(true)
-      }, 300000)
+      }, 180000)
       return () => clearTimeout(time)
     }
   }, [showSpyCheck])

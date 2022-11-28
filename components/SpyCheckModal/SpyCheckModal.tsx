@@ -98,12 +98,12 @@ const SpyCheckModal = ({ setShowSpyCheck, setDidntPass }: any) => {
                   }}
                 >
                   <div className={s.content}>
-                    <p>
-                      <h2>{question?.title}</h2>
-                    </p>
                     <div className={s.instruction}>
                       Вы находитесь на сайте уже подозрительно долго для среднестатистического участика учебно-методической группы. Ответьте-ка на вопрос.
                     </div>
+                    <p>
+                      <h2>{question?.title}</h2>
+                    </p>
 
                     <div className={`${s.answers} ${!('visualQuestion' in question!) && s.answers_text}`}>
                       {question?.answers.map((a) => {
