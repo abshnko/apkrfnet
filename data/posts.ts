@@ -94,6 +94,11 @@ export const posts = [
     id: '18',
     title: 'Микротравма',
     date: '28.11.2022',
+  },
+  {
+    id: '19',
+    title: 'Пародии на пародии',
+    date: '11.04.2023',
     isNew: true,
   },
 ]
