@@ -199,39 +199,39 @@ const Post_20 = () => {
         </p>
       </div>
 
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[1]</span>
         </a>{' '}
         &laquo;Соавторов&raquo; и &laquo;соавторок&raquo; тоже касается, кстати. Ну, ей-богу, пора завязывать с этим позорищем.
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref2'>
           <span>[2]</span>
         </a>{' '}
         &laquo;Комп&raquo; - родовое понятие, объединяющее карманные, портативные, настольные компьютеры, а также рабочие станции, серверы, суперкомпьютеры и
         кластерные системы. Короче, всё то, во что члены кафедры погружаются, когда на заседании кафедры поднимается вопрос об обновлении тестов.
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref3'>
           <span>[3]</span>
         </a>{' '}
         Не путать с мультитачем.
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref4'>
           <span>[4]</span>
         </a>{' '}
         Пока не начали искусственно замедлять.
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref5'>
           <span>[5]</span>
         </a>{' '}
         Имеется в виду новый кафедральный комментарий к АПК РФ, ГПК РФ, КАС РФ или к Закону об исполнительном производстве (они так часто обновляются, что
         практически всегда есть какой-то свежий).
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref6'>
           <span>[6]</span>
         </a>{' '}
@@ -266,7 +266,7 @@ const Post_20 = () => {
           Образованность всё хочут показать&hellip;
         </p>
       </div>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[1]</span>
         </a>{' '}
@@ -302,7 +302,8 @@ const Post_20 = () => {
           </a>
           ,<br />А я с ликующим лицом
           <br />
-          Бегу слагать доценту оду. Бежит еда в последний путь,
+          Бегу слагать доценту оду. <br />
+          Бежит еда в последний путь,
           <br />С идеей для статьи играя.
           <br />
           Не замедляю бег пера я,
@@ -311,7 +312,7 @@ const Post_20 = () => {
         </p>
       </div>
 
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref2'>
           <span>[1]</span>
         </a>{' '}
@@ -363,25 +364,25 @@ const Post_20 = () => {
           </a>
         </p>
       </div>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[1]</span>
         </a>{' '}
         Речь идет о Свердловской областной универсальной научной библиотекеим. В.Г. Белинского (подозреваю, что не все знают о ее существовании).
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref2'>
           <span>[2]</span>
         </a>{' '}
         Нижняя Синячиха, Гагарка, Боярка, Суеватпауль, Новая Княсьпа, Ёква, Чауж, Меркитасиха, Марсяты и др. населенные пункты Свердловской области.
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref3'>
           <span>[3]</span>
         </a>{' '}
         Замполит &ndash; заместитель командира по политической работе (типа нашего координатора учебно-методической работы кафедры).
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[4]</span>
         </a>{' '}
@@ -412,7 +413,7 @@ const Post_20 = () => {
           Можно ставить памятник ему!
         </p>
       </div>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[1]</span>
         </a>{' '}
@@ -452,13 +453,13 @@ const Post_20 = () => {
           Огурчиков и &hellip; дома посижу!
         </p>
       </div>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[1]</span>
         </a>{' '}
         Имеется в виду то ли разрешенный, то ли запрещенный Telegram (кто-то, кстати, открывает чат &laquo;Кафедра ГП&raquo;?).
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref2'>
           <span>[2]</span>
         </a>{' '}
@@ -501,13 +502,13 @@ const Post_20 = () => {
           Другой, коллеги, у меня маршрут!&raquo;
         </p>
       </div>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[1]</span>
         </a>{' '}
         Если кто не понял, то речь идет о звонках на занятия, а не о звонах колоколов в культовых сооружениях.
       </p>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[2]</span>
         </a>{' '}
@@ -570,7 +571,7 @@ const Post_20 = () => {
           Не чью-нибудь, а мою&hellip;
         </p>
       </div>
-      <p>
+      <p className={s.small_footnote}>
         <a href='#_ftnref1'>
           <span>[1]</span>
         </a>{' '}
