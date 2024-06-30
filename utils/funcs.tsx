@@ -11,6 +11,7 @@ import Post_18 from '../components/Posts/Post_18'
 import Post_19 from '../components/Posts/Post_19'
 import Post_2 from '../components/Posts/Post_2'
 import Post_20 from '../components/Posts/Post_20'
+import Post_21 from '../components/Posts/Post_21'
 import Post_3 from '../components/Posts/Post_3'
 import Post_4 from '../components/Posts/Post_4'
 import Post_5 from '../components/Posts/Post_5'
@@ -118,6 +119,8 @@ export const renderSwitch = (id: string) => {
       return <Post_19 />
     case '19':
       return <Post_20 />
+    case '20':
+      return <Post_21 />
     default:
       return null
   }
