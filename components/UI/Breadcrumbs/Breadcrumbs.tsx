@@ -14,11 +14,11 @@ const Breadcrumbs = ({ crumbs, links }: IBreadcrumbs) => {
       {crumbs !== undefined &&
         crumbs.map((c: string, i: number) => {
           return i === crumbs.length - 1 ? (
-            <Link href={links[i]} passHref>
+            <Link href={links[i]} passHref key={i}>
               <a>&nbsp;{c}</a>
             </Link>
           ) : (
-            <Link href={links[i]}>
+            <Link href={links[i]} key={i}>
               <a>&nbsp;{c} |</a>
             </Link>
           );
