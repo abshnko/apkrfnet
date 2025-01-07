@@ -15,42 +15,49 @@ const It = () => {
                         alt="1"
                         width="400px"
                         height={600}
+                        unoptimized
                     />
                     <Image
                         src="/images/basic/2.png"
                         alt="2"
                         width="400px"
                         height={600}
+                        unoptimized
                     />
                     <Image
                         src="/images/basic/3.png"
                         alt="3"
                         width="400px"
                         height={600}
+                        unoptimized
                     />
                      <Image
                         src="/images/basic/4.png"
                         alt="4"
                         width="400px"
                         height={600}
+                        unoptimized
                     />
                     <Image
                         src="/images/basic/5.png"
                         alt="5"
                         width="400px"
                         height={600}
+                        unoptimized
                     />
                     <Image
                         src="/images/basic/6.png"
                         alt="6"
                         width="400px"
                         height={600}
+                        unoptimized
                     />
                     <Image
                         src="/images/basic/7.png"
                         alt="7"
                         width="400px"
                         height={600}
+                        unoptimized
                     />
                 </div>
             </MainContainer>
