@@ -43,10 +43,10 @@ export const Chat = () => {
                 ) : (
                     <div className={s.messages} ref={chatContainerRef}>
                         {questions.map((q, i) => {
-                            return (<span key={i}>
-                                <SpeechBubble key={i} text={q} isAnswer={true} />
-                                <SpeechBubble key={i} text={answers[i]} />
-                            </span>)
+                            return (<div key={i} style={{display: 'flex', flexDirection:'column'}}>
+                                <SpeechBubble text={q} isAnswer={true} />
+                                <SpeechBubble text={answers[i]} />
+                            </div>)
                         })}
                     </div>
                 )}
