@@ -74,6 +74,12 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
               <Link href="/autographs">дорогие автографы</Link>
             </li>
             <li>
+              <Link href="/chat">чат эй, пей!</Link>
+            </li>
+            <li>
+              <Link href="/it">уйти в IT</Link>
+            </li>
+            <li>
               <button onClick={showAlertEN}>en</button>
             </li>
           </ul>

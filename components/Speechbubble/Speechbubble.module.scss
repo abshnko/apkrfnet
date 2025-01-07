@@ -1,0 +1,45 @@
+.speechBubble {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0.9rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    position: relative;
+
+    p {
+        margin: 0;
+        word-wrap: break-word;
+    }
+
+    &.question {
+        background-color: #FFDF2E;
+        align-self: flex-start;
+        width: fit-content;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: -10px;
+            bottom: 10px;
+            border: 10px solid transparent;
+            border-right-color: #FFDF2E;
+            border-left: 0;
+        }
+    }
+
+    &.answer {
+        background-color: #F4F4F4;
+        align-self: flex-end;
+        width: fit-content;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            bottom: 10px;
+            border: 10px solid transparent;
+            border-left-color: #F4F4F4;
+            border-right: 0;
+        }
+    }
+}
