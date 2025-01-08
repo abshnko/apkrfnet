@@ -90,6 +90,26 @@ const NavbarMobile = ({
               />
             </div>
           </li>
+          <li className={s.link} onClick={() => setShowMobileNav(false)}>
+            <Link href="/chat">чат эй, пей!</Link>
+            <div className={s.arrow}>
+              <Image
+                src={'/images/right_chevron.svg'}
+                alt="arrow"
+                layout="fill"
+              />
+            </div>
+          </li>
+          <li className={s.link} onClick={() => setShowMobileNav(false)}>
+            <Link href="/it">уйти в it</Link>
+            <div className={s.arrow}>
+              <Image
+                src={'/images/right_chevron.svg'}
+                alt="arrow"
+                layout="fill"
+              />
+            </div>
+          </li>
           <li
             className={s.link}
             onClick={() => {
