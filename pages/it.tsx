@@ -59,6 +59,27 @@ const It = () => {
                         height={600}
                         unoptimized
                     />
+                    <Image
+                        src="/images/basic/8.png"
+                        alt="7"
+                        width={400}
+                        height={600}
+                        unoptimized
+                    />
+                    <Image
+                        src="/images/basic/9.png"
+                        alt="7"
+                        width={400}
+                        height={600}
+                        unoptimized
+                    />
+                     <Image
+                        src="/images/basic/10.png"
+                        alt="7"
+                        width={400}
+                        height={600}
+                        unoptimized
+                    />
                 </div>
             </MainContainer>
         </MainLayout>
