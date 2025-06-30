@@ -20,7 +20,7 @@
     color: white;
     padding: 20px 40px;
     border-radius: 20px;
-    height: 80vh;
+    height: 95vh;
     background-color: $black_background;
 
     padding-bottom: 2rem;
@@ -36,11 +36,16 @@
       margin-top: 2rem;
       height: 76%;
       overflow-y: scroll;
-      -ms-overflow-style: none; /* Internet Explorer 10+ */
-      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */
+      scrollbar-width: none;
+
+      /* Firefox */
       &::-webkit-scrollbar {
-        display: none; /* Safari and Chrome */
+        display: none;
+        /* Safari and Chrome */
       }
+
       .post {
         border-bottom: 1px solid rgba(255, 255, 255, 0.516);
         padding-bottom: 1rem;
@@ -57,6 +62,7 @@
           margin-top: 0.5rem;
           opacity: 60%;
         }
+
         &:first-child {
           padding-top: 0;
         }
@@ -73,6 +79,7 @@
         .title {
           opacity: 100%;
         }
+
         font-weight: 600;
       }
     }
@@ -88,10 +95,12 @@
       opacity: 100%;
     }
   }
+
   .right_side {
     width: 68%;
     overflow-y: auto;
-    height: 80vh;
+    height: 95vh;
+
     .post_title {
       @include accentedButton;
       font-size: 26px;
@@ -108,6 +117,7 @@
         opacity: 80%;
       }
     }
+
     .post_content {
       height: 70vh;
       //   overflow-y: auto;
@@ -121,21 +131,25 @@
 @media (max-width: 1400px) {
   .container {
     width: 90%;
+
     .left_side {
       .posts_title {
         font-size: 26px;
       }
     }
   }
+
   .bread {
     width: 90%;
   }
 }
+
 //Mobile
 @media only screen and (max-width: 500px) {
   .container {
     display: none;
   }
+
   .bread {
     width: 80%;
     margin: 0 auto;
