@@ -29,12 +29,14 @@
         transform: rotate(20deg);
       }
     }
+
     .img {
       border-radius: 30px;
       overflow: hidden;
     }
   }
 }
+
 .img {
   border-radius: 20px;
   overflow: hidden;
@@ -49,6 +51,7 @@
   width: 100%;
   height: min-content;
   justify-content: space-around;
+
   .img {
     border-radius: 20px;
     overflow: hidden;
@@ -69,6 +72,7 @@
   width: 850px;
   height: 500px;
 }
+
 .small_image {
   position: relative;
   width: 850px;
@@ -87,11 +91,13 @@
     width: 340px;
     height: 100px;
   }
+
   .scheme_large_image {
     position: relative;
     width: 350px;
     height: 250px;
   }
+
   .small_image {
     position: relative;
     width: 350px;
@@ -106,6 +112,6 @@
 }
 
 .small_footnote {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 0.6rem;
 }
