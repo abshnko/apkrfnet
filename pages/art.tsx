@@ -3,6 +3,7 @@ import MainLayout from '../components/MainLayout'
 import MainContainer from '../components/MainContainer/MainContainer'
 import Breadcrumbs from '../components/UI/Breadcrumbs/Breadcrumbs'
 import Image from 'next/image';
+import s from '../components/posts/Post.module.scss'
 
 const Art = () => {
     return (
@@ -10,14 +11,19 @@ const Art = () => {
             <MainContainer>
                 <Breadcrumbs crumbs={['Творчество участников']} links={['/art']} />
                 <div style={{display:'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '3rem'}}>
-                    <Image
-                        src="/images/art/art_1.jpg"
-                        alt="1"
-                        width={600}
-                        height={600}
-                        unoptimized
-                    />
-                </div>
+                    <div className={s.img_container}>
+                        <div className={s.img}>
+                            <Image
+                                src="/images/art/art_1.jpg"
+                                className=''
+                                alt="1"
+                                width={600}
+                                height={600}
+                                unoptimized
+                                />
+                        </div>
+                        </div>
+                    </div>
             </MainContainer>
         </MainLayout>
     )
