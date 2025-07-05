@@ -3,7 +3,7 @@ import MainLayout from '../components/MainLayout'
 import MainContainer from '../components/MainContainer/MainContainer'
 import Breadcrumbs from '../components/UI/Breadcrumbs/Breadcrumbs'
 import Image from 'next/image';
-import s from '../components/posts/Post.module.scss'
+import s from '../components/Posts/Post.module.scss'
 
 const Art = () => {
     return (
