@@ -71,6 +71,9 @@ const Navbar = ({ myRefTeam, refClassics }: any) => {
               <Link href="/gallery">галерея участников</Link>
             </li>
             <li>
+              <Link href="/art">Творчество участников</Link>
+            </li>
+            <li>
               <Link href="/autographs">дорогие автографы</Link>
             </li>
             <li>
