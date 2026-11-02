@@ -119,6 +119,11 @@ export const posts = [
     id: '23',
     title: 'Эллочка Щукина',
     date: '24.02.2026',
+  },
+  {
+    id: '24',
+    title: 'Народный быт',
+    date: '02.11.2026',
     isNew: true,
   },
 ]
