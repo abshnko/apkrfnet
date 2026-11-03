@@ -123,7 +123,7 @@ export const posts = [
   {
     id: '24',
     title: 'Народный быт',
-    date: '02.11.2026',
+    date: '03.11.2026',
     isNew: true,
   },
 ]
